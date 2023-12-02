@@ -1,0 +1,1 @@
+/home/alfredo/repos/advent-of-code-2023/day_02/target/debug/day_02: /home/alfredo/repos/advent-of-code-2023/day_02/input/prob_one_input.txt /home/alfredo/repos/advent-of-code-2023/day_02/src/main.rs /home/alfredo/repos/advent-of-code-2023/day_02/src/prob_one.rs
