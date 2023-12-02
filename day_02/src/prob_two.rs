@@ -24,29 +24,4 @@ pub fn problem_two(line: &str) -> u64 {
     blue_bag.sort_by(|a, b| a.partial_cmp(b).unwrap());
 
     red_bag.last().unwrap().0 * green_bag.last().unwrap().0 * blue_bag.last().unwrap().0
-
-    //println!("{:?}", red_bag);
-    //println!("{:?}", green_bag);
-    //println!("{:?}", blue_bag);
-    //println!("{:?}", red_bag.last().unwrap().0 * green_bag.last().unwrap().0 * blue_bag.last().unwrap().0 );
-    //println!("=============");
-
-    //bag.remove(0);
-    //let bag_uncovered = bag
-    //               .iter()
-    //               .map(|tuple| {
-    //                     let temp = INIT_GAME.iter().find(|cell| {
-    //                         cell.0 == tuple.1 && cell.1 >= (tuple.0.parse::<u32>().unwrap())
-    //                     });
-    //                     temp
-    //               })
-    //               .filter(|x| x.is_none())
-    //               .collect::<Vec<_>>();
-
-    //if bag_uncovered.len() != 0 {
-    //    return 0;
-    //}
-    //else {
-    //    return val;
-    //}
 }
