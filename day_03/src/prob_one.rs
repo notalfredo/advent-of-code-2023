@@ -44,82 +44,19 @@ impl Number {
         }
     }
 
-    //number_point: Vec<Point>,
-    //number_char: Vec<char>
-
-    //symbol_point: Point,
-    //character: char
     fn has_adjacent_symbol(&self, vector_of_symbols: &Vec<Symbol>) -> u32 {
         let adjacent_points: Vec<Option<_>> = self.number_point.iter().map(|point| {
-            if point.row == 0 && point.column == 0 {
-                vector_of_symbols.iter().find(|curr_symbol| {
-                    (curr_symbol.symbol_point.row == point.row // right
-                        && curr_symbol.symbol_point.column == point.column + 1)
-                        || (curr_symbol.symbol_point.row == point.row + 1 // bottom
-                            && curr_symbol.symbol_point.column == point.column)
-                        || (curr_symbol.symbol_point.row == point.row + 1 // bottom right
-                            && curr_symbol.symbol_point.column == point.column + 1)
-                })
-            }
-             else if point.row == 0 {
-                vector_of_symbols.iter().find(|curr_symbol| {
-                    (curr_symbol.symbol_point.row == point.row // right
-                        && curr_symbol.symbol_point.column == point.column + 1)
-                        || (curr_symbol.symbol_point.row == point.row  // left
-                            && curr_symbol.symbol_point.column == point.column - 1)
-                        || (curr_symbol.symbol_point.row == point.row + 1 // bottom
-                            && curr_symbol.symbol_point.column == point.column)
-                        || (curr_symbol.symbol_point.row == point.row + 1 // bottom left 
-                            && curr_symbol.symbol_point.column == point.column - 1)
-                        || (curr_symbol.symbol_point.row == point.row + 1 // bottom right
-                            && curr_symbol.symbol_point.column == point.column + 1)
-                })
-            } else if point.column == 0 {
-                vector_of_symbols.iter().find(|curr_symbol| {
-                    (curr_symbol.symbol_point.row == point.row // right
-                        && curr_symbol.symbol_point.column == point.column + 1)
-                        || (curr_symbol.symbol_point.row == point.row + 1 // bottom
-                            && curr_symbol.symbol_point.column == point.column)
-                        || (curr_symbol.symbol_point.row == point.row - 1 // top
-                            && curr_symbol.symbol_point.column == point.column)
-                        || (curr_symbol.symbol_point.row == point.row + 1 // bottom right
-                            && curr_symbol.symbol_point.column == point.column + 1)
-                        || (curr_symbol.symbol_point.row == point.row - 1 // top right
-                            && curr_symbol.symbol_point.column == point.column + 1)
-                })
-            } else {
-                vector_of_symbols.iter().find(|curr_symbol| {
-                    (curr_symbol.symbol_point.row == point.row // right
-                        && curr_symbol.symbol_point.column == point.column + 1)
-                        || (curr_symbol.symbol_point.row == point.row + 1 // bottom
-                            && curr_symbol.symbol_point.column == point.column)
-                        || (curr_symbol.symbol_point.row == point.row - 1 // top
-                            && curr_symbol.symbol_point.column == point.column)
-                        || (curr_symbol.symbol_point.row == point.row  // left
-                            && curr_symbol.symbol_point.column == point.column - 1)
-
-
-
-                        || (curr_symbol.symbol_point.row == point.row + 1 // bottom right
-                            && curr_symbol.symbol_point.column == point.column + 1)
-                        || (curr_symbol.symbol_point.row == point.row + 1 // bottom left
-                            && curr_symbol.symbol_point.column == point.column - 1)
-
-                        || (curr_symbol.symbol_point.row == point.row - 1 // top right 
-                            && curr_symbol.symbol_point.column == point.column + 1)
-                        || (curr_symbol.symbol_point.row == point.row - 1 // top left
-                            && curr_symbol.symbol_point.column == point.column - 1)
-                })
-            }
+              vector_of_symbols.iter().find(|curr_symbol| {
+                point.row.abs_diff(curr_symbol.symbol_point.row) <= 1 
+                    &&
+                point.column.abs_diff(curr_symbol.symbol_point.column) <= 1 
+              })
         }).collect();
 
         let found_adjecent_symbols = adjacent_points.iter().filter(|x| x.is_some() ).collect::<Vec<_>>();
 
 
         if found_adjecent_symbols.len() > 0 {
-            //println!("FOUND found_adjecent_symbols {:?}", found_adjecent_symbols);
-            //println!("{:?}", self.number_point );
-            //let sting: &str = self.number_char.iter().collect();
             let mut sum: u32 = 0;
             let mut ten_power: u32 = 1;
             self.number_char.iter().rev().for_each(|c| {
@@ -129,7 +66,6 @@ impl Number {
             sum
         }
         else {
-            //println!("DID NOT FIND SYMBOL");
             0
         }
 
@@ -151,7 +87,6 @@ impl Schematic {
             .iter()
             .map(|number| number.has_adjacent_symbol(&self.symbols))
             .sum();
-        //println!("{:}", *result);
         *result
     }
 }

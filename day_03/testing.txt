@@ -1,0 +1,1930 @@
+row: 1, column: 137 = *
+row: 1, column: 149 = *
+row: 1, column: 155 = *
+row: 1, column: 167 = *
+row: 1, column: 179 = %
+row: 1, column: 193 = *
+row: 1, column: 222 = *
+row: 1, column: 224 = $
+row: 1, column: 244 = *
+row: 1, column: 265 = *
+row: 2, column: 316 = *
+row: 2, column: 325 = @
+row: 2, column: 335 = @
+row: 2, column: 369 = *
+row: 3, column: 398 = *
+row: 3, column: 417 = &
+row: 3, column: 448 = *
+row: 3, column: 492 = *
+row: 3, column: 511 = @
+row: 3, column: 515 = *
+row: 4, column: 533 = +
+row: 4, column: 586 = /
+row: 4, column: 588 = &
+row: 4, column: 598 = *
+row: 4, column: 615 = *
+row: 4, column: 627 = +
+row: 4, column: 654 = *
+row: 5, column: 693 = %
+row: 5, column: 725 = *
+row: 5, column: 733 = +
+row: 5, column: 747 = *
+row: 5, column: 763 = #
+row: 5, column: 766 = /
+row: 6, column: 800 = *
+row: 6, column: 820 = *
+row: 6, column: 829 = =
+row: 6, column: 837 = *
+row: 7, column: 940 = +
+row: 7, column: 991 = @
+row: 7, column: 1044 = #
+row: 8, column: 1058 = *
+row: 8, column: 1060 = @
+row: 8, column: 1072 = *
+row: 8, column: 1102 = *
+row: 8, column: 1130 = *
+row: 8, column: 1138 = =
+row: 8, column: 1155 = =
+row: 8, column: 1165 = *
+row: 9, column: 1173 = =
+row: 9, column: 1181 = *
+row: 9, column: 1239 = *
+row: 9, column: 1245 = *
+row: 9, column: 1263 = %
+row: 9, column: 1279 = -
+row: 10, column: 1415 = +
+row: 10, column: 1421 = =
+row: 11, column: 1492 = =
+row: 11, column: 1518 = %
+row: 11, column: 1536 = %
+row: 11, column: 1565 = &
+row: 12, column: 1577 = *
+row: 12, column: 1617 = *
+row: 12, column: 1641 = &
+row: 13, column: 1694 = %
+row: 13, column: 1712 = *
+row: 13, column: 1718 = @
+row: 13, column: 1730 = *
+row: 13, column: 1757 = *
+row: 13, column: 1788 = %
+row: 14, column: 1826 = =
+row: 14, column: 1862 = /
+row: 14, column: 1873 = *
+row: 14, column: 1882 = /
+row: 14, column: 1912 = *
+row: 14, column: 1937 = *
+row: 15, column: 1960 = $
+row: 15, column: 2030 = *
+row: 15, column: 2035 = *
+row: 15, column: 2046 = +
+row: 15, column: 2048 = &
+row: 15, column: 2063 = *
+row: 15, column: 2085 = +
+row: 16, column: 2115 = *
+row: 16, column: 2135 = *
+row: 16, column: 2145 = *
+row: 16, column: 2151 = -
+row: 16, column: 2202 = *
+row: 16, column: 2207 = *
+row: 17, column: 2222 = +
+row: 17, column: 2233 = *
+row: 17, column: 2250 = *
+row: 17, column: 2260 = $
+row: 17, column: 2294 = #
+row: 17, column: 2297 = =
+row: 17, column: 2317 = *
+row: 18, column: 2343 = %
+row: 18, column: 2345 = +
+row: 18, column: 2373 = #
+row: 18, column: 2402 = *
+row: 18, column: 2416 = *
+row: 18, column: 2439 = %
+row: 19, column: 2528 = %
+row: 19, column: 2561 = /
+row: 19, column: 2585 = *
+row: 19, column: 2594 = *
+row: 19, column: 2602 = *
+row: 20, column: 2607 = *
+row: 20, column: 2626 = *
+row: 20, column: 2632 = @
+row: 20, column: 2650 = *
+row: 20, column: 2681 = *
+row: 21, column: 2748 = *
+row: 21, column: 2771 = #
+row: 21, column: 2839 = *
+row: 22, column: 2883 = *
+row: 22, column: 2910 = =
+row: 22, column: 2919 = $
+row: 22, column: 2927 = /
+row: 22, column: 2973 = *
+row: 22, column: 2990 = *
+row: 23, column: 3036 = %
+row: 23, column: 3046 = =
+row: 23, column: 3052 = *
+row: 23, column: 3063 = *
+row: 23, column: 3069 = -
+row: 23, column: 3075 = =
+row: 23, column: 3080 = *
+row: 23, column: 3091 = #
+row: 23, column: 3111 = =
+row: 23, column: 3114 = @
+row: 24, column: 3129 = =
+row: 24, column: 3132 = =
+row: 24, column: 3151 = $
+row: 24, column: 3158 = +
+row: 25, column: 3253 = -
+row: 25, column: 3269 = *
+row: 25, column: 3279 = *
+row: 25, column: 3363 = *
+row: 25, column: 3386 = *
+row: 26, column: 3443 = =
+row: 26, column: 3473 = *
+row: 26, column: 3487 = &
+row: 26, column: 3499 = *
+row: 27, column: 3554 = #
+row: 27, column: 3567 = -
+row: 27, column: 3580 = /
+row: 27, column: 3594 = *
+row: 27, column: 3599 = *
+row: 27, column: 3636 = @
+row: 27, column: 3645 = -
+row: 28, column: 3742 = *
+row: 28, column: 3749 = /
+row: 29, column: 3784 = $
+row: 29, column: 3789 = *
+row: 29, column: 3804 = *
+row: 29, column: 3808 = &
+row: 29, column: 3833 = *
+row: 29, column: 3844 = %
+row: 29, column: 3848 = *
+row: 29, column: 3901 = +
+row: 30, column: 3951 = =
+row: 30, column: 3959 = /
+row: 30, column: 3985 = *
+row: 30, column: 4005 = *
+row: 30, column: 4022 = -
+row: 31, column: 4035 = +
+row: 31, column: 4037 = %
+row: 31, column: 4054 = #
+row: 31, column: 4094 = *
+row: 31, column: 4124 = /
+row: 31, column: 4129 = *
+row: 31, column: 4143 = #
+row: 32, column: 4187 = /
+row: 32, column: 4199 = =
+row: 32, column: 4288 = *
+row: 33, column: 4296 = =
+row: 33, column: 4322 = =
+row: 33, column: 4359 = *
+row: 33, column: 4409 = -
+row: 33, column: 4416 = $
+row: 34, column: 4437 = $
+row: 34, column: 4455 = /
+row: 34, column: 4464 = /
+row: 34, column: 4466 = -
+row: 34, column: 4499 = -
+row: 34, column: 4508 = *
+row: 34, column: 4528 = *
+row: 34, column: 4554 = =
+row: 34, column: 4556 = #
+row: 35, column: 4572 = $
+row: 35, column: 4660 = $
+row: 36, column: 4685 = *
+row: 36, column: 4691 = *
+row: 36, column: 4720 = $
+row: 36, column: 4733 = @
+row: 36, column: 4755 = *
+row: 36, column: 4761 = *
+row: 36, column: 4778 = *
+row: 36, column: 4782 = *
+row: 36, column: 4815 = @
+row: 37, column: 4855 = /
+row: 37, column: 4889 = /
+row: 37, column: 4925 = &
+row: 38, column: 4967 = *
+row: 38, column: 4979 = *
+row: 38, column: 4994 = *
+row: 38, column: 5005 = *
+row: 38, column: 5034 = =
+row: 38, column: 5047 = *
+row: 38, column: 5069 = *
+row: 38, column: 5072 = $
+row: 39, column: 5082 = $
+row: 39, column: 5089 = &
+row: 39, column: 5161 = @
+row: 39, column: 5187 = -
+row: 40, column: 5233 = *
+row: 40, column: 5248 = %
+row: 40, column: 5273 = *
+row: 40, column: 5297 = *
+row: 40, column: 5319 = *
+row: 41, column: 5335 = #
+row: 41, column: 5375 = *
+row: 42, column: 5477 = *
+row: 42, column: 5484 = &
+row: 42, column: 5487 = *
+row: 42, column: 5547 = *
+row: 42, column: 5556 = #
+row: 42, column: 5564 = +
+row: 42, column: 5572 = *
+row: 43, column: 5594 = *
+row: 43, column: 5624 = *
+row: 43, column: 5629 = *
+row: 43, column: 5641 = &
+row: 43, column: 5654 = %
+row: 43, column: 5659 = *
+row: 44, column: 5797 = *
+row: 44, column: 5836 = *
+row: 44, column: 5841 = %
+row: 44, column: 5845 = *
+row: 45, column: 5862 = #
+row: 45, column: 5870 = @
+row: 45, column: 5874 = *
+row: 45, column: 5877 = *
+row: 45, column: 5899 = +
+row: 45, column: 5906 = *
+row: 45, column: 5919 = #
+row: 45, column: 5935 = -
+row: 46, column: 5989 = *
+row: 46, column: 6016 = *
+row: 46, column: 6041 = @
+row: 46, column: 6045 = *
+row: 46, column: 6074 = *
+row: 46, column: 6093 = *
+row: 46, column: 6115 = =
+row: 47, column: 6141 = &
+row: 47, column: 6183 = *
+row: 47, column: 6189 = @
+row: 47, column: 6239 = &
+row: 48, column: 6256 = &
+row: 48, column: 6284 = $
+row: 48, column: 6295 = *
+row: 48, column: 6299 = =
+row: 48, column: 6345 = %
+row: 48, column: 6361 = +
+row: 49, column: 6373 = *
+row: 49, column: 6393 = *
+row: 50, column: 6537 = *
+row: 50, column: 6566 = *
+row: 50, column: 6586 = %
+row: 50, column: 6592 = *
+row: 50, column: 6603 = -
+row: 50, column: 6606 = +
+row: 50, column: 6615 = *
+row: 50, column: 6627 = *
+row: 50, column: 6629 = +
+row: 51, column: 6657 = #
+row: 51, column: 6664 = *
+row: 51, column: 6763 = #
+row: 52, column: 6785 = *
+row: 52, column: 6792 = -
+row: 52, column: 6809 = *
+row: 52, column: 6837 = *
+row: 52, column: 6856 = *
+row: 53, column: 6907 = *
+row: 53, column: 6952 = *
+row: 53, column: 6975 = *
+row: 53, column: 6994 = *
+row: 53, column: 7017 = @
+row: 54, column: 7024 = *
+row: 54, column: 7031 = @
+row: 54, column: 7059 = #
+row: 54, column: 7078 = @
+row: 55, column: 7191 = &
+row: 55, column: 7197 = @
+row: 55, column: 7203 = @
+row: 55, column: 7237 = =
+row: 55, column: 7256 = *
+row: 56, column: 7345 = *
+row: 56, column: 7352 = %
+row: 56, column: 7374 = *
+row: 56, column: 7394 = *
+row: 56, column: 7403 = *
+row: 56, column: 7413 = &
+row: 57, column: 7430 = @
+row: 57, column: 7447 = #
+row: 57, column: 7487 = $
+row: 57, column: 7521 = *
+row: 57, column: 7538 = $
+row: 58, column: 7597 = =
+row: 58, column: 7619 = *
+row: 58, column: 7675 = *
+row: 59, column: 7709 = *
+row: 59, column: 7735 = *
+row: 59, column: 7741 = *
+row: 59, column: 7769 = *
+row: 59, column: 7786 = @
+row: 59, column: 7791 = *
+row: 60, column: 7847 = *
+row: 60, column: 7860 = @
+row: 60, column: 7882 = *
+row: 61, column: 7944 = $
+row: 61, column: 7959 = *
+row: 61, column: 7966 = &
+row: 61, column: 7979 = %
+row: 61, column: 7987 = @
+row: 61, column: 8020 = *
+row: 61, column: 8037 = -
+row: 61, column: 8056 = #
+row: 61, column: 8066 = #
+row: 62, column: 8068 = *
+row: 62, column: 8077 = *
+row: 62, column: 8082 = %
+row: 62, column: 8121 = $
+row: 62, column: 8131 = -
+row: 62, column: 8135 = *
+row: 62, column: 8159 = *
+row: 62, column: 8169 = /
+row: 62, column: 8194 = /
+row: 63, column: 8240 = *
+row: 63, column: 8271 = *
+row: 63, column: 8313 = *
+row: 64, column: 8348 = =
+row: 64, column: 8351 = *
+row: 64, column: 8386 = *
+row: 64, column: 8408 = $
+row: 65, column: 8511 = *
+row: 65, column: 8550 = *
+row: 66, column: 8586 = #
+row: 66, column: 8592 = *
+row: 66, column: 8607 = @
+row: 66, column: 8672 = *
+row: 66, column: 8694 = @
+row: 66, column: 8712 = *
+row: 67, column: 8730 = *
+row: 67, column: 8777 = %
+row: 67, column: 8790 = *
+row: 67, column: 8837 = *
+row: 68, column: 8865 = +
+row: 68, column: 8871 = *
+row: 68, column: 8893 = *
+row: 68, column: 8924 = %
+row: 68, column: 8950 = -
+row: 69, column: 9012 = @
+row: 69, column: 9065 = *
+row: 69, column: 9074 = $
+row: 70, column: 9112 = +
+row: 70, column: 9191 = =
+row: 71, column: 9249 = *
+row: 71, column: 9268 = *
+row: 71, column: 9324 = /
+row: 71, column: 9337 = *
+row: 71, column: 9343 = =
+row: 71, column: 9352 = =
+row: 72, column: 9409 = *
+row: 72, column: 9412 = $
+row: 72, column: 9418 = *
+row: 72, column: 9425 = *
+row: 72, column: 9443 = *
+row: 72, column: 9447 = @
+row: 72, column: 9486 = -
+row: 73, column: 9513 = /
+row: 73, column: 9518 = *
+row: 73, column: 9525 = =
+row: 73, column: 9565 = *
+row: 73, column: 9624 = *
+row: 74, column: 9627 = *
+row: 74, column: 9728 = *
+row: 74, column: 9737 = &
+row: 74, column: 9742 = +
+row: 75, column: 9768 = *
+row: 75, column: 9781 = *
+row: 75, column: 9793 = *
+row: 75, column: 9803 = *
+row: 75, column: 9812 = $
+row: 75, column: 9831 = *
+row: 75, column: 9849 = *
+row: 75, column: 9854 = =
+row: 75, column: 9877 = #
+row: 76, column: 9892 = *
+row: 76, column: 9916 = *
+row: 76, column: 9921 = &
+row: 76, column: 9928 = +
+row: 76, column: 9955 = *
+row: 76, column: 9963 = +
+row: 76, column: 9974 = &
+row: 76, column: 9994 = *
+row: 77, column: 10071 = #
+row: 77, column: 10139 = *
+row: 78, column: 10144 = *
+row: 78, column: 10171 = *
+row: 78, column: 10209 = *
+row: 78, column: 10274 = $
+row: 79, column: 10284 = *
+row: 79, column: 10291 = *
+row: 79, column: 10353 = *
+row: 79, column: 10367 = $
+row: 79, column: 10369 = *
+row: 79, column: 10379 = *
+row: 79, column: 10402 = *
+row: 80, column: 10442 = *
+row: 80, column: 10460 = *
+row: 80, column: 10491 = *
+row: 80, column: 10519 = *
+row: 81, column: 10548 = *
+row: 81, column: 10557 = *
+row: 81, column: 10565 = *
+row: 81, column: 10578 = +
+row: 81, column: 10606 = -
+row: 82, column: 10703 = -
+row: 82, column: 10714 = /
+row: 82, column: 10748 = *
+row: 83, column: 10831 = =
+row: 83, column: 10858 = #
+row: 83, column: 10872 = *
+row: 83, column: 10888 = *
+row: 83, column: 10915 = *
+row: 83, column: 10921 = +
+row: 84, column: 10934 = *
+row: 84, column: 10951 = @
+row: 84, column: 11037 = *
+row: 84, column: 11055 = *
+row: 85, column: 11053 = -
+row: 85, column: 11061 = -
+row: 85, column: 11069 = *
+row: 85, column: 11075 = &
+row: 85, column: 11087 = $
+row: 85, column: 11106 = *
+row: 85, column: 11114 = $
+row: 85, column: 11137 = -
+row: 85, column: 11145 = *
+row: 85, column: 11154 = *
+row: 86, column: 11201 = #
+row: 86, column: 11225 = *
+row: 86, column: 11232 = &
+row: 86, column: 11252 = *
+row: 86, column: 11279 = =
+row: 86, column: 11303 = *
+row: 86, column: 11306 = *
+row: 86, column: 11316 = #
+row: 87, column: 11386 = &
+row: 87, column: 11399 = /
+row: 87, column: 11421 = *
+row: 87, column: 11427 = *
+row: 88, column: 11443 = =
+row: 88, column: 11488 = *
+row: 88, column: 11571 = #
+row: 89, column: 11576 = *
+row: 89, column: 11593 = *
+row: 89, column: 11597 = *
+row: 89, column: 11607 = =
+row: 89, column: 11634 = *
+row: 89, column: 11652 = @
+row: 89, column: 11662 = *
+row: 89, column: 11693 = /
+row: 90, column: 11711 = *
+row: 90, column: 11729 = *
+row: 90, column: 11735 = *
+row: 90, column: 11757 = *
+row: 90, column: 11779 = -
+row: 90, column: 11785 = *
+row: 91, column: 11848 = @
+row: 91, column: 11946 = *
+row: 92, column: 12001 = $
+row: 92, column: 12008 = *
+row: 92, column: 12045 = *
+row: 92, column: 12064 = *
+row: 92, column: 12080 = *
+row: 93, column: 12143 = *
+row: 93, column: 12152 = @
+row: 93, column: 12221 = *
+row: 94, column: 12226 = *
+row: 94, column: 12242 = *
+row: 94, column: 12265 = =
+row: 94, column: 12289 = *
+row: 94, column: 12304 = %
+row: 94, column: 12330 = *
+row: 95, column: 12368 = *
+row: 95, column: 12378 = *
+row: 95, column: 12387 = *
+row: 95, column: 12415 = *
+row: 95, column: 12424 = &
+row: 95, column: 12429 = =
+row: 95, column: 12445 = *
+row: 95, column: 12451 = *
+row: 95, column: 12483 = *
+row: 96, column: 12484 = *
+row: 96, column: 12529 = *
+row: 96, column: 12534 = *
+row: 96, column: 12566 = %
+row: 96, column: 12598 = %
+row: 96, column: 12606 = +
+row: 97, column: 12630 = $
+row: 97, column: 12666 = *
+row: 97, column: 12739 = *
+row: 98, column: 12769 = *
+row: 98, column: 12819 = $
+row: 98, column: 12826 = +
+row: 98, column: 12831 = -
+row: 98, column: 12837 = $
+row: 99, column: 12886 = +
+row: 99, column: 12911 = *
+row: 99, column: 12916 = &
+row: 99, column: 12921 = &
+row: 99, column: 12938 = *
+row: 99, column: 12989 = *
+row: 100, column: 13022 = +
+row: 100, column: 13036 = *
+row: 100, column: 13072 = =
+row: 100, column: 13105 = *
+row: 101, column: 13134 = -
+row: 101, column: 13140 = $
+row: 101, column: 13187 = *
+row: 101, column: 13193 = *
+row: 101, column: 13210 = -
+row: 101, column: 13227 = *
+row: 102, column: 13281 = +
+row: 102, column: 13288 = *
+row: 102, column: 13292 = =
+row: 102, column: 13309 = *
+row: 102, column: 13345 = /
+row: 102, column: 13350 = *
+row: 102, column: 13361 = -
+row: 102, column: 13370 = @
+row: 102, column: 13375 = *
+row: 102, column: 13393 = *
+row: 103, column: 13397 = $
+row: 103, column: 13406 = %
+row: 103, column: 13414 = *
+row: 103, column: 13428 = #
+row: 103, column: 13450 = *
+row: 103, column: 13456 = *
+row: 103, column: 13509 = *
+row: 104, column: 13572 = *
+row: 104, column: 13591 = +
+row: 104, column: 13625 = @
+row: 104, column: 13643 = *
+row: 105, column: 13663 = $
+row: 105, column: 13692 = =
+row: 105, column: 13742 = *
+row: 105, column: 13747 = +
+row: 106, column: 13801 = +
+row: 106, column: 13811 = =
+row: 106, column: 13825 = *
+row: 106, column: 13837 = /
+row: 107, column: 13933 = $
+row: 107, column: 13947 = *
+row: 107, column: 13964 = *
+row: 107, column: 13980 = *
+row: 107, column: 13989 = /
+row: 107, column: 14012 = *
+row: 107, column: 14022 = *
+row: 107, column: 14027 = %
+row: 107, column: 14034 = *
+row: 107, column: 14039 = *
+row: 108, column: 14067 = *
+row: 108, column: 14117 = &
+row: 108, column: 14147 = $
+row: 108, column: 14159 = =
+row: 108, column: 14175 = *
+row: 109, column: 14178 = =
+row: 109, column: 14192 = *
+row: 109, column: 14205 = *
+row: 109, column: 14216 = *
+row: 109, column: 14231 = $
+row: 109, column: 14237 = =
+row: 110, column: 14351 = -
+row: 110, column: 14374 = *
+row: 110, column: 14382 = *
+row: 110, column: 14392 = *
+row: 110, column: 14395 = &
+row: 110, column: 14406 = &
+row: 110, column: 14420 = *
+row: 110, column: 14427 = #
+row: 110, column: 14436 = -
+row: 111, column: 14545 = =
+row: 112, column: 14566 = *
+row: 112, column: 14572 = *
+row: 112, column: 14617 = $
+row: 112, column: 14694 = +
+row: 113, column: 14706 = #
+row: 113, column: 14715 = *
+row: 113, column: 14721 = *
+row: 113, column: 14732 = *
+row: 113, column: 14771 = *
+row: 113, column: 14783 = -
+row: 113, column: 14794 = *
+row: 113, column: 14806 = =
+row: 113, column: 14812 = #
+row: 114, column: 14823 = *
+row: 114, column: 14873 = *
+row: 114, column: 14891 = -
+row: 114, column: 14918 = =
+row: 115, column: 14979 = $
+row: 115, column: 15008 = &
+row: 115, column: 15028 = =
+row: 115, column: 15039 = -
+row: 116, column: 15120 = *
+row: 116, column: 15148 = *
+row: 116, column: 15174 = $
+row: 116, column: 15186 = %
+row: 116, column: 15189 = *
+row: 117, column: 15229 = +
+row: 117, column: 15258 = #
+row: 117, column: 15263 = *
+row: 117, column: 15340 = *
+row: 118, column: 15343 = +
+row: 118, column: 15352 = +
+row: 118, column: 15372 = $
+row: 118, column: 15386 = *
+row: 118, column: 15399 = *
+row: 119, column: 15492 = *
+row: 119, column: 15498 = +
+row: 119, column: 15577 = &
+row: 119, column: 15587 = *
+row: 119, column: 15606 = +
+row: 120, column: 15663 = *
+row: 120, column: 15667 = %
+row: 120, column: 15682 = /
+row: 120, column: 15687 = &
+row: 120, column: 15701 = #
+row: 120, column: 15712 = *
+row: 120, column: 15727 = *
+row: 121, column: 15736 = *
+row: 121, column: 15778 = *
+row: 121, column: 15788 = @
+row: 121, column: 15819 = =
+row: 121, column: 15823 = *
+row: 122, column: 15874 = =
+row: 122, column: 15894 = *
+row: 122, column: 15901 = *
+row: 122, column: 15957 = *
+row: 122, column: 15967 = &
+row: 123, column: 15996 = *
+row: 123, column: 16009 = *
+row: 123, column: 16015 = @
+row: 123, column: 16048 = -
+row: 123, column: 16057 = /
+row: 123, column: 16064 = /
+row: 124, column: 16163 = *
+row: 124, column: 16205 = *
+row: 124, column: 16225 = =
+row: 124, column: 16228 = #
+row: 125, column: 16372 = -
+row: 126, column: 16389 = &
+row: 126, column: 16395 = *
+row: 126, column: 16438 = *
+row: 126, column: 16452 = =
+row: 126, column: 16456 = %
+row: 126, column: 16469 = &
+row: 126, column: 16477 = *
+row: 126, column: 16495 = -
+row: 126, column: 16516 = =
+row: 127, column: 16516 = &
+row: 127, column: 16541 = /
+row: 127, column: 16590 = @
+row: 128, column: 16666 = &
+row: 128, column: 16678 = *
+row: 128, column: 16690 = *
+row: 128, column: 16703 = *
+row: 128, column: 16753 = *
+row: 128, column: 16766 = *
+row: 129, column: 16774 = *
+row: 129, column: 16793 = +
+row: 129, column: 16840 = *
+row: 130, column: 16914 = *
+row: 130, column: 16937 = *
+row: 130, column: 16946 = *
+row: 130, column: 16982 = *
+row: 130, column: 16998 = *
+row: 130, column: 17004 = -
+row: 130, column: 17024 = =
+row: 131, column: 17083 = *
+row: 131, column: 17091 = *
+row: 131, column: 17104 = *
+row: 131, column: 17119 = *
+row: 131, column: 17147 = -
+row: 131, column: 17165 = #
+row: 132, column: 17175 = *
+row: 132, column: 17182 = $
+row: 132, column: 17187 = #
+row: 132, column: 17264 = *
+row: 132, column: 17293 = +
+row: 133, column: 17295 = -
+row: 133, column: 17299 = -
+row: 133, column: 17332 = =
+row: 133, column: 17370 = *
+row: 133, column: 17384 = *
+row: 133, column: 17399 = *
+row: 133, column: 17404 = $
+row: 133, column: 17408 = =
+row: 134, column: 17455 = @
+row: 134, column: 17477 = *
+row: 135, column: 17569 = #
+row: 135, column: 17611 = &
+row: 135, column: 17625 = %
+row: 136, column: 17684 = @
+row: 136, column: 17692 = *
+row: 136, column: 17711 = *
+row: 136, column: 17769 = *
+row: 136, column: 17777 = $
+row: 136, column: 17786 = &
+row: 137, column: 17834 = &
+row: 137, column: 17861 = %
+row: 137, column: 17866 = -
+row: 137, column: 17883 = *
+row: 137, column: 17918 = *
+row: 138, column: 17981 = *
+row: 138, column: 17986 = *
+row: 138, column: 18007 = %
+row: 138, column: 18019 = *
+row: 138, column: 18038 = #
+row: 138, column: 18070 = #
+[Point { row: 0, column: 0 }, Point { row: 0, column: 1 }, Point { row: 0, column: 2 }], ['3', '1', '1']
+[Point { row: 0, column: 6 }, Point { row: 0, column: 7 }, Point { row: 0, column: 8 }], ['6', '7', '2']
+[Point { row: 0, column: 12 }, Point { row: 0, column: 13 }], ['3', '4']
+[Point { row: 0, column: 17 }, Point { row: 0, column: 18 }, Point { row: 0, column: 19 }], ['3', '9', '1']
+[Point { row: 0, column: 25 }, Point { row: 0, column: 26 }, Point { row: 0, column: 27 }], ['5', '9', '1']
+[Point { row: 0, column: 34 }, Point { row: 0, column: 35 }, Point { row: 0, column: 36 }], ['8', '2', '8']
+[Point { row: 0, column: 60 }, Point { row: 0, column: 61 }, Point { row: 0, column: 62 }], ['7', '3', '8']
+[Point { row: 0, column: 83 }, Point { row: 0, column: 84 }, Point { row: 0, column: 85 }], ['2', '2', '3']
+[Point { row: 0, column: 90 }, Point { row: 0, column: 91 }, Point { row: 0, column: 92 }], ['8', '0', '3']
+[Point { row: 0, column: 95 }, Point { row: 0, column: 96 }, Point { row: 0, column: 97 }], ['4', '7', '2']
+[Point { row: 0, column: 132 }, Point { row: 0, column: 133 }, Point { row: 0, column: 134 }], ['7', '1', '4']
+[Point { row: 0, column: 136 }, Point { row: 0, column: 137 }, Point { row: 0, column: 138 }], ['8', '4', '0']
+[Point { row: 1, column: 46 }, Point { row: 1, column: 47 }, Point { row: 1, column: 48 }], ['6', '3', '1']
+[Point { row: 1, column: 53 }, Point { row: 1, column: 54 }, Point { row: 1, column: 55 }], ['7', '0', '3']
+[Point { row: 1, column: 66 }, Point { row: 1, column: 67 }], ['1', '2']
+[Point { row: 1, column: 72 }, Point { row: 1, column: 73 }, Point { row: 1, column: 74 }], ['6', '5', '2']
+[Point { row: 1, column: 107 }, Point { row: 1, column: 108 }, Point { row: 1, column: 109 }], ['3', '6', '8']
+[Point { row: 1, column: 111 }, Point { row: 1, column: 112 }, Point { row: 1, column: 113 }], ['7', '6', '9']
+[Point { row: 1, column: 115 }, Point { row: 1, column: 116 }, Point { row: 1, column: 117 }], ['1', '4', '8']
+[Point { row: 2, column: 4 }, Point { row: 2, column: 5 }, Point { row: 2, column: 6 }], ['4', '1', '1']
+[Point { row: 2, column: 18 }], ['2']
+[Point { row: 2, column: 23 }, Point { row: 2, column: 24 }, Point { row: 2, column: 25 }], ['8', '3', '7']
+[Point { row: 2, column: 27 }, Point { row: 2, column: 28 }, Point { row: 2, column: 29 }], ['1', '2', '1']
+[Point { row: 2, column: 38 }, Point { row: 2, column: 39 }, Point { row: 2, column: 40 }], ['5', '1', '1']
+[Point { row: 2, column: 42 }, Point { row: 2, column: 43 }, Point { row: 2, column: 44 }], ['7', '4', '5']
+[Point { row: 2, column: 58 }, Point { row: 2, column: 59 }], ['4', '8']
+[Point { row: 2, column: 61 }, Point { row: 2, column: 62 }, Point { row: 2, column: 63 }], ['4', '2', '2']
+[Point { row: 2, column: 89 }, Point { row: 2, column: 90 }, Point { row: 2, column: 91 }], ['3', '1', '1']
+[Point { row: 2, column: 100 }, Point { row: 2, column: 101 }, Point { row: 2, column: 102 }], ['8', '8', '7']
+[Point { row: 2, column: 126 }, Point { row: 2, column: 127 }, Point { row: 2, column: 128 }], ['4', '5', '7']
+[Point { row: 2, column: 137 }, Point { row: 2, column: 138 }, Point { row: 2, column: 139 }], ['5', '9', '5']
+[Point { row: 3, column: 9 }, Point { row: 3, column: 10 }, Point { row: 3, column: 11 }], ['3', '2', '8']
+[Point { row: 3, column: 54 }, Point { row: 3, column: 55 }, Point { row: 3, column: 56 }], ['1', '4', '4']
+[Point { row: 3, column: 78 }, Point { row: 3, column: 79 }, Point { row: 3, column: 80 }], ['1', '3', '8']
+[Point { row: 3, column: 93 }, Point { row: 3, column: 94 }], ['4', '8']
+[Point { row: 3, column: 109 }, Point { row: 3, column: 110 }, Point { row: 3, column: 111 }], ['6', '8', '2']
+[Point { row: 3, column: 133 }, Point { row: 3, column: 134 }, Point { row: 3, column: 135 }], ['7', '7', '7']
+[Point { row: 4, column: 5 }, Point { row: 4, column: 6 }, Point { row: 4, column: 7 }], ['1', '4', '4']
+[Point { row: 4, column: 22 }, Point { row: 4, column: 23 }, Point { row: 4, column: 24 }], ['1', '7', '0']
+[Point { row: 4, column: 44 }, Point { row: 4, column: 45 }, Point { row: 4, column: 46 }], ['2', '0', '7']
+[Point { row: 4, column: 59 }, Point { row: 4, column: 60 }, Point { row: 4, column: 61 }], ['8', '1', '3']
+[Point { row: 4, column: 73 }, Point { row: 4, column: 74 }, Point { row: 4, column: 75 }], ['1', '3', '9']
+[Point { row: 4, column: 84 }, Point { row: 4, column: 85 }, Point { row: 4, column: 86 }], ['3', '4', '6']
+[Point { row: 4, column: 98 }, Point { row: 4, column: 99 }, Point { row: 4, column: 100 }], ['1', '4', '7']
+[Point { row: 4, column: 103 }, Point { row: 4, column: 104 }, Point { row: 4, column: 105 }], ['1', '4', '3']
+[Point { row: 4, column: 113 }, Point { row: 4, column: 114 }], ['7', '8']
+[Point { row: 4, column: 119 }, Point { row: 4, column: 120 }, Point { row: 4, column: 121 }], ['5', '3', '6']
+[Point { row: 4, column: 124 }, Point { row: 4, column: 125 }], ['7', '9']
+[Point { row: 5, column: 11 }, Point { row: 5, column: 12 }, Point { row: 5, column: 13 }], ['8', '2', '8']
+[Point { row: 5, column: 17 }, Point { row: 5, column: 18 }, Point { row: 5, column: 19 }], ['5', '5', '9']
+[Point { row: 5, column: 37 }, Point { row: 5, column: 38 }, Point { row: 5, column: 39 }], ['1', '8', '1']
+[Point { row: 5, column: 54 }, Point { row: 5, column: 55 }, Point { row: 5, column: 56 }], ['6', '1', '3']
+[Point { row: 5, column: 64 }, Point { row: 5, column: 65 }], ['1', '0']
+[Point { row: 5, column: 69 }, Point { row: 5, column: 70 }, Point { row: 5, column: 71 }], ['9', '2', '8']
+[Point { row: 5, column: 79 }, Point { row: 5, column: 80 }, Point { row: 5, column: 81 }], ['9', '9', '3']
+[Point { row: 5, column: 93 }, Point { row: 5, column: 94 }, Point { row: 5, column: 95 }], ['7', '5', '8']
+[Point { row: 5, column: 107 }, Point { row: 5, column: 108 }, Point { row: 5, column: 109 }], ['4', '7', '1']
+[Point { row: 5, column: 132 }, Point { row: 5, column: 133 }, Point { row: 5, column: 134 }], ['5', '7', '3']
+[Point { row: 6, column: 21 }, Point { row: 6, column: 22 }, Point { row: 6, column: 23 }], ['1', '6', '4']
+[Point { row: 6, column: 27 }, Point { row: 6, column: 28 }, Point { row: 6, column: 29 }], ['1', '3', '2']
+[Point { row: 6, column: 75 }, Point { row: 6, column: 76 }], ['4', '7']
+[Point { row: 6, column: 86 }, Point { row: 6, column: 87 }, Point { row: 6, column: 88 }], ['1', '8', '6']
+[Point { row: 6, column: 98 }, Point { row: 6, column: 99 }, Point { row: 6, column: 100 }], ['3', '1', '3']
+[Point { row: 6, column: 115 }, Point { row: 6, column: 116 }, Point { row: 6, column: 117 }], ['4', '1', '1']
+[Point { row: 7, column: 15 }, Point { row: 7, column: 16 }, Point { row: 7, column: 17 }], ['3', '4', '2']
+[Point { row: 7, column: 33 }, Point { row: 7, column: 34 }, Point { row: 7, column: 35 }], ['8', '2', '3']
+[Point { row: 7, column: 41 }, Point { row: 7, column: 42 }, Point { row: 7, column: 43 }], ['5', '3', '3']
+[Point { row: 7, column: 48 }, Point { row: 7, column: 49 }, Point { row: 7, column: 50 }], ['5', '1', '9']
+[Point { row: 7, column: 56 }, Point { row: 7, column: 57 }, Point { row: 7, column: 58 }], ['8', '9', '9']
+[Point { row: 7, column: 62 }, Point { row: 7, column: 63 }, Point { row: 7, column: 64 }], ['3', '1', '0']
+[Point { row: 7, column: 90 }, Point { row: 7, column: 91 }, Point { row: 7, column: 92 }], ['3', '2', '5']
+[Point { row: 7, column: 104 }, Point { row: 7, column: 105 }], ['1', '5']
+[Point { row: 7, column: 126 }, Point { row: 7, column: 127 }, Point { row: 7, column: 128 }], ['4', '0', '7']
+[Point { row: 8, column: 0 }, Point { row: 8, column: 1 }, Point { row: 8, column: 2 }], ['5', '1', '5']
+[Point { row: 8, column: 9 }, Point { row: 8, column: 10 }, Point { row: 8, column: 11 }], ['9', '1', '6']
+[Point { row: 8, column: 69 }, Point { row: 8, column: 70 }, Point { row: 8, column: 71 }], ['9', '6', '1']
+[Point { row: 8, column: 81 }, Point { row: 8, column: 82 }, Point { row: 8, column: 83 }], ['8', '2', '7']
+[Point { row: 8, column: 108 }, Point { row: 8, column: 109 }, Point { row: 8, column: 110 }], ['5', '6', '7']
+[Point { row: 8, column: 116 }, Point { row: 8, column: 117 }, Point { row: 8, column: 118 }], ['2', '3', '8']
+[Point { row: 8, column: 122 }, Point { row: 8, column: 123 }, Point { row: 8, column: 124 }], ['8', '7', '4']
+[Point { row: 8, column: 133 }, Point { row: 8, column: 134 }, Point { row: 8, column: 135 }], ['4', '2', '0']
+[Point { row: 9, column: 15 }, Point { row: 9, column: 16 }, Point { row: 9, column: 17 }], ['2', '0', '7']
+[Point { row: 9, column: 21 }, Point { row: 9, column: 22 }, Point { row: 9, column: 23 }], ['8', '8', '2']
+[Point { row: 9, column: 30 }, Point { row: 9, column: 31 }, Point { row: 9, column: 32 }], ['7', '1', '9']
+[Point { row: 9, column: 37 }, Point { row: 9, column: 38 }, Point { row: 9, column: 39 }], ['4', '5', '5']
+[Point { row: 9, column: 41 }, Point { row: 9, column: 42 }, Point { row: 9, column: 43 }], ['9', '7', '3']
+[Point { row: 9, column: 63 }, Point { row: 9, column: 64 }, Point { row: 9, column: 65 }], ['3', '6', '9']
+[Point { row: 9, column: 76 }, Point { row: 9, column: 77 }, Point { row: 9, column: 78 }], ['9', '1', '3']
+[Point { row: 9, column: 87 }, Point { row: 9, column: 88 }, Point { row: 9, column: 89 }], ['9', '7', '8']
+[Point { row: 9, column: 96 }, Point { row: 9, column: 97 }, Point { row: 9, column: 98 }], ['7', '2', '0']
+[Point { row: 10, column: 8 }, Point { row: 10, column: 9 }, Point { row: 10, column: 10 }], ['3', '0', '6']
+[Point { row: 10, column: 59 }, Point { row: 10, column: 60 }, Point { row: 10, column: 61 }], ['1', '8', '2']
+[Point { row: 10, column: 67 }, Point { row: 10, column: 68 }, Point { row: 10, column: 69 }], ['5', '3', '4']
+[Point { row: 10, column: 92 }, Point { row: 10, column: 93 }, Point { row: 10, column: 94 }], ['2', '2', '9']
+[Point { row: 10, column: 103 }, Point { row: 10, column: 104 }, Point { row: 10, column: 105 }], ['7', '4', '4']
+[Point { row: 10, column: 132 }, Point { row: 10, column: 133 }, Point { row: 10, column: 134 }], ['9', '1', '8']
+[Point { row: 11, column: 0 }, Point { row: 11, column: 1 }, Point { row: 11, column: 2 }], ['3', '0', '3']
+[Point { row: 11, column: 14 }, Point { row: 11, column: 15 }, Point { row: 11, column: 16 }], ['7', '4', '5']
+[Point { row: 11, column: 28 }, Point { row: 11, column: 29 }, Point { row: 11, column: 30 }], ['3', '6', '1']
+[Point { row: 11, column: 45 }, Point { row: 11, column: 46 }, Point { row: 11, column: 47 }], ['2', '2', '3']
+[Point { row: 11, column: 50 }, Point { row: 11, column: 51 }, Point { row: 11, column: 52 }], ['2', '4', '3']
+[Point { row: 11, column: 54 }, Point { row: 11, column: 55 }, Point { row: 11, column: 56 }], ['1', '2', '9']
+[Point { row: 11, column: 80 }, Point { row: 11, column: 81 }, Point { row: 11, column: 82 }], ['8', '3', '0']
+[Point { row: 11, column: 113 }, Point { row: 11, column: 114 }, Point { row: 11, column: 115 }], ['4', '9', '3']
+[Point { row: 11, column: 120 }, Point { row: 11, column: 121 }, Point { row: 11, column: 122 }], ['1', '0', '6']
+[Point { row: 12, column: 18 }, Point { row: 12, column: 19 }, Point { row: 12, column: 20 }], ['2', '0', '9']
+[Point { row: 12, column: 23 }, Point { row: 12, column: 24 }], ['1', '7']
+[Point { row: 12, column: 34 }, Point { row: 12, column: 35 }, Point { row: 12, column: 36 }], ['4', '9', '4']
+[Point { row: 12, column: 38 }, Point { row: 12, column: 39 }, Point { row: 12, column: 40 }], ['9', '1', '0']
+[Point { row: 12, column: 58 }, Point { row: 12, column: 59 }], ['9', '0']
+[Point { row: 12, column: 64 }, Point { row: 12, column: 65 }, Point { row: 12, column: 66 }], ['4', '9', '6']
+[Point { row: 12, column: 72 }, Point { row: 12, column: 73 }, Point { row: 12, column: 74 }], ['7', '0', '9']
+[Point { row: 12, column: 86 }, Point { row: 12, column: 87 }, Point { row: 12, column: 88 }], ['8', '9', '6']
+[Point { row: 13, column: 7 }, Point { row: 13, column: 8 }, Point { row: 13, column: 9 }], ['5', '6', '2']
+[Point { row: 13, column: 43 }, Point { row: 13, column: 44 }, Point { row: 13, column: 45 }], ['5', '2', '8']
+[Point { row: 13, column: 53 }, Point { row: 13, column: 54 }, Point { row: 13, column: 55 }], ['3', '2', '1']
+[Point { row: 13, column: 68 }, Point { row: 13, column: 69 }, Point { row: 13, column: 70 }], ['6', '7', '3']
+[Point { row: 13, column: 93 }, Point { row: 13, column: 94 }, Point { row: 13, column: 95 }], ['8', '8', '7']
+[Point { row: 13, column: 99 }, Point { row: 13, column: 100 }, Point { row: 13, column: 101 }], ['2', '3', '1']
+[Point { row: 13, column: 117 }, Point { row: 13, column: 118 }, Point { row: 13, column: 119 }], ['7', '0', '0']
+[Point { row: 13, column: 134 }, Point { row: 13, column: 135 }, Point { row: 13, column: 136 }], ['1', '1', '6']
+[Point { row: 14, column: 1 }, Point { row: 14, column: 2 }, Point { row: 14, column: 3 }], ['9', '8', '8']
+[Point { row: 14, column: 11 }, Point { row: 14, column: 12 }, Point { row: 14, column: 13 }], ['9', '4', '4']
+[Point { row: 14, column: 17 }, Point { row: 14, column: 18 }, Point { row: 14, column: 19 }], ['5', '9', '6']
+[Point { row: 14, column: 28 }, Point { row: 14, column: 29 }, Point { row: 14, column: 30 }], ['8', '0', '6']
+[Point { row: 14, column: 34 }, Point { row: 14, column: 35 }], ['2', '4']
+[Point { row: 14, column: 38 }, Point { row: 14, column: 39 }, Point { row: 14, column: 40 }], ['5', '1', '9']
+[Point { row: 14, column: 78 }, Point { row: 14, column: 79 }, Point { row: 14, column: 80 }], ['1', '4', '6']
+[Point { row: 14, column: 112 }, Point { row: 14, column: 113 }, Point { row: 14, column: 114 }], ['5', '5', '4']
+[Point { row: 15, column: 50 }, Point { row: 15, column: 51 }, Point { row: 15, column: 52 }], ['8', '2', '2']
+[Point { row: 15, column: 56 }, Point { row: 15, column: 57 }, Point { row: 15, column: 58 }], ['6', '2', '1']
+[Point { row: 15, column: 61 }, Point { row: 15, column: 62 }, Point { row: 15, column: 63 }], ['7', '7', '1']
+[Point { row: 15, column: 66 }, Point { row: 15, column: 67 }, Point { row: 15, column: 68 }], ['1', '5', '1']
+[Point { row: 15, column: 70 }, Point { row: 15, column: 71 }, Point { row: 15, column: 72 }], ['5', '0', '4']
+[Point { row: 15, column: 82 }, Point { row: 15, column: 83 }, Point { row: 15, column: 84 }], ['6', '2', '8']
+[Point { row: 15, column: 86 }, Point { row: 15, column: 87 }, Point { row: 15, column: 88 }], ['3', '4', '3']
+[Point { row: 15, column: 91 }, Point { row: 15, column: 92 }], ['3', '4']
+[Point { row: 15, column: 116 }, Point { row: 15, column: 117 }, Point { row: 15, column: 118 }], ['3', '2', '9']
+[Point { row: 15, column: 120 }, Point { row: 15, column: 121 }, Point { row: 15, column: 122 }], ['3', '0', '3']
+[Point { row: 15, column: 125 }, Point { row: 15, column: 126 }, Point { row: 15, column: 127 }], ['6', '4', '1']
+[Point { row: 15, column: 130 }, Point { row: 15, column: 131 }, Point { row: 15, column: 132 }], ['6', '7', '8']
+[Point { row: 16, column: 24 }, Point { row: 16, column: 25 }, Point { row: 16, column: 26 }], ['3', '6', '1']
+[Point { row: 16, column: 32 }, Point { row: 16, column: 33 }, Point { row: 16, column: 34 }], ['3', '4', '7']
+[Point { row: 16, column: 36 }, Point { row: 16, column: 37 }, Point { row: 16, column: 38 }], ['5', '2', '4']
+[Point { row: 16, column: 41 }, Point { row: 16, column: 42 }, Point { row: 16, column: 43 }], ['5', '3', '8']
+[Point { row: 16, column: 78 }, Point { row: 16, column: 79 }, Point { row: 16, column: 80 }], ['7', '9', '0']
+[Point { row: 16, column: 94 }, Point { row: 16, column: 95 }, Point { row: 16, column: 96 }], ['9', '3', '3']
+[Point { row: 16, column: 99 }, Point { row: 16, column: 100 }, Point { row: 16, column: 101 }], ['7', '2', '4']
+[Point { row: 16, column: 108 }, Point { row: 16, column: 109 }, Point { row: 16, column: 110 }], ['6', '9', '9']
+[Point { row: 16, column: 136 }, Point { row: 16, column: 137 }, Point { row: 16, column: 138 }], ['2', '6', '2']
+[Point { row: 17, column: 1 }, Point { row: 17, column: 2 }, Point { row: 17, column: 3 }], ['7', '1', '6']
+[Point { row: 17, column: 6 }, Point { row: 17, column: 7 }, Point { row: 17, column: 8 }], ['5', '1', '7']
+[Point { row: 17, column: 47 }, Point { row: 17, column: 48 }, Point { row: 17, column: 49 }], ['9', '5', '5']
+[Point { row: 17, column: 53 }, Point { row: 17, column: 54 }, Point { row: 17, column: 55 }], ['5', '4', '4']
+[Point { row: 17, column: 61 }, Point { row: 17, column: 62 }, Point { row: 17, column: 63 }], ['2', '3', '8']
+[Point { row: 17, column: 66 }, Point { row: 17, column: 67 }, Point { row: 17, column: 68 }], ['5', '9', '3']
+[Point { row: 17, column: 74 }, Point { row: 17, column: 75 }, Point { row: 17, column: 76 }], ['3', '9', '9']
+[Point { row: 17, column: 119 }, Point { row: 17, column: 120 }, Point { row: 17, column: 121 }], ['2', '4', '1']
+[Point { row: 17, column: 127 }, Point { row: 17, column: 128 }, Point { row: 17, column: 129 }], ['9', '3', '0']
+[Point { row: 18, column: 13 }, Point { row: 18, column: 14 }, Point { row: 18, column: 15 }], ['7', '4', '4']
+[Point { row: 18, column: 20 }, Point { row: 18, column: 21 }, Point { row: 18, column: 22 }], ['5', '5', '0']
+[Point { row: 18, column: 34 }, Point { row: 18, column: 35 }, Point { row: 18, column: 36 }], ['1', '3', '1']
+[Point { row: 18, column: 41 }, Point { row: 18, column: 42 }, Point { row: 18, column: 43 }], ['9', '6', '4']
+[Point { row: 18, column: 57 }, Point { row: 18, column: 58 }, Point { row: 18, column: 59 }], ['2', '3', '4']
+[Point { row: 18, column: 82 }, Point { row: 18, column: 83 }, Point { row: 18, column: 84 }], ['8', '5', '6']
+[Point { row: 18, column: 87 }, Point { row: 18, column: 88 }, Point { row: 18, column: 89 }], ['8', '0', '9']
+[Point { row: 18, column: 92 }, Point { row: 18, column: 93 }, Point { row: 18, column: 94 }], ['4', '5', '0']
+[Point { row: 18, column: 104 }, Point { row: 18, column: 105 }, Point { row: 18, column: 106 }], ['3', '3', '2']
+[Point { row: 18, column: 112 }, Point { row: 18, column: 113 }, Point { row: 18, column: 114 }], ['4', '1', '9']
+[Point { row: 18, column: 133 }, Point { row: 18, column: 134 }, Point { row: 18, column: 135 }], ['3', '8', '9']
+[Point { row: 19, column: 8 }, Point { row: 19, column: 9 }, Point { row: 19, column: 10 }], ['2', '6', '4']
+[Point { row: 19, column: 26 }, Point { row: 19, column: 27 }, Point { row: 19, column: 28 }], ['7', '9', '8']
+[Point { row: 19, column: 51 }, Point { row: 19, column: 52 }, Point { row: 19, column: 53 }], ['8', '1', '6']
+[Point { row: 19, column: 63 }, Point { row: 19, column: 64 }, Point { row: 19, column: 65 }], ['2', '2', '8']
+[Point { row: 19, column: 73 }, Point { row: 19, column: 74 }, Point { row: 19, column: 75 }], ['5', '0', '1']
+[Point { row: 19, column: 78 }, Point { row: 19, column: 79 }, Point { row: 19, column: 80 }], ['2', '2', '4']
+[Point { row: 19, column: 99 }, Point { row: 19, column: 100 }, Point { row: 19, column: 101 }], ['6', '4', '5']
+[Point { row: 19, column: 116 }, Point { row: 19, column: 117 }, Point { row: 19, column: 118 }], ['4', '9', '9']
+[Point { row: 20, column: 15 }, Point { row: 20, column: 16 }, Point { row: 20, column: 17 }], ['9', '3', '9']
+[Point { row: 20, column: 47 }, Point { row: 20, column: 48 }, Point { row: 20, column: 49 }], ['7', '9', '5']
+[Point { row: 20, column: 106 }, Point { row: 20, column: 107 }, Point { row: 20, column: 108 }], ['7', '8', '9']
+[Point { row: 20, column: 125 }, Point { row: 20, column: 126 }, Point { row: 20, column: 127 }], ['9', '0', '7']
+[Point { row: 20, column: 133 }, Point { row: 20, column: 134 }, Point { row: 20, column: 135 }], ['6', '4', '7']
+[Point { row: 21, column: 5 }, Point { row: 21, column: 6 }, Point { row: 21, column: 7 }], ['6', '1', '2']
+[Point { row: 21, column: 20 }, Point { row: 21, column: 21 }, Point { row: 21, column: 22 }], ['6', '1', '2']
+[Point { row: 21, column: 25 }, Point { row: 21, column: 26 }, Point { row: 21, column: 27 }], ['2', '9', '1']
+[Point { row: 21, column: 30 }, Point { row: 21, column: 31 }, Point { row: 21, column: 32 }], ['5', '9', '2']
+[Point { row: 21, column: 59 }, Point { row: 21, column: 60 }, Point { row: 21, column: 61 }], ['5', '6', '7']
+[Point { row: 21, column: 81 }, Point { row: 21, column: 82 }, Point { row: 21, column: 83 }], ['3', '9', '1']
+[Point { row: 21, column: 114 }, Point { row: 21, column: 115 }, Point { row: 21, column: 116 }], ['3', '8', '7']
+[Point { row: 21, column: 129 }, Point { row: 21, column: 130 }], ['6', '4']
+[Point { row: 22, column: 16 }, Point { row: 22, column: 17 }], ['2', '4']
+[Point { row: 22, column: 41 }, Point { row: 22, column: 42 }, Point { row: 22, column: 43 }], ['8', '1', '4']
+[Point { row: 22, column: 72 }, Point { row: 22, column: 73 }, Point { row: 22, column: 74 }], ['3', '4', '6']
+[Point { row: 22, column: 91 }, Point { row: 22, column: 92 }, Point { row: 22, column: 93 }], ['4', '4', '4']
+[Point { row: 22, column: 106 }, Point { row: 22, column: 107 }, Point { row: 22, column: 108 }], ['8', '3', '3']
+[Point { row: 22, column: 124 }, Point { row: 22, column: 125 }, Point { row: 22, column: 126 }], ['8', '4', '5']
+[Point { row: 23, column: 11 }, Point { row: 23, column: 12 }, Point { row: 23, column: 13 }], ['3', '0', '3']
+[Point { row: 23, column: 23 }, Point { row: 23, column: 24 }, Point { row: 23, column: 25 }], ['6', '0', '5']
+[Point { row: 23, column: 28 }, Point { row: 23, column: 29 }, Point { row: 23, column: 30 }], ['3', '2', '6']
+[Point { row: 23, column: 36 }, Point { row: 23, column: 37 }, Point { row: 23, column: 38 }], ['1', '0', '8']
+[Point { row: 23, column: 49 }, Point { row: 23, column: 50 }], ['5', '6']
+[Point { row: 23, column: 53 }, Point { row: 23, column: 54 }, Point { row: 23, column: 55 }], ['8', '4', '2']
+[Point { row: 23, column: 67 }, Point { row: 23, column: 68 }, Point { row: 23, column: 69 }], ['3', '8', '7']
+[Point { row: 23, column: 76 }, Point { row: 23, column: 77 }, Point { row: 23, column: 78 }], ['4', '7', '8']
+[Point { row: 23, column: 82 }, Point { row: 23, column: 83 }, Point { row: 23, column: 84 }], ['2', '7', '2']
+[Point { row: 23, column: 110 }, Point { row: 23, column: 111 }, Point { row: 23, column: 112 }], ['7', '7', '8']
+[Point { row: 23, column: 118 }, Point { row: 23, column: 119 }, Point { row: 23, column: 120 }], ['2', '9', '9']
+[Point { row: 23, column: 128 }, Point { row: 23, column: 129 }, Point { row: 23, column: 130 }], ['7', '2', '2']
+[Point { row: 24, column: 6 }, Point { row: 24, column: 7 }, Point { row: 24, column: 8 }], ['4', '8', '4']
+[Point { row: 24, column: 18 }, Point { row: 24, column: 19 }, Point { row: 24, column: 20 }], ['7', '5', '3']
+[Point { row: 24, column: 44 }, Point { row: 24, column: 45 }, Point { row: 24, column: 46 }], ['4', '4', '9']
+[Point { row: 24, column: 62 }, Point { row: 24, column: 63 }, Point { row: 24, column: 64 }], ['5', '5', '9']
+[Point { row: 24, column: 72 }, Point { row: 24, column: 73 }, Point { row: 24, column: 74 }], ['1', '4', '4']
+[Point { row: 24, column: 88 }, Point { row: 24, column: 89 }, Point { row: 24, column: 90 }], ['6', '9', '5']
+[Point { row: 24, column: 100 }, Point { row: 24, column: 101 }, Point { row: 24, column: 102 }], ['6', '7', '5']
+[Point { row: 24, column: 137 }, Point { row: 24, column: 138 }, Point { row: 24, column: 139 }], ['2', '5', '3']
+[Point { row: 25, column: 94 }, Point { row: 25, column: 95 }, Point { row: 25, column: 96 }], ['9', '8', '7']
+[Point { row: 25, column: 104 }, Point { row: 25, column: 105 }, Point { row: 25, column: 106 }], ['2', '0', '0']
+[Point { row: 25, column: 120 }, Point { row: 25, column: 121 }, Point { row: 25, column: 122 }], ['4', '4', '5']
+[Point { row: 25, column: 130 }, Point { row: 25, column: 131 }, Point { row: 25, column: 132 }], ['1', '2', '4']
+[Point { row: 26, column: 4 }, Point { row: 26, column: 5 }, Point { row: 26, column: 6 }], ['8', '2', '5']
+[Point { row: 26, column: 19 }, Point { row: 26, column: 20 }, Point { row: 26, column: 21 }], ['6', '0', '3']
+[Point { row: 26, column: 26 }, Point { row: 26, column: 27 }, Point { row: 26, column: 28 }], ['5', '4', '4']
+[Point { row: 26, column: 30 }, Point { row: 26, column: 31 }, Point { row: 26, column: 32 }], ['6', '3', '4']
+[Point { row: 26, column: 57 }, Point { row: 26, column: 58 }, Point { row: 26, column: 59 }], ['4', '3', '2']
+[Point { row: 26, column: 64 }, Point { row: 26, column: 65 }, Point { row: 26, column: 66 }], ['8', '7', '5']
+[Point { row: 26, column: 70 }, Point { row: 26, column: 71 }, Point { row: 26, column: 72 }], ['7', '3', '8']
+[Point { row: 26, column: 88 }, Point { row: 26, column: 89 }, Point { row: 26, column: 90 }], ['7', '3', '1']
+[Point { row: 26, column: 110 }, Point { row: 26, column: 111 }, Point { row: 26, column: 112 }], ['4', '8', '8']
+[Point { row: 26, column: 114 }, Point { row: 26, column: 115 }, Point { row: 26, column: 116 }], ['3', '6', '3']
+[Point { row: 26, column: 125 }, Point { row: 26, column: 126 }, Point { row: 26, column: 127 }], ['6', '6', '3']
+[Point { row: 26, column: 137 }, Point { row: 26, column: 138 }, Point { row: 26, column: 139 }], ['8', '7', '6']
+[Point { row: 27, column: 8 }, Point { row: 27, column: 9 }, Point { row: 27, column: 10 }], ['7', '5', '5']
+[Point { row: 27, column: 94 }, Point { row: 27, column: 95 }, Point { row: 27, column: 96 }], ['4', '7', '0']
+[Point { row: 27, column: 99 }, Point { row: 27, column: 100 }, Point { row: 27, column: 101 }], ['3', '1', '4']
+[Point { row: 27, column: 103 }, Point { row: 27, column: 104 }, Point { row: 27, column: 105 }], ['1', '4', '5']
+[Point { row: 27, column: 120 }, Point { row: 27, column: 121 }, Point { row: 27, column: 122 }], ['2', '7', '7']
+[Point { row: 27, column: 132 }, Point { row: 27, column: 133 }, Point { row: 27, column: 134 }], ['2', '3', '4']
+[Point { row: 28, column: 4 }, Point { row: 28, column: 5 }, Point { row: 28, column: 6 }], ['3', '2', '3']
+[Point { row: 28, column: 16 }, Point { row: 28, column: 17 }, Point { row: 28, column: 18 }], ['2', '2', '1']
+[Point { row: 28, column: 33 }, Point { row: 28, column: 34 }, Point { row: 28, column: 35 }], ['8', '9', '2']
+[Point { row: 28, column: 39 }, Point { row: 28, column: 40 }, Point { row: 28, column: 41 }], ['2', '8', '4']
+[Point { row: 28, column: 44 }, Point { row: 28, column: 45 }, Point { row: 28, column: 46 }], ['4', '7', '3']
+[Point { row: 28, column: 52 }, Point { row: 28, column: 53 }], ['4', '4']
+[Point { row: 28, column: 60 }, Point { row: 28, column: 61 }, Point { row: 28, column: 62 }], ['3', '4', '2']
+[Point { row: 28, column: 64 }, Point { row: 28, column: 65 }, Point { row: 28, column: 66 }], ['6', '2', '2']
+[Point { row: 28, column: 76 }, Point { row: 28, column: 77 }, Point { row: 28, column: 78 }], ['7', '0', '7']
+[Point { row: 28, column: 83 }, Point { row: 28, column: 84 }, Point { row: 28, column: 85 }], ['4', '1', '3']
+[Point { row: 28, column: 89 }, Point { row: 28, column: 90 }, Point { row: 28, column: 91 }], ['9', '8', '4']
+[Point { row: 29, column: 71 }, Point { row: 29, column: 72 }, Point { row: 29, column: 73 }], ['3', '5', '1']
+[Point { row: 29, column: 108 }, Point { row: 29, column: 109 }, Point { row: 29, column: 110 }], ['2', '2', '6']
+[Point { row: 29, column: 121 }, Point { row: 29, column: 122 }, Point { row: 29, column: 123 }], ['1', '5', '5']
+[Point { row: 29, column: 128 }, Point { row: 29, column: 129 }, Point { row: 29, column: 130 }], ['9', '7', '3']
+[Point { row: 30, column: 15 }, Point { row: 30, column: 16 }, Point { row: 30, column: 17 }], ['1', '7', '7']
+[Point { row: 30, column: 19 }, Point { row: 30, column: 20 }, Point { row: 30, column: 21 }], ['9', '9', '1']
+[Point { row: 30, column: 32 }, Point { row: 30, column: 33 }, Point { row: 30, column: 34 }], ['2', '6', '8']
+[Point { row: 30, column: 48 }, Point { row: 30, column: 49 }, Point { row: 30, column: 50 }], ['5', '3', '2']
+[Point { row: 30, column: 65 }, Point { row: 30, column: 66 }, Point { row: 30, column: 67 }], ['2', '7', '7']
+[Point { row: 30, column: 76 }, Point { row: 30, column: 77 }, Point { row: 30, column: 78 }], ['1', '8', '3']
+[Point { row: 30, column: 86 }, Point { row: 30, column: 87 }, Point { row: 30, column: 88 }], ['9', '3', '5']
+[Point { row: 30, column: 98 }, Point { row: 30, column: 99 }, Point { row: 30, column: 100 }], ['9', '1', '7']
+[Point { row: 30, column: 114 }, Point { row: 30, column: 115 }, Point { row: 30, column: 116 }], ['8', '2', '5']
+[Point { row: 31, column: 28 }, Point { row: 31, column: 29 }, Point { row: 31, column: 30 }], ['4', '1', '3']
+[Point { row: 31, column: 39 }, Point { row: 31, column: 40 }, Point { row: 31, column: 41 }], ['3', '0', '4']
+[Point { row: 31, column: 57 }, Point { row: 31, column: 58 }, Point { row: 31, column: 59 }], ['3', '8', '4']
+[Point { row: 31, column: 82 }, Point { row: 31, column: 83 }, Point { row: 31, column: 84 }], ['7', '4', '8']
+[Point { row: 31, column: 103 }, Point { row: 31, column: 104 }, Point { row: 31, column: 105 }], ['9', '5', '5']
+[Point { row: 31, column: 125 }, Point { row: 31, column: 126 }, Point { row: 31, column: 127 }], ['8', '8', '5']
+[Point { row: 31, column: 129 }, Point { row: 31, column: 130 }, Point { row: 31, column: 131 }], ['9', '7', '0']
+[Point { row: 32, column: 3 }, Point { row: 32, column: 4 }], ['4', '4']
+[Point { row: 32, column: 8 }, Point { row: 32, column: 9 }, Point { row: 32, column: 10 }], ['6', '2', '7']
+[Point { row: 32, column: 21 }, Point { row: 32, column: 22 }, Point { row: 32, column: 23 }], ['3', '6', '8']
+[Point { row: 32, column: 65 }, Point { row: 32, column: 66 }, Point { row: 32, column: 67 }], ['3', '1', '4']
+[Point { row: 32, column: 70 }, Point { row: 32, column: 71 }, Point { row: 32, column: 72 }], ['2', '9', '3']
+[Point { row: 32, column: 92 }, Point { row: 32, column: 93 }, Point { row: 32, column: 94 }], ['1', '0', '2']
+[Point { row: 32, column: 97 }, Point { row: 32, column: 98 }, Point { row: 32, column: 99 }], ['1', '0', '8']
+[Point { row: 33, column: 41 }, Point { row: 33, column: 42 }, Point { row: 33, column: 43 }], ['7', '3', '3']
+[Point { row: 33, column: 46 }, Point { row: 33, column: 47 }, Point { row: 33, column: 48 }], ['4', '3', '3']
+[Point { row: 33, column: 52 }, Point { row: 33, column: 53 }, Point { row: 33, column: 54 }], ['1', '2', '8']
+[Point { row: 33, column: 77 }, Point { row: 33, column: 78 }, Point { row: 33, column: 79 }], ['8', '8', '9']
+[Point { row: 33, column: 107 }, Point { row: 33, column: 108 }, Point { row: 33, column: 109 }], ['6', '6', '1']
+[Point { row: 33, column: 120 }, Point { row: 33, column: 121 }, Point { row: 33, column: 122 }], ['3', '5', '8']
+[Point { row: 33, column: 131 }, Point { row: 33, column: 132 }, Point { row: 33, column: 133 }], ['2', '8', '1']
+[Point { row: 34, column: 5 }, Point { row: 34, column: 6 }], ['3', '5']
+[Point { row: 34, column: 29 }, Point { row: 34, column: 30 }, Point { row: 34, column: 31 }], ['8', '3', '4']
+[Point { row: 34, column: 36 }, Point { row: 34, column: 37 }, Point { row: 34, column: 38 }], ['6', '9', '9']
+[Point { row: 34, column: 69 }, Point { row: 34, column: 70 }, Point { row: 34, column: 71 }], ['4', '6', '1']
+[Point { row: 34, column: 127 }, Point { row: 34, column: 128 }, Point { row: 34, column: 129 }], ['3', '7', '4']
+[Point { row: 34, column: 137 }, Point { row: 34, column: 138 }, Point { row: 34, column: 139 }], ['4', '1', '2']
+[Point { row: 35, column: 12 }, Point { row: 35, column: 13 }, Point { row: 35, column: 14 }], ['7', '6', '3']
+[Point { row: 35, column: 17 }, Point { row: 35, column: 18 }, Point { row: 35, column: 19 }], ['2', '0', '1']
+[Point { row: 35, column: 51 }, Point { row: 35, column: 52 }, Point { row: 35, column: 53 }], ['3', '9', '2']
+[Point { row: 35, column: 62 }, Point { row: 35, column: 63 }, Point { row: 35, column: 64 }], ['3', '4', '1']
+[Point { row: 35, column: 73 }, Point { row: 35, column: 74 }], ['9', '6']
+[Point { row: 35, column: 81 }, Point { row: 35, column: 82 }, Point { row: 35, column: 83 }], ['7', '2', '3']
+[Point { row: 35, column: 85 }, Point { row: 35, column: 86 }, Point { row: 35, column: 87 }], ['3', '4', '0']
+[Point { row: 35, column: 97 }, Point { row: 35, column: 98 }, Point { row: 35, column: 99 }], ['3', '2', '7']
+[Point { row: 35, column: 101 }, Point { row: 35, column: 102 }, Point { row: 35, column: 103 }], ['7', '3', '6']
+[Point { row: 35, column: 107 }], ['1']
+[Point { row: 35, column: 111 }, Point { row: 35, column: 112 }, Point { row: 35, column: 113 }], ['8', '9', '7']
+[Point { row: 35, column: 119 }, Point { row: 35, column: 120 }, Point { row: 35, column: 121 }], ['4', '7', '1']
+[Point { row: 36, column: 6 }, Point { row: 36, column: 7 }, Point { row: 36, column: 8 }], ['5', '1', '2']
+[Point { row: 36, column: 21 }, Point { row: 36, column: 22 }, Point { row: 36, column: 23 }], ['2', '2', '1']
+[Point { row: 36, column: 37 }, Point { row: 36, column: 38 }, Point { row: 36, column: 39 }], ['1', '2', '5']
+[Point { row: 36, column: 45 }, Point { row: 36, column: 46 }, Point { row: 36, column: 47 }], ['2', '5', '7']
+[Point { row: 36, column: 77 }, Point { row: 36, column: 78 }, Point { row: 36, column: 79 }], ['2', '7', '7']
+[Point { row: 37, column: 2 }, Point { row: 37, column: 3 }, Point { row: 37, column: 4 }], ['3', '0', '1']
+[Point { row: 37, column: 11 }, Point { row: 37, column: 12 }, Point { row: 37, column: 13 }], ['6', '9', '4']
+[Point { row: 37, column: 28 }, Point { row: 37, column: 29 }], ['5', '4']
+[Point { row: 37, column: 55 }, Point { row: 37, column: 56 }, Point { row: 37, column: 57 }], ['6', '1', '1']
+[Point { row: 37, column: 73 }, Point { row: 37, column: 74 }, Point { row: 37, column: 75 }], ['5', '9', '6']
+[Point { row: 37, column: 82 }, Point { row: 37, column: 83 }, Point { row: 37, column: 84 }], ['1', '0', '0']
+[Point { row: 37, column: 92 }, Point { row: 37, column: 93 }, Point { row: 37, column: 94 }], ['1', '6', '4']
+[Point { row: 37, column: 96 }, Point { row: 37, column: 97 }, Point { row: 37, column: 98 }], ['8', '0', '1']
+[Point { row: 37, column: 103 }, Point { row: 37, column: 104 }, Point { row: 37, column: 105 }], ['5', '9', '6']
+[Point { row: 37, column: 108 }, Point { row: 37, column: 109 }, Point { row: 37, column: 110 }], ['4', '9', '0']
+[Point { row: 37, column: 116 }, Point { row: 37, column: 117 }, Point { row: 37, column: 118 }], ['3', '6', '1']
+[Point { row: 37, column: 128 }, Point { row: 37, column: 129 }, Point { row: 37, column: 130 }], ['4', '1', '5']
+[Point { row: 37, column: 135 }, Point { row: 37, column: 136 }, Point { row: 37, column: 137 }], ['4', '1', '2']
+[Point { row: 38, column: 18 }, Point { row: 38, column: 19 }, Point { row: 38, column: 20 }], ['2', '4', '3']
+[Point { row: 38, column: 24 }, Point { row: 38, column: 25 }, Point { row: 38, column: 26 }], ['9', '2', '7']
+[Point { row: 38, column: 37 }, Point { row: 38, column: 38 }], ['2', '9']
+[Point { row: 38, column: 40 }, Point { row: 38, column: 41 }, Point { row: 38, column: 42 }], ['2', '9', '3']
+[Point { row: 38, column: 51 }, Point { row: 38, column: 52 }, Point { row: 38, column: 53 }], ['6', '4', '5']
+[Point { row: 38, column: 62 }, Point { row: 38, column: 63 }, Point { row: 38, column: 64 }], ['8', '6', '2']
+[Point { row: 38, column: 66 }], ['2']
+[Point { row: 39, column: 29 }, Point { row: 39, column: 30 }, Point { row: 39, column: 31 }], ['6', '5', '5']
+[Point { row: 39, column: 33 }, Point { row: 39, column: 34 }, Point { row: 39, column: 35 }], ['9', '0', '6']
+[Point { row: 39, column: 47 }, Point { row: 39, column: 48 }, Point { row: 39, column: 49 }], ['5', '0', '0']
+[Point { row: 39, column: 70 }, Point { row: 39, column: 71 }, Point { row: 39, column: 72 }], ['1', '2', '5']
+[Point { row: 39, column: 74 }, Point { row: 39, column: 75 }, Point { row: 39, column: 76 }], ['6', '1', '3']
+[Point { row: 39, column: 79 }, Point { row: 39, column: 80 }, Point { row: 39, column: 81 }], ['8', '4', '4']
+[Point { row: 39, column: 98 }, Point { row: 39, column: 99 }, Point { row: 39, column: 100 }], ['4', '3', '5']
+[Point { row: 39, column: 107 }, Point { row: 39, column: 108 }, Point { row: 39, column: 109 }], ['9', '8', '4']
+[Point { row: 39, column: 114 }, Point { row: 39, column: 115 }, Point { row: 39, column: 116 }], ['7', '2', '5']
+[Point { row: 39, column: 120 }, Point { row: 39, column: 121 }, Point { row: 39, column: 122 }], ['5', '3', '1']
+[Point { row: 39, column: 128 }, Point { row: 39, column: 129 }, Point { row: 39, column: 130 }], ['7', '1', '1']
+[Point { row: 39, column: 133 }, Point { row: 39, column: 134 }], ['7', '9']
+[Point { row: 40, column: 3 }, Point { row: 40, column: 4 }, Point { row: 40, column: 5 }], ['8', '1', '7']
+[Point { row: 40, column: 9 }, Point { row: 40, column: 10 }, Point { row: 40, column: 11 }], ['4', '5', '0']
+[Point { row: 40, column: 42 }, Point { row: 40, column: 43 }, Point { row: 40, column: 44 }], ['4', '3', '1']
+[Point { row: 40, column: 84 }, Point { row: 40, column: 85 }, Point { row: 40, column: 86 }], ['9', '5', '7']
+[Point { row: 40, column: 92 }, Point { row: 40, column: 93 }, Point { row: 40, column: 94 }], ['7', '3', '9']
+[Point { row: 41, column: 14 }, Point { row: 41, column: 15 }, Point { row: 41, column: 16 }], ['2', '3', '7']
+[Point { row: 41, column: 23 }, Point { row: 41, column: 24 }, Point { row: 41, column: 25 }], ['1', '2', '2']
+[Point { row: 41, column: 27 }, Point { row: 41, column: 28 }], ['6', '6']
+[Point { row: 41, column: 30 }, Point { row: 41, column: 31 }, Point { row: 41, column: 32 }], ['9', '4', '2']
+[Point { row: 41, column: 55 }, Point { row: 41, column: 56 }, Point { row: 41, column: 57 }], ['5', '4', '8']
+[Point { row: 41, column: 76 }, Point { row: 41, column: 77 }, Point { row: 41, column: 78 }], ['5', '0', '6']
+[Point { row: 41, column: 80 }, Point { row: 41, column: 81 }, Point { row: 41, column: 82 }], ['4', '3', '5']
+[Point { row: 41, column: 98 }, Point { row: 41, column: 99 }], ['7', '3']
+[Point { row: 41, column: 101 }, Point { row: 41, column: 102 }, Point { row: 41, column: 103 }], ['8', '8', '3']
+[Point { row: 41, column: 116 }, Point { row: 41, column: 117 }, Point { row: 41, column: 118 }], ['6', '4', '4']
+[Point { row: 41, column: 122 }, Point { row: 41, column: 123 }, Point { row: 41, column: 124 }], ['1', '0', '1']
+[Point { row: 42, column: 1 }, Point { row: 42, column: 2 }, Point { row: 42, column: 3 }], ['8', '6', '3']
+[Point { row: 42, column: 46 }, Point { row: 42, column: 47 }], ['9', '8']
+[Point { row: 42, column: 50 }, Point { row: 42, column: 51 }, Point { row: 42, column: 52 }], ['2', '8', '3']
+[Point { row: 42, column: 61 }, Point { row: 42, column: 62 }, Point { row: 42, column: 63 }], ['5', '3', '2']
+[Point { row: 42, column: 70 }, Point { row: 42, column: 71 }, Point { row: 42, column: 72 }], ['7', '5', '0']
+[Point { row: 42, column: 109 }, Point { row: 42, column: 110 }, Point { row: 42, column: 111 }], ['5', '9', '4']
+[Point { row: 43, column: 14 }, Point { row: 43, column: 15 }, Point { row: 43, column: 16 }], ['4', '5', '1']
+[Point { row: 43, column: 26 }, Point { row: 43, column: 27 }, Point { row: 43, column: 28 }], ['6', '2', '3']
+[Point { row: 43, column: 67 }, Point { row: 43, column: 68 }], ['5', '0']
+[Point { row: 43, column: 77 }, Point { row: 43, column: 78 }], ['4', '4']
+[Point { row: 43, column: 84 }, Point { row: 43, column: 85 }, Point { row: 43, column: 86 }], ['1', '2', '3']
+[Point { row: 43, column: 93 }, Point { row: 43, column: 94 }, Point { row: 43, column: 95 }], ['9', '5', '1']
+[Point { row: 43, column: 113 }, Point { row: 43, column: 114 }], ['6', '2']
+[Point { row: 43, column: 116 }, Point { row: 43, column: 117 }, Point { row: 43, column: 118 }], ['9', '4', '3']
+[Point { row: 43, column: 125 }, Point { row: 43, column: 126 }, Point { row: 43, column: 127 }], ['3', '6', '5']
+[Point { row: 43, column: 131 }, Point { row: 43, column: 132 }, Point { row: 43, column: 133 }], ['9', '9', '5']
+[Point { row: 44, column: 1 }, Point { row: 44, column: 2 }, Point { row: 44, column: 3 }], ['6', '3', '9']
+[Point { row: 44, column: 18 }, Point { row: 44, column: 19 }, Point { row: 44, column: 20 }], ['8', '2', '7']
+[Point { row: 44, column: 22 }, Point { row: 44, column: 23 }, Point { row: 44, column: 24 }], ['2', '6', '5']
+[Point { row: 44, column: 31 }, Point { row: 44, column: 32 }, Point { row: 44, column: 33 }], ['1', '3', '2']
+[Point { row: 44, column: 36 }, Point { row: 44, column: 37 }, Point { row: 44, column: 38 }], ['3', '5', '4']
+[Point { row: 44, column: 40 }, Point { row: 44, column: 41 }, Point { row: 44, column: 42 }], ['1', '2', '7']
+[Point { row: 44, column: 54 }, Point { row: 44, column: 55 }, Point { row: 44, column: 56 }], ['3', '5', '0']
+[Point { row: 44, column: 104 }, Point { row: 44, column: 105 }], ['1', '1']
+[Point { row: 45, column: 8 }, Point { row: 45, column: 9 }], ['4', '1']
+[Point { row: 45, column: 13 }, Point { row: 45, column: 14 }, Point { row: 45, column: 15 }], ['1', '7', '5']
+[Point { row: 45, column: 59 }, Point { row: 45, column: 60 }, Point { row: 45, column: 61 }], ['2', '4', '7']
+[Point { row: 45, column: 63 }, Point { row: 45, column: 64 }, Point { row: 45, column: 65 }], ['3', '5', '3']
+[Point { row: 45, column: 75 }, Point { row: 45, column: 76 }], ['4', '4']
+[Point { row: 45, column: 82 }, Point { row: 45, column: 83 }, Point { row: 45, column: 84 }], ['9', '1', '2']
+[Point { row: 45, column: 92 }, Point { row: 45, column: 93 }, Point { row: 45, column: 94 }], ['7', '5', '7']
+[Point { row: 45, column: 110 }, Point { row: 45, column: 111 }, Point { row: 45, column: 112 }], ['1', '4', '4']
+[Point { row: 45, column: 115 }, Point { row: 45, column: 116 }, Point { row: 45, column: 117 }], ['4', '8', '1']
+[Point { row: 45, column: 119 }, Point { row: 45, column: 120 }, Point { row: 45, column: 121 }], ['6', '9', '3']
+[Point { row: 45, column: 123 }, Point { row: 45, column: 124 }, Point { row: 45, column: 125 }], ['2', '7', '1']
+[Point { row: 45, column: 135 }, Point { row: 45, column: 136 }, Point { row: 45, column: 137 }], ['9', '9', '3']
+[Point { row: 46, column: 23 }, Point { row: 46, column: 24 }, Point { row: 46, column: 25 }], ['9', '9', '3']
+[Point { row: 46, column: 27 }, Point { row: 46, column: 28 }, Point { row: 46, column: 29 }], ['7', '0', '7']
+[Point { row: 46, column: 33 }, Point { row: 46, column: 34 }, Point { row: 46, column: 35 }], ['8', '5', '7']
+[Point { row: 46, column: 48 }, Point { row: 46, column: 49 }, Point { row: 46, column: 50 }], ['3', '7', '5']
+[Point { row: 46, column: 56 }, Point { row: 46, column: 57 }], ['9', '0']
+[Point { row: 46, column: 68 }, Point { row: 46, column: 69 }, Point { row: 46, column: 70 }], ['3', '8', '6']
+[Point { row: 46, column: 78 }, Point { row: 46, column: 79 }, Point { row: 46, column: 80 }], ['4', '0', '3']
+[Point { row: 46, column: 128 }, Point { row: 46, column: 129 }, Point { row: 46, column: 130 }], ['2', '0', '8']
+[Point { row: 47, column: 7 }, Point { row: 47, column: 8 }, Point { row: 47, column: 9 }], ['3', '4', '3']
+[Point { row: 47, column: 11 }, Point { row: 47, column: 12 }, Point { row: 47, column: 13 }], ['4', '3', '7']
+[Point { row: 47, column: 18 }, Point { row: 47, column: 19 }, Point { row: 47, column: 20 }], ['3', '9', '1']
+[Point { row: 47, column: 37 }, Point { row: 47, column: 38 }, Point { row: 47, column: 39 }], ['1', '1', '7']
+[Point { row: 47, column: 44 }, Point { row: 47, column: 45 }, Point { row: 47, column: 46 }], ['6', '3', '7']
+[Point { row: 47, column: 52 }, Point { row: 47, column: 53 }, Point { row: 47, column: 54 }], ['3', '4', '5']
+[Point { row: 47, column: 64 }, Point { row: 47, column: 65 }], ['4', '3']
+[Point { row: 47, column: 74 }, Point { row: 47, column: 75 }, Point { row: 47, column: 76 }], ['6', '6', '2']
+[Point { row: 47, column: 91 }, Point { row: 47, column: 92 }, Point { row: 47, column: 93 }], ['9', '0', '8']
+[Point { row: 47, column: 103 }, Point { row: 47, column: 104 }, Point { row: 47, column: 105 }], ['9', '5', '6']
+[Point { row: 47, column: 113 }, Point { row: 47, column: 114 }, Point { row: 47, column: 115 }], ['9', '0', '8']
+[Point { row: 48, column: 0 }, Point { row: 48, column: 1 }, Point { row: 48, column: 2 }], ['3', '8', '9']
+[Point { row: 48, column: 28 }, Point { row: 48, column: 29 }, Point { row: 48, column: 30 }], ['6', '7', '0']
+[Point { row: 48, column: 48 }, Point { row: 48, column: 49 }], ['4', '2']
+[Point { row: 48, column: 70 }, Point { row: 48, column: 71 }, Point { row: 48, column: 72 }], ['5', '6', '4']
+[Point { row: 49, column: 16 }, Point { row: 49, column: 17 }, Point { row: 49, column: 18 }], ['4', '3', '5']
+[Point { row: 49, column: 37 }, Point { row: 49, column: 38 }, Point { row: 49, column: 39 }], ['9', '1', '3']
+[Point { row: 49, column: 54 }, Point { row: 49, column: 55 }, Point { row: 49, column: 56 }], ['5', '7', '4']
+[Point { row: 49, column: 59 }, Point { row: 49, column: 60 }, Point { row: 49, column: 61 }], ['1', '4', '9']
+[Point { row: 49, column: 85 }, Point { row: 49, column: 86 }, Point { row: 49, column: 87 }], ['9', '6', '2']
+[Point { row: 49, column: 108 }, Point { row: 49, column: 109 }, Point { row: 49, column: 110 }], ['9', '5', '3']
+[Point { row: 49, column: 114 }, Point { row: 49, column: 115 }], ['7', '7']
+[Point { row: 49, column: 118 }, Point { row: 49, column: 119 }, Point { row: 49, column: 120 }], ['6', '4', '1']
+[Point { row: 49, column: 125 }, Point { row: 49, column: 126 }, Point { row: 49, column: 127 }], ['5', '1', '4']
+[Point { row: 50, column: 4 }, Point { row: 50, column: 5 }, Point { row: 50, column: 6 }], ['4', '4', '8']
+[Point { row: 50, column: 12 }, Point { row: 50, column: 13 }, Point { row: 50, column: 14 }], ['7', '8', '3']
+[Point { row: 50, column: 20 }, Point { row: 50, column: 21 }, Point { row: 50, column: 22 }], ['8', '9', '2']
+[Point { row: 50, column: 25 }, Point { row: 50, column: 26 }, Point { row: 50, column: 27 }], ['3', '8', '1']
+[Point { row: 50, column: 33 }, Point { row: 50, column: 34 }, Point { row: 50, column: 35 }], ['5', '9', '3']
+[Point { row: 50, column: 63 }, Point { row: 50, column: 64 }, Point { row: 50, column: 65 }], ['4', '0', '3']
+[Point { row: 50, column: 67 }, Point { row: 50, column: 68 }, Point { row: 50, column: 69 }], ['1', '4', '9']
+[Point { row: 50, column: 89 }, Point { row: 50, column: 90 }, Point { row: 50, column: 91 }], ['8', '6', '3']
+[Point { row: 50, column: 93 }, Point { row: 50, column: 94 }, Point { row: 50, column: 95 }], ['9', '5', '4']
+[Point { row: 50, column: 100 }, Point { row: 50, column: 101 }, Point { row: 50, column: 102 }], ['3', '7', '3']
+[Point { row: 50, column: 133 }, Point { row: 50, column: 134 }, Point { row: 50, column: 135 }], ['6', '6', '3']
+[Point { row: 51, column: 0 }, Point { row: 51, column: 1 }, Point { row: 51, column: 2 }], ['9', '0', '6']
+[Point { row: 51, column: 38 }, Point { row: 51, column: 39 }, Point { row: 51, column: 40 }], ['9', '2', '2']
+[Point { row: 51, column: 50 }, Point { row: 51, column: 51 }, Point { row: 51, column: 52 }], ['9', '5', '0']
+[Point { row: 51, column: 75 }, Point { row: 51, column: 76 }, Point { row: 51, column: 77 }], ['9', '9', '3']
+[Point { row: 51, column: 81 }], ['3']
+[Point { row: 51, column: 107 }, Point { row: 51, column: 108 }, Point { row: 51, column: 109 }], ['3', '7', '9']
+[Point { row: 51, column: 114 }, Point { row: 51, column: 115 }, Point { row: 51, column: 116 }], ['4', '5', '0']
+[Point { row: 51, column: 124 }, Point { row: 51, column: 125 }, Point { row: 51, column: 126 }], ['8', '7', '7']
+[Point { row: 51, column: 129 }, Point { row: 51, column: 130 }, Point { row: 51, column: 131 }], ['8', '0', '4']
+[Point { row: 52, column: 15 }, Point { row: 52, column: 16 }, Point { row: 52, column: 17 }], ['7', '6', '8']
+[Point { row: 52, column: 34 }, Point { row: 52, column: 35 }, Point { row: 52, column: 36 }], ['1', '9', '8']
+[Point { row: 52, column: 46 }, Point { row: 52, column: 47 }, Point { row: 52, column: 48 }], ['1', '6', '0']
+[Point { row: 52, column: 62 }, Point { row: 52, column: 63 }, Point { row: 52, column: 64 }], ['8', '2', '0']
+[Point { row: 52, column: 71 }, Point { row: 52, column: 72 }, Point { row: 52, column: 73 }], ['3', '8', '2']
+[Point { row: 52, column: 84 }, Point { row: 52, column: 85 }, Point { row: 52, column: 86 }], ['1', '6', '9']
+[Point { row: 52, column: 97 }, Point { row: 52, column: 98 }, Point { row: 52, column: 99 }], ['5', '5', '5']
+[Point { row: 52, column: 102 }, Point { row: 52, column: 103 }, Point { row: 52, column: 104 }], ['2', '5', '7']
+[Point { row: 53, column: 0 }, Point { row: 53, column: 1 }, Point { row: 53, column: 2 }], ['2', '6', '0']
+[Point { row: 53, column: 23 }, Point { row: 53, column: 24 }], ['6', '8']
+[Point { row: 53, column: 30 }, Point { row: 53, column: 31 }, Point { row: 53, column: 32 }], ['2', '8', '1']
+[Point { row: 53, column: 40 }, Point { row: 53, column: 41 }, Point { row: 53, column: 42 }], ['8', '7', '1']
+[Point { row: 53, column: 66 }, Point { row: 53, column: 67 }, Point { row: 53, column: 68 }], ['9', '8', '0']
+[Point { row: 53, column: 75 }, Point { row: 53, column: 76 }, Point { row: 53, column: 77 }], ['8', '7', '5']
+[Point { row: 53, column: 93 }, Point { row: 53, column: 94 }, Point { row: 53, column: 95 }], ['1', '6', '9']
+[Point { row: 53, column: 118 }, Point { row: 53, column: 119 }, Point { row: 53, column: 120 }], ['5', '3', '1']
+[Point { row: 54, column: 17 }, Point { row: 54, column: 18 }, Point { row: 54, column: 19 }], ['5', '8', '7']
+[Point { row: 54, column: 46 }, Point { row: 54, column: 47 }], ['4', '8']
+[Point { row: 54, column: 50 }, Point { row: 54, column: 51 }, Point { row: 54, column: 52 }], ['2', '5', '1']
+[Point { row: 54, column: 55 }, Point { row: 54, column: 56 }, Point { row: 54, column: 57 }], ['3', '1', '6']
+[Point { row: 54, column: 62 }, Point { row: 54, column: 63 }, Point { row: 54, column: 64 }], ['8', '4', '8']
+[Point { row: 54, column: 83 }, Point { row: 54, column: 84 }, Point { row: 54, column: 85 }], ['3', '0', '3']
+[Point { row: 54, column: 102 }, Point { row: 54, column: 103 }, Point { row: 54, column: 104 }], ['9', '3', '1']
+[Point { row: 54, column: 107 }, Point { row: 54, column: 108 }, Point { row: 54, column: 109 }], ['1', '3', '2']
+[Point { row: 54, column: 124 }, Point { row: 54, column: 125 }, Point { row: 54, column: 126 }], ['7', '9', '0']
+[Point { row: 55, column: 5 }, Point { row: 55, column: 6 }, Point { row: 55, column: 7 }], ['2', '0', '5']
+[Point { row: 55, column: 11 }, Point { row: 55, column: 12 }, Point { row: 55, column: 13 }], ['5', '7', '2']
+[Point { row: 55, column: 30 }, Point { row: 55, column: 31 }, Point { row: 55, column: 32 }], ['6', '9', '6']
+[Point { row: 55, column: 66 }, Point { row: 55, column: 67 }, Point { row: 55, column: 68 }], ['7', '0', '9']
+[Point { row: 55, column: 71 }, Point { row: 55, column: 72 }, Point { row: 55, column: 73 }], ['6', '1', '1']
+[Point { row: 55, column: 95 }, Point { row: 55, column: 96 }, Point { row: 55, column: 97 }], ['2', '7', '0']
+[Point { row: 55, column: 111 }, Point { row: 55, column: 112 }, Point { row: 55, column: 113 }], ['1', '6', '5']
+[Point { row: 55, column: 120 }, Point { row: 55, column: 121 }, Point { row: 55, column: 122 }], ['7', '8', '3']
+[Point { row: 55, column: 130 }, Point { row: 55, column: 131 }, Point { row: 55, column: 132 }], ['7', '9', '0']
+[Point { row: 56, column: 22 }, Point { row: 56, column: 23 }, Point { row: 56, column: 24 }], ['9', '6', '5']
+[Point { row: 56, column: 34 }, Point { row: 56, column: 35 }, Point { row: 56, column: 36 }], ['7', '0', '9']
+[Point { row: 56, column: 39 }, Point { row: 56, column: 40 }, Point { row: 56, column: 41 }], ['8', '2', '6']
+[Point { row: 56, column: 62 }, Point { row: 56, column: 63 }, Point { row: 56, column: 64 }], ['8', '8', '2']
+[Point { row: 56, column: 75 }, Point { row: 56, column: 76 }, Point { row: 56, column: 77 }], ['7', '7', '5']
+[Point { row: 56, column: 87 }, Point { row: 56, column: 88 }, Point { row: 56, column: 89 }], ['3', '9', '1']
+[Point { row: 56, column: 101 }, Point { row: 56, column: 102 }, Point { row: 56, column: 103 }], ['9', '8', '5']
+[Point { row: 56, column: 105 }], ['5']
+[Point { row: 56, column: 115 }, Point { row: 56, column: 116 }, Point { row: 56, column: 117 }], ['1', '7', '9']
+[Point { row: 56, column: 124 }, Point { row: 56, column: 125 }], ['4', '7']
+[Point { row: 57, column: 5 }, Point { row: 57, column: 6 }, Point { row: 57, column: 7 }], ['4', '5', '1']
+[Point { row: 57, column: 56 }, Point { row: 57, column: 57 }, Point { row: 57, column: 58 }], ['8', '0', '4']
+[Point { row: 57, column: 80 }, Point { row: 57, column: 81 }, Point { row: 57, column: 82 }], ['1', '6', '1']
+[Point { row: 57, column: 94 }, Point { row: 57, column: 95 }, Point { row: 57, column: 96 }], ['8', '3', '7']
+[Point { row: 57, column: 129 }, Point { row: 57, column: 130 }, Point { row: 57, column: 131 }], ['9', '0', '4']
+[Point { row: 57, column: 136 }, Point { row: 57, column: 137 }, Point { row: 57, column: 138 }], ['1', '7', '6']
+[Point { row: 58, column: 0 }, Point { row: 58, column: 1 }, Point { row: 58, column: 2 }], ['7', '2', '0']
+[Point { row: 58, column: 20 }, Point { row: 58, column: 21 }], ['7', '0']
+[Point { row: 58, column: 32 }, Point { row: 58, column: 33 }, Point { row: 58, column: 34 }], ['8', '9', '9']
+[Point { row: 58, column: 40 }, Point { row: 58, column: 41 }, Point { row: 58, column: 42 }], ['8', '6', '8']
+[Point { row: 58, column: 65 }, Point { row: 58, column: 66 }, Point { row: 58, column: 67 }], ['3', '5', '7']
+[Point { row: 58, column: 69 }, Point { row: 58, column: 70 }, Point { row: 58, column: 71 }], ['2', '5', '2']
+[Point { row: 58, column: 98 }, Point { row: 58, column: 99 }, Point { row: 58, column: 100 }], ['7', '0', '7']
+[Point { row: 58, column: 108 }, Point { row: 58, column: 109 }, Point { row: 58, column: 110 }], ['8', '9', '8']
+[Point { row: 58, column: 112 }, Point { row: 58, column: 113 }, Point { row: 58, column: 114 }], ['1', '3', '9']
+[Point { row: 58, column: 120 }, Point { row: 58, column: 121 }, Point { row: 58, column: 122 }], ['7', '0', '4']
+[Point { row: 59, column: 36 }, Point { row: 59, column: 37 }, Point { row: 59, column: 38 }], ['3', '0', '7']
+[Point { row: 59, column: 44 }, Point { row: 59, column: 45 }, Point { row: 59, column: 46 }], ['5', '1', '0']
+[Point { row: 59, column: 79 }, Point { row: 59, column: 80 }], ['1', '7']
+[Point { row: 59, column: 83 }, Point { row: 59, column: 84 }, Point { row: 59, column: 85 }], ['5', '0', '1']
+[Point { row: 59, column: 132 }, Point { row: 59, column: 133 }, Point { row: 59, column: 134 }], ['8', '5', '5']
+[Point { row: 60, column: 13 }, Point { row: 60, column: 14 }, Point { row: 60, column: 15 }], ['7', '4', '5']
+[Point { row: 60, column: 28 }, Point { row: 60, column: 29 }, Point { row: 60, column: 30 }], ['4', '5', '1']
+[Point { row: 60, column: 50 }, Point { row: 60, column: 51 }, Point { row: 60, column: 52 }], ['6', '8', '9']
+[Point { row: 60, column: 55 }, Point { row: 60, column: 56 }, Point { row: 60, column: 57 }], ['9', '8', '0']
+[Point { row: 60, column: 61 }, Point { row: 60, column: 62 }, Point { row: 60, column: 63 }], ['6', '7', '0']
+[Point { row: 60, column: 65 }, Point { row: 60, column: 66 }, Point { row: 60, column: 67 }], ['5', '9', '4']
+[Point { row: 60, column: 69 }, Point { row: 60, column: 70 }, Point { row: 60, column: 71 }], ['7', '1', '6']
+[Point { row: 60, column: 100 }, Point { row: 60, column: 101 }, Point { row: 60, column: 102 }], ['5', '6', '5']
+[Point { row: 60, column: 109 }, Point { row: 60, column: 110 }, Point { row: 60, column: 111 }], ['5', '9', '5']
+[Point { row: 60, column: 114 }, Point { row: 60, column: 115 }, Point { row: 60, column: 116 }], ['6', '2', '2']
+[Point { row: 60, column: 122 }, Point { row: 60, column: 123 }, Point { row: 60, column: 124 }], ['7', '9', '3']
+[Point { row: 61, column: 5 }, Point { row: 61, column: 6 }, Point { row: 61, column: 7 }], ['8', '9', '0']
+[Point { row: 61, column: 18 }, Point { row: 61, column: 19 }], ['7', '3']
+[Point { row: 61, column: 23 }, Point { row: 61, column: 24 }, Point { row: 61, column: 25 }], ['4', '2', '2']
+[Point { row: 61, column: 33 }, Point { row: 61, column: 34 }, Point { row: 61, column: 35 }], ['9', '7', '7']
+[Point { row: 61, column: 44 }, Point { row: 61, column: 45 }, Point { row: 61, column: 46 }], ['3', '2', '4']
+[Point { row: 61, column: 74 }, Point { row: 61, column: 75 }], ['2', '9']
+[Point { row: 61, column: 83 }, Point { row: 61, column: 84 }, Point { row: 61, column: 85 }], ['9', '4', '5']
+[Point { row: 61, column: 104 }, Point { row: 61, column: 105 }, Point { row: 61, column: 106 }], ['2', '9', '8']
+[Point { row: 61, column: 137 }, Point { row: 61, column: 138 }, Point { row: 61, column: 139 }], ['6', '4', '2']
+[Point { row: 62, column: 62 }, Point { row: 62, column: 63 }, Point { row: 62, column: 64 }], ['6', '4', '5']
+[Point { row: 62, column: 79 }, Point { row: 62, column: 80 }, Point { row: 62, column: 81 }], ['1', '5', '0']
+[Point { row: 62, column: 87 }, Point { row: 62, column: 88 }, Point { row: 62, column: 89 }], ['4', '3', '4']
+[Point { row: 62, column: 91 }, Point { row: 62, column: 92 }, Point { row: 62, column: 93 }], ['2', '5', '9']
+[Point { row: 62, column: 96 }, Point { row: 62, column: 97 }, Point { row: 62, column: 98 }], ['6', '0', '9']
+[Point { row: 62, column: 100 }, Point { row: 62, column: 101 }, Point { row: 62, column: 102 }], ['5', '6', '0']
+[Point { row: 62, column: 122 }, Point { row: 62, column: 123 }, Point { row: 62, column: 124 }], ['2', '6', '6']
+[Point { row: 62, column: 127 }, Point { row: 62, column: 128 }, Point { row: 62, column: 129 }], ['5', '2', '4']
+[Point { row: 63, column: 5 }, Point { row: 63, column: 6 }, Point { row: 63, column: 7 }], ['2', '0', '3']
+[Point { row: 63, column: 18 }, Point { row: 63, column: 19 }, Point { row: 63, column: 20 }], ['1', '3', '3']
+[Point { row: 63, column: 26 }, Point { row: 63, column: 27 }, Point { row: 63, column: 28 }], ['5', '9', '6']
+[Point { row: 63, column: 30 }, Point { row: 63, column: 31 }, Point { row: 63, column: 32 }], ['6', '1', '9']
+[Point { row: 63, column: 66 }, Point { row: 63, column: 67 }, Point { row: 63, column: 68 }], ['6', '7', '6']
+[Point { row: 63, column: 70 }, Point { row: 63, column: 71 }, Point { row: 63, column: 72 }], ['1', '0', '7']
+[Point { row: 63, column: 75 }, Point { row: 63, column: 76 }, Point { row: 63, column: 77 }], ['8', '1', '1']
+[Point { row: 63, column: 109 }, Point { row: 63, column: 110 }, Point { row: 63, column: 111 }], ['1', '1', '5']
+[Point { row: 63, column: 133 }, Point { row: 63, column: 134 }, Point { row: 63, column: 135 }], ['1', '7', '8']
+[Point { row: 64, column: 47 }, Point { row: 64, column: 48 }, Point { row: 64, column: 49 }], ['1', '5', '7']
+[Point { row: 64, column: 51 }, Point { row: 64, column: 52 }, Point { row: 64, column: 53 }], ['6', '8', '2']
+[Point { row: 64, column: 61 }, Point { row: 64, column: 62 }, Point { row: 64, column: 63 }], ['2', '6', '2']
+[Point { row: 64, column: 79 }, Point { row: 64, column: 80 }, Point { row: 64, column: 81 }], ['1', '9', '6']
+[Point { row: 64, column: 99 }, Point { row: 64, column: 100 }, Point { row: 64, column: 101 }], ['7', '0', '7']
+[Point { row: 64, column: 118 }, Point { row: 64, column: 119 }], ['1', '4']
+[Point { row: 64, column: 122 }, Point { row: 64, column: 123 }, Point { row: 64, column: 124 }], ['3', '8', '6']
+[Point { row: 65, column: 9 }, Point { row: 65, column: 10 }, Point { row: 65, column: 11 }], ['8', '7', '1']
+[Point { row: 65, column: 24 }, Point { row: 65, column: 25 }, Point { row: 65, column: 26 }], ['6', '0', '5']
+[Point { row: 65, column: 31 }, Point { row: 65, column: 32 }, Point { row: 65, column: 33 }], ['7', '2', '1']
+[Point { row: 65, column: 65 }, Point { row: 65, column: 66 }, Point { row: 65, column: 67 }], ['8', '6', '7']
+[Point { row: 65, column: 85 }, Point { row: 65, column: 86 }, Point { row: 65, column: 87 }], ['6', '8', '5']
+[Point { row: 65, column: 90 }, Point { row: 65, column: 91 }, Point { row: 65, column: 92 }], ['8', '6', '6']
+[Point { row: 65, column: 114 }, Point { row: 65, column: 115 }, Point { row: 65, column: 116 }], ['6', '0', '2']
+[Point { row: 65, column: 132 }, Point { row: 65, column: 133 }, Point { row: 65, column: 134 }], ['6', '2', '8']
+[Point { row: 66, column: 17 }, Point { row: 66, column: 18 }, Point { row: 66, column: 19 }], ['4', '1', '3']
+[Point { row: 66, column: 35 }, Point { row: 66, column: 36 }, Point { row: 66, column: 37 }], ['3', '8', '0']
+[Point { row: 66, column: 42 }, Point { row: 66, column: 43 }, Point { row: 66, column: 44 }], ['8', '7', '2']
+[Point { row: 66, column: 61 }, Point { row: 66, column: 62 }, Point { row: 66, column: 63 }], ['3', '7', '2']
+[Point { row: 66, column: 71 }, Point { row: 66, column: 72 }, Point { row: 66, column: 73 }], ['2', '7', '7']
+[Point { row: 66, column: 80 }, Point { row: 66, column: 81 }, Point { row: 66, column: 82 }], ['2', '7', '7']
+[Point { row: 66, column: 100 }, Point { row: 66, column: 101 }, Point { row: 66, column: 102 }], ['1', '6', '6']
+[Point { row: 66, column: 125 }, Point { row: 66, column: 126 }, Point { row: 66, column: 127 }], ['6', '5', '6']
+[Point { row: 66, column: 137 }, Point { row: 66, column: 138 }, Point { row: 66, column: 139 }], ['7', '4', '8']
+[Point { row: 67, column: 5 }, Point { row: 67, column: 6 }, Point { row: 67, column: 7 }], ['8', '4', '1']
+[Point { row: 67, column: 10 }, Point { row: 67, column: 11 }, Point { row: 67, column: 12 }], ['6', '6', '4']
+[Point { row: 67, column: 22 }, Point { row: 67, column: 23 }, Point { row: 67, column: 24 }], ['4', '2', '2']
+[Point { row: 67, column: 53 }, Point { row: 67, column: 54 }, Point { row: 67, column: 55 }], ['9', '4', '5']
+[Point { row: 67, column: 90 }, Point { row: 67, column: 91 }, Point { row: 67, column: 92 }], ['9', '5', '9']
+[Point { row: 67, column: 94 }, Point { row: 67, column: 95 }, Point { row: 67, column: 96 }], ['8', '6', '3']
+[Point { row: 67, column: 106 }, Point { row: 67, column: 107 }, Point { row: 67, column: 108 }], ['1', '8', '7']
+[Point { row: 67, column: 117 }, Point { row: 67, column: 118 }, Point { row: 67, column: 119 }], ['2', '9', '9']
+[Point { row: 67, column: 133 }, Point { row: 67, column: 134 }, Point { row: 67, column: 135 }], ['8', '8', '7']
+[Point { row: 68, column: 1 }, Point { row: 68, column: 2 }, Point { row: 68, column: 3 }], ['7', '0', '8']
+[Point { row: 68, column: 18 }, Point { row: 68, column: 19 }, Point { row: 68, column: 20 }], ['3', '1', '1']
+[Point { row: 68, column: 28 }, Point { row: 68, column: 29 }, Point { row: 68, column: 30 }], ['2', '9', '6']
+[Point { row: 68, column: 32 }, Point { row: 68, column: 33 }, Point { row: 68, column: 34 }], ['4', '9', '7']
+[Point { row: 68, column: 40 }, Point { row: 68, column: 41 }, Point { row: 68, column: 42 }], ['7', '5', '1']
+[Point { row: 68, column: 46 }, Point { row: 68, column: 47 }, Point { row: 68, column: 48 }], ['6', '3', '9']
+[Point { row: 68, column: 64 }, Point { row: 68, column: 65 }, Point { row: 68, column: 66 }], ['2', '6', '9']
+[Point { row: 68, column: 77 }, Point { row: 68, column: 78 }, Point { row: 68, column: 79 }], ['8', '7', '5']
+[Point { row: 68, column: 128 }, Point { row: 68, column: 129 }], ['3', '6']
+[Point { row: 69, column: 9 }, Point { row: 69, column: 10 }, Point { row: 69, column: 11 }], ['8', '3', '4']
+[Point { row: 69, column: 54 }, Point { row: 69, column: 55 }, Point { row: 69, column: 56 }], ['7', '0', '8']
+[Point { row: 69, column: 84 }, Point { row: 69, column: 85 }], ['8', '7']
+[Point { row: 69, column: 90 }, Point { row: 69, column: 91 }, Point { row: 69, column: 92 }], ['2', '9', '8']
+[Point { row: 69, column: 96 }, Point { row: 69, column: 97 }, Point { row: 69, column: 98 }], ['4', '7', '1']
+[Point { row: 69, column: 110 }, Point { row: 69, column: 111 }, Point { row: 69, column: 112 }], ['4', '6', '3']
+[Point { row: 70, column: 16 }, Point { row: 70, column: 17 }, Point { row: 70, column: 18 }], ['7', '3', '9']
+[Point { row: 70, column: 29 }, Point { row: 70, column: 30 }, Point { row: 70, column: 31 }], ['7', '0', '1']
+[Point { row: 70, column: 72 }, Point { row: 70, column: 73 }, Point { row: 70, column: 74 }], ['7', '7', '9']
+[Point { row: 70, column: 101 }, Point { row: 70, column: 102 }, Point { row: 70, column: 103 }], ['2', '6', '5']
+[Point { row: 70, column: 106 }, Point { row: 70, column: 107 }, Point { row: 70, column: 108 }], ['6', '4', '2']
+[Point { row: 71, column: 6 }, Point { row: 71, column: 7 }, Point { row: 71, column: 8 }], ['5', '0', '4']
+[Point { row: 71, column: 35 }, Point { row: 71, column: 36 }, Point { row: 71, column: 37 }], ['8', '7', '1']
+[Point { row: 71, column: 39 }, Point { row: 71, column: 40 }, Point { row: 71, column: 41 }], ['3', '1', '4']
+[Point { row: 71, column: 46 }, Point { row: 71, column: 47 }, Point { row: 71, column: 48 }], ['1', '2', '7']
+[Point { row: 71, column: 51 }, Point { row: 71, column: 52 }], ['3', '6']
+[Point { row: 71, column: 55 }, Point { row: 71, column: 56 }, Point { row: 71, column: 57 }], ['6', '3', '9']
+[Point { row: 71, column: 59 }, Point { row: 71, column: 60 }, Point { row: 71, column: 61 }], ['1', '9', '6']
+[Point { row: 71, column: 64 }, Point { row: 71, column: 65 }], ['4', '8']
+[Point { row: 71, column: 84 }, Point { row: 71, column: 85 }], ['9', '6']
+[Point { row: 71, column: 95 }, Point { row: 71, column: 96 }, Point { row: 71, column: 97 }], ['7', '8', '5']
+[Point { row: 71, column: 110 }, Point { row: 71, column: 111 }, Point { row: 71, column: 112 }], ['8', '5', '4']
+[Point { row: 71, column: 119 }, Point { row: 71, column: 120 }, Point { row: 71, column: 121 }], ['6', '0', '7']
+[Point { row: 71, column: 126 }, Point { row: 71, column: 127 }, Point { row: 71, column: 128 }], ['5', '4', '2']
+[Point { row: 72, column: 3 }, Point { row: 72, column: 4 }], ['7', '3']
+[Point { row: 72, column: 17 }, Point { row: 72, column: 18 }, Point { row: 72, column: 19 }], ['2', '5', '4']
+[Point { row: 72, column: 21 }, Point { row: 72, column: 22 }, Point { row: 72, column: 23 }], ['5', '9', '1']
+[Point { row: 72, column: 75 }, Point { row: 72, column: 76 }], ['3', '5']
+[Point { row: 72, column: 104 }, Point { row: 72, column: 105 }, Point { row: 72, column: 106 }], ['1', '5', '0']
+[Point { row: 72, column: 135 }, Point { row: 72, column: 136 }, Point { row: 72, column: 137 }], ['3', '4', '0']
+[Point { row: 73, column: 8 }, Point { row: 73, column: 9 }, Point { row: 73, column: 10 }], ['2', '2', '4']
+[Point { row: 73, column: 29 }, Point { row: 73, column: 30 }, Point { row: 73, column: 31 }], ['2', '1', '4']
+[Point { row: 73, column: 46 }, Point { row: 73, column: 47 }, Point { row: 73, column: 48 }], ['9', '4', '9']
+[Point { row: 73, column: 63 }, Point { row: 73, column: 64 }, Point { row: 73, column: 65 }], ['4', '5', '5']
+[Point { row: 73, column: 83 }, Point { row: 73, column: 84 }, Point { row: 73, column: 85 }], ['3', '7', '7']
+[Point { row: 73, column: 87 }, Point { row: 73, column: 88 }], ['8', '8']
+[Point { row: 73, column: 109 }, Point { row: 73, column: 110 }, Point { row: 73, column: 111 }], ['8', '2', '3']
+[Point { row: 73, column: 118 }, Point { row: 73, column: 119 }, Point { row: 73, column: 120 }], ['5', '8', '2']
+[Point { row: 74, column: 15 }, Point { row: 74, column: 16 }, Point { row: 74, column: 17 }], ['6', '4', '3']
+[Point { row: 74, column: 25 }, Point { row: 74, column: 26 }, Point { row: 74, column: 27 }], ['9', '0', '1']
+[Point { row: 74, column: 36 }, Point { row: 74, column: 37 }, Point { row: 74, column: 38 }], ['1', '9', '1']
+[Point { row: 74, column: 41 }, Point { row: 74, column: 42 }, Point { row: 74, column: 43 }], ['2', '6', '7']
+[Point { row: 74, column: 51 }, Point { row: 74, column: 52 }, Point { row: 74, column: 53 }], ['2', '9', '3']
+[Point { row: 74, column: 73 }, Point { row: 74, column: 74 }, Point { row: 74, column: 75 }], ['1', '9', '4']
+[Point { row: 74, column: 78 }, Point { row: 74, column: 79 }, Point { row: 74, column: 80 }], ['2', '6', '6']
+[Point { row: 74, column: 98 }, Point { row: 74, column: 99 }, Point { row: 74, column: 100 }], ['9', '8', '7']
+[Point { row: 74, column: 132 }, Point { row: 74, column: 133 }, Point { row: 74, column: 134 }], ['5', '4', '5']
+[Point { row: 75, column: 4 }, Point { row: 75, column: 5 }, Point { row: 75, column: 6 }], ['6', '0', '4']
+[Point { row: 75, column: 10 }, Point { row: 75, column: 11 }, Point { row: 75, column: 12 }], ['5', '8', '3']
+[Point { row: 75, column: 32 }, Point { row: 75, column: 33 }, Point { row: 75, column: 34 }], ['7', '4', '2']
+[Point { row: 75, column: 84 }, Point { row: 75, column: 85 }, Point { row: 75, column: 86 }], ['3', '6', '5']
+[Point { row: 75, column: 108 }, Point { row: 75, column: 109 }, Point { row: 75, column: 110 }], ['8', '8', '0']
+[Point { row: 75, column: 112 }, Point { row: 75, column: 113 }], ['5', '5']
+[Point { row: 75, column: 120 }, Point { row: 75, column: 121 }, Point { row: 75, column: 122 }], ['5', '4', '0']
+[Point { row: 75, column: 124 }, Point { row: 75, column: 125 }, Point { row: 75, column: 126 }], ['5', '2', '0']
+[Point { row: 76, column: 15 }, Point { row: 76, column: 16 }, Point { row: 76, column: 17 }], ['2', '7', '2']
+[Point { row: 76, column: 23 }, Point { row: 76, column: 24 }, Point { row: 76, column: 25 }], ['8', '4', '3']
+[Point { row: 76, column: 28 }, Point { row: 76, column: 29 }, Point { row: 76, column: 30 }], ['2', '0', '1']
+[Point { row: 76, column: 43 }, Point { row: 76, column: 44 }, Point { row: 76, column: 45 }], ['1', '2', '8']
+[Point { row: 76, column: 53 }, Point { row: 76, column: 54 }, Point { row: 76, column: 55 }], ['4', '3', '3']
+[Point { row: 76, column: 63 }, Point { row: 76, column: 64 }, Point { row: 76, column: 65 }], ['5', '6', '3']
+[Point { row: 76, column: 72 }, Point { row: 76, column: 73 }, Point { row: 76, column: 74 }], ['2', '8', '1']
+[Point { row: 76, column: 76 }, Point { row: 76, column: 77 }], ['7', '7']
+[Point { row: 76, column: 79 }, Point { row: 76, column: 80 }, Point { row: 76, column: 81 }], ['5', '4', '0']
+[Point { row: 76, column: 91 }, Point { row: 76, column: 92 }, Point { row: 76, column: 93 }], ['9', '7', '9']
+[Point { row: 76, column: 97 }, Point { row: 76, column: 98 }, Point { row: 76, column: 99 }], ['1', '3', '4']
+[Point { row: 76, column: 104 }, Point { row: 76, column: 105 }, Point { row: 76, column: 106 }], ['5', '1', '4']
+[Point { row: 76, column: 129 }, Point { row: 76, column: 130 }], ['4', '6']
+[Point { row: 77, column: 3 }, Point { row: 77, column: 4 }, Point { row: 77, column: 5 }], ['9', '6', '6']
+[Point { row: 77, column: 11 }, Point { row: 77, column: 12 }], ['6', '7']
+[Point { row: 77, column: 36 }, Point { row: 77, column: 37 }], ['1', '9']
+[Point { row: 77, column: 39 }, Point { row: 77, column: 40 }, Point { row: 77, column: 41 }], ['9', '3', '4']
+[Point { row: 77, column: 48 }, Point { row: 77, column: 49 }, Point { row: 77, column: 50 }], ['2', '2', '4']
+[Point { row: 77, column: 114 }, Point { row: 77, column: 115 }, Point { row: 77, column: 116 }], ['6', '9', '3']
+[Point { row: 77, column: 135 }, Point { row: 77, column: 136 }, Point { row: 77, column: 137 }], ['5', '2', '5']
+[Point { row: 78, column: 14 }, Point { row: 78, column: 15 }, Point { row: 78, column: 16 }], ['1', '8', '8']
+[Point { row: 78, column: 22 }, Point { row: 78, column: 23 }, Point { row: 78, column: 24 }], ['9', '0', '4']
+[Point { row: 78, column: 62 }, Point { row: 78, column: 63 }, Point { row: 78, column: 64 }], ['2', '1', '0']
+[Point { row: 78, column: 70 }, Point { row: 78, column: 71 }, Point { row: 78, column: 72 }], ['9', '5', '8']
+[Point { row: 78, column: 82 }, Point { row: 78, column: 83 }, Point { row: 78, column: 84 }], ['8', '1', '1']
+[Point { row: 78, column: 100 }, Point { row: 78, column: 101 }, Point { row: 78, column: 102 }], ['5', '7', '4']
+[Point { row: 78, column: 107 }, Point { row: 78, column: 108 }, Point { row: 78, column: 109 }], ['9', '6', '5']
+[Point { row: 78, column: 126 }, Point { row: 78, column: 127 }, Point { row: 78, column: 128 }], ['2', '8', '8']
+[Point { row: 78, column: 131 }, Point { row: 78, column: 132 }], ['2', '0']
+[Point { row: 79, column: 2 }, Point { row: 79, column: 3 }, Point { row: 79, column: 4 }], ['2', '1', '3']
+[Point { row: 79, column: 18 }, Point { row: 79, column: 19 }, Point { row: 79, column: 20 }], ['1', '3', '7']
+[Point { row: 79, column: 29 }, Point { row: 79, column: 30 }, Point { row: 79, column: 31 }], ['3', '2', '5']
+[Point { row: 79, column: 37 }, Point { row: 79, column: 38 }, Point { row: 79, column: 39 }], ['6', '2', '8']
+[Point { row: 79, column: 58 }, Point { row: 79, column: 59 }, Point { row: 79, column: 60 }], ['4', '0', '6']
+[Point { row: 79, column: 67 }, Point { row: 79, column: 68 }], ['3', '4']
+[Point { row: 79, column: 91 }, Point { row: 79, column: 92 }, Point { row: 79, column: 93 }], ['4', '0', '6']
+[Point { row: 79, column: 119 }, Point { row: 79, column: 120 }, Point { row: 79, column: 121 }], ['8', '6', '7']
+[Point { row: 80, column: 11 }, Point { row: 80, column: 12 }, Point { row: 80, column: 13 }], ['8', '1', '0']
+[Point { row: 80, column: 48 }, Point { row: 80, column: 49 }, Point { row: 80, column: 50 }], ['9', '2', '6']
+[Point { row: 80, column: 75 }, Point { row: 80, column: 76 }, Point { row: 80, column: 77 }], ['3', '7', '2']
+[Point { row: 80, column: 83 }, Point { row: 80, column: 84 }, Point { row: 80, column: 85 }], ['3', '7', '2']
+[Point { row: 80, column: 95 }, Point { row: 80, column: 96 }, Point { row: 80, column: 97 }], ['2', '6', '6']
+[Point { row: 80, column: 99 }, Point { row: 80, column: 100 }, Point { row: 80, column: 101 }], ['7', '1', '6']
+[Point { row: 80, column: 110 }, Point { row: 80, column: 111 }, Point { row: 80, column: 112 }], ['9', '8', '5']
+[Point { row: 80, column: 133 }], ['1']
+[Point { row: 81, column: 15 }, Point { row: 81, column: 16 }, Point { row: 81, column: 17 }], ['3', '9', '9']
+[Point { row: 81, column: 19 }, Point { row: 81, column: 20 }, Point { row: 81, column: 21 }], ['1', '2', '6']
+[Point { row: 81, column: 39 }, Point { row: 81, column: 40 }, Point { row: 81, column: 41 }], ['3', '7', '9']
+[Point { row: 81, column: 44 }, Point { row: 81, column: 45 }, Point { row: 81, column: 46 }], ['7', '2', '9']
+[Point { row: 81, column: 57 }, Point { row: 81, column: 58 }, Point { row: 81, column: 59 }], ['2', '4', '5']
+[Point { row: 81, column: 69 }, Point { row: 81, column: 70 }, Point { row: 81, column: 71 }], ['8', '9', '3']
+[Point { row: 81, column: 79 }, Point { row: 81, column: 80 }, Point { row: 81, column: 81 }], ['8', '6', '6']
+[Point { row: 81, column: 87 }, Point { row: 81, column: 88 }, Point { row: 81, column: 89 }], ['1', '0', '1']
+[Point { row: 81, column: 91 }, Point { row: 81, column: 92 }, Point { row: 81, column: 93 }], ['2', '9', '9']
+[Point { row: 81, column: 104 }], ['8']
+[Point { row: 81, column: 106 }, Point { row: 81, column: 107 }, Point { row: 81, column: 108 }], ['5', '4', '4']
+[Point { row: 81, column: 117 }, Point { row: 81, column: 118 }, Point { row: 81, column: 119 }], ['7', '8', '4']
+[Point { row: 82, column: 0 }, Point { row: 82, column: 1 }, Point { row: 82, column: 2 }], ['9', '5', '4']
+[Point { row: 82, column: 25 }, Point { row: 82, column: 26 }], ['6', '3']
+[Point { row: 82, column: 28 }, Point { row: 82, column: 29 }, Point { row: 82, column: 30 }], ['5', '0', '1']
+[Point { row: 82, column: 32 }, Point { row: 82, column: 33 }, Point { row: 82, column: 34 }], ['5', '2', '9']
+[Point { row: 82, column: 51 }, Point { row: 82, column: 52 }, Point { row: 82, column: 53 }], ['6', '9', '5']
+[Point { row: 82, column: 99 }, Point { row: 82, column: 100 }, Point { row: 82, column: 101 }], ['3', '2', '0']
+[Point { row: 82, column: 122 }, Point { row: 82, column: 123 }, Point { row: 82, column: 124 }], ['2', '1', '1']
+[Point { row: 82, column: 126 }, Point { row: 82, column: 127 }], ['5', '5']
+[Point { row: 82, column: 131 }, Point { row: 82, column: 132 }, Point { row: 82, column: 133 }], ['5', '3', '3']
+[Point { row: 83, column: 12 }, Point { row: 83, column: 13 }, Point { row: 83, column: 14 }], ['4', '5', '7']
+[Point { row: 83, column: 65 }, Point { row: 83, column: 66 }, Point { row: 83, column: 67 }], ['3', '7', '5']
+[Point { row: 83, column: 79 }, Point { row: 83, column: 80 }, Point { row: 83, column: 81 }], ['9', '6', '1']
+[Point { row: 83, column: 89 }, Point { row: 83, column: 90 }, Point { row: 83, column: 91 }], ['7', '2', '0']
+[Point { row: 83, column: 114 }, Point { row: 83, column: 115 }, Point { row: 83, column: 116 }], ['5', '4', '2']
+[Point { row: 83, column: 135 }, Point { row: 83, column: 136 }, Point { row: 83, column: 137 }], ['3', '2', '7']
+[Point { row: 84, column: 8 }, Point { row: 84, column: 9 }, Point { row: 84, column: 10 }], ['3', '9', '6']
+[Point { row: 84, column: 16 }, Point { row: 84, column: 17 }, Point { row: 84, column: 18 }], ['4', '7', '6']
+[Point { row: 84, column: 20 }, Point { row: 84, column: 21 }, Point { row: 84, column: 22 }], ['7', '7', '4']
+[Point { row: 84, column: 24 }, Point { row: 84, column: 25 }, Point { row: 84, column: 26 }], ['6', '8', '0']
+[Point { row: 84, column: 28 }, Point { row: 84, column: 29 }, Point { row: 84, column: 30 }], ['1', '8', '9']
+[Point { row: 84, column: 33 }, Point { row: 84, column: 34 }, Point { row: 84, column: 35 }], ['4', '3', '8']
+[Point { row: 84, column: 42 }, Point { row: 84, column: 43 }, Point { row: 84, column: 44 }], ['6', '6', '9']
+[Point { row: 84, column: 57 }, Point { row: 84, column: 58 }, Point { row: 84, column: 59 }], ['9', '3', '6']
+[Point { row: 84, column: 83 }, Point { row: 84, column: 84 }, Point { row: 84, column: 85 }], ['1', '9', '5']
+[Point { row: 84, column: 93 }, Point { row: 84, column: 94 }, Point { row: 84, column: 95 }], ['4', '0', '5']
+[Point { row: 84, column: 97 }, Point { row: 84, column: 98 }, Point { row: 84, column: 99 }], ['9', '2', '6']
+[Point { row: 84, column: 101 }, Point { row: 84, column: 102 }, Point { row: 84, column: 103 }], ['2', '1', '3']
+[Point { row: 84, column: 109 }, Point { row: 84, column: 110 }, Point { row: 84, column: 111 }], ['2', '5', '4']
+[Point { row: 85, column: 46 }, Point { row: 85, column: 47 }], ['2', '2']
+[Point { row: 85, column: 52 }, Point { row: 85, column: 53 }, Point { row: 85, column: 54 }], ['7', '3', '2']
+[Point { row: 85, column: 65 }, Point { row: 85, column: 66 }, Point { row: 85, column: 67 }], ['1', '2', '1']
+[Point { row: 85, column: 69 }, Point { row: 85, column: 70 }, Point { row: 85, column: 71 }], ['2', '0', '0']
+[Point { row: 85, column: 118 }, Point { row: 85, column: 119 }, Point { row: 85, column: 120 }], ['5', '2', '2']
+[Point { row: 85, column: 122 }, Point { row: 85, column: 123 }, Point { row: 85, column: 124 }], ['8', '2', '5']
+[Point { row: 85, column: 127 }, Point { row: 85, column: 128 }], ['7', '7']
+[Point { row: 86, column: 4 }, Point { row: 86, column: 5 }, Point { row: 86, column: 6 }], ['2', '7', '2']
+[Point { row: 86, column: 34 }, Point { row: 86, column: 35 }, Point { row: 86, column: 36 }], ['9', '2', '5']
+[Point { row: 86, column: 42 }, Point { row: 86, column: 43 }, Point { row: 86, column: 44 }], ['3', '7', '8']
+[Point { row: 86, column: 57 }, Point { row: 86, column: 58 }], ['5', '3']
+[Point { row: 86, column: 77 }, Point { row: 86, column: 78 }, Point { row: 86, column: 79 }], ['6', '0', '5']
+[Point { row: 86, column: 85 }, Point { row: 86, column: 86 }, Point { row: 86, column: 87 }], ['3', '2', '9']
+[Point { row: 86, column: 89 }, Point { row: 86, column: 90 }, Point { row: 86, column: 91 }], ['1', '1', '6']
+[Point { row: 86, column: 94 }, Point { row: 86, column: 95 }, Point { row: 86, column: 96 }], ['5', '0', '1']
+[Point { row: 86, column: 101 }, Point { row: 86, column: 102 }, Point { row: 86, column: 103 }], ['7', '6', '5']
+[Point { row: 86, column: 110 }, Point { row: 86, column: 111 }, Point { row: 86, column: 112 }], ['5', '3', '7']
+[Point { row: 86, column: 114 }, Point { row: 86, column: 115 }, Point { row: 86, column: 116 }], ['6', '8', '0']
+[Point { row: 87, column: 0 }, Point { row: 87, column: 1 }, Point { row: 87, column: 2 }], ['8', '1', '7']
+[Point { row: 87, column: 11 }, Point { row: 87, column: 12 }, Point { row: 87, column: 13 }], ['1', '0', '9']
+[Point { row: 87, column: 18 }, Point { row: 87, column: 19 }, Point { row: 87, column: 20 }], ['2', '0', '9']
+[Point { row: 87, column: 48 }, Point { row: 87, column: 49 }, Point { row: 87, column: 50 }], ['6', '9', '0']
+[Point { row: 87, column: 70 }, Point { row: 87, column: 71 }, Point { row: 87, column: 72 }], ['5', '7', '3']
+[Point { row: 87, column: 98 }, Point { row: 87, column: 99 }], ['4', '8']
+[Point { row: 87, column: 120 }, Point { row: 87, column: 121 }, Point { row: 87, column: 122 }], ['1', '6', '9']
+[Point { row: 87, column: 126 }, Point { row: 87, column: 127 }, Point { row: 87, column: 128 }], ['5', '8', '1']
+[Point { row: 87, column: 136 }, Point { row: 87, column: 137 }, Point { row: 87, column: 138 }], ['5', '3', '7']
+[Point { row: 88, column: 6 }, Point { row: 88, column: 7 }, Point { row: 88, column: 8 }], ['7', '4', '7']
+[Point { row: 88, column: 22 }, Point { row: 88, column: 23 }, Point { row: 88, column: 24 }], ['1', '7', '1']
+[Point { row: 88, column: 26 }, Point { row: 88, column: 27 }], ['7', '0']
+[Point { row: 88, column: 37 }, Point { row: 88, column: 38 }, Point { row: 88, column: 39 }], ['9', '9', '0']
+[Point { row: 88, column: 63 }, Point { row: 88, column: 64 }, Point { row: 88, column: 65 }], ['5', '2', '9']
+[Point { row: 88, column: 79 }, Point { row: 88, column: 80 }, Point { row: 88, column: 81 }], ['4', '8', '2']
+[Point { row: 88, column: 103 }, Point { row: 88, column: 104 }, Point { row: 88, column: 105 }], ['3', '8', '3']
+[Point { row: 88, column: 112 }, Point { row: 88, column: 113 }, Point { row: 88, column: 114 }], ['5', '3', '1']
+[Point { row: 88, column: 116 }, Point { row: 88, column: 117 }], ['5', '3']
+[Point { row: 88, column: 132 }, Point { row: 88, column: 133 }, Point { row: 88, column: 134 }], ['2', '1', '1']
+[Point { row: 89, column: 12 }, Point { row: 89, column: 13 }, Point { row: 89, column: 14 }], ['4', '7', '0']
+[Point { row: 89, column: 29 }, Point { row: 89, column: 30 }, Point { row: 89, column: 31 }], ['8', '1', '2']
+[Point { row: 89, column: 33 }, Point { row: 89, column: 34 }, Point { row: 89, column: 35 }], ['6', '6', '4']
+[Point { row: 89, column: 45 }, Point { row: 89, column: 46 }, Point { row: 89, column: 47 }], ['1', '4', '1']
+[Point { row: 89, column: 53 }, Point { row: 89, column: 54 }], ['8', '2']
+[Point { row: 89, column: 58 }, Point { row: 89, column: 59 }, Point { row: 89, column: 60 }], ['8', '8', '8']
+[Point { row: 89, column: 84 }, Point { row: 89, column: 85 }, Point { row: 89, column: 86 }], ['3', '1', '2']
+[Point { row: 89, column: 91 }], ['9']
+[Point { row: 89, column: 93 }, Point { row: 89, column: 94 }, Point { row: 89, column: 95 }], ['8', '6', '0']
+[Point { row: 89, column: 107 }, Point { row: 89, column: 108 }, Point { row: 89, column: 109 }], ['5', '2', '9']
+[Point { row: 89, column: 127 }, Point { row: 89, column: 128 }, Point { row: 89, column: 129 }], ['9', '5', '2']
+[Point { row: 90, column: 5 }, Point { row: 90, column: 6 }, Point { row: 90, column: 7 }], ['9', '0', '6']
+[Point { row: 90, column: 16 }, Point { row: 90, column: 17 }, Point { row: 90, column: 18 }], ['8', '1', '0']
+[Point { row: 90, column: 22 }, Point { row: 90, column: 23 }, Point { row: 90, column: 24 }], ['9', '6', '6']
+[Point { row: 90, column: 65 }, Point { row: 90, column: 66 }, Point { row: 90, column: 67 }], ['6', '1', '6']
+[Point { row: 90, column: 76 }, Point { row: 90, column: 77 }, Point { row: 90, column: 78 }], ['3', '2', '7']
+[Point { row: 90, column: 117 }, Point { row: 90, column: 118 }], ['8', '0']
+[Point { row: 90, column: 120 }, Point { row: 90, column: 121 }, Point { row: 90, column: 122 }], ['6', '5', '5']
+[Point { row: 91, column: 0 }, Point { row: 91, column: 1 }, Point { row: 91, column: 2 }], ['3', '2', '3']
+[Point { row: 91, column: 9 }, Point { row: 91, column: 10 }, Point { row: 91, column: 11 }], ['4', '5', '9']
+[Point { row: 91, column: 28 }, Point { row: 91, column: 29 }, Point { row: 91, column: 30 }], ['1', '8', '5']
+[Point { row: 91, column: 36 }, Point { row: 91, column: 37 }, Point { row: 91, column: 38 }], ['8', '9', '4']
+[Point { row: 91, column: 41 }, Point { row: 91, column: 42 }, Point { row: 91, column: 43 }], ['8', '9', '1']
+[Point { row: 91, column: 54 }, Point { row: 91, column: 55 }, Point { row: 91, column: 56 }], ['2', '5', '4']
+[Point { row: 91, column: 90 }, Point { row: 91, column: 91 }, Point { row: 91, column: 92 }], ['9', '3', '8']
+[Point { row: 91, column: 102 }, Point { row: 91, column: 103 }, Point { row: 91, column: 104 }], ['2', '6', '2']
+[Point { row: 91, column: 113 }, Point { row: 91, column: 114 }, Point { row: 91, column: 115 }], ['6', '0', '2']
+[Point { row: 92, column: 13 }, Point { row: 92, column: 14 }, Point { row: 92, column: 15 }], ['1', '1', '0']
+[Point { row: 92, column: 49 }, Point { row: 92, column: 50 }], ['5', '5']
+[Point { row: 92, column: 61 }, Point { row: 92, column: 62 }, Point { row: 92, column: 63 }], ['1', '5', '5']
+[Point { row: 92, column: 82 }, Point { row: 92, column: 83 }, Point { row: 92, column: 84 }], ['2', '4', '8']
+[Point { row: 92, column: 86 }, Point { row: 92, column: 87 }, Point { row: 92, column: 88 }], ['6', '0', '0']
+[Point { row: 92, column: 94 }, Point { row: 92, column: 95 }], ['6', '6']
+[Point { row: 92, column: 127 }, Point { row: 92, column: 128 }], ['7', '5']
+[Point { row: 92, column: 131 }, Point { row: 92, column: 132 }, Point { row: 92, column: 133 }], ['8', '8', '0']
+[Point { row: 93, column: 5 }, Point { row: 93, column: 6 }, Point { row: 93, column: 7 }], ['4', '5', '9']
+[Point { row: 93, column: 19 }, Point { row: 93, column: 20 }, Point { row: 93, column: 21 }], ['9', '2', '8']
+[Point { row: 93, column: 54 }, Point { row: 93, column: 55 }, Point { row: 93, column: 56 }], ['9', '0', '0']
+[Point { row: 93, column: 68 }, Point { row: 93, column: 69 }], ['2', '7']
+[Point { row: 93, column: 98 }, Point { row: 93, column: 99 }, Point { row: 93, column: 100 }], ['5', '2', '6']
+[Point { row: 93, column: 105 }, Point { row: 93, column: 106 }, Point { row: 93, column: 107 }], ['4', '3', '4']
+[Point { row: 93, column: 109 }, Point { row: 93, column: 110 }, Point { row: 93, column: 111 }], ['4', '0', '2']
+[Point { row: 93, column: 117 }, Point { row: 93, column: 118 }, Point { row: 93, column: 119 }], ['8', '4', '0']
+[Point { row: 93, column: 121 }, Point { row: 93, column: 122 }, Point { row: 93, column: 123 }], ['8', '1', '6']
+[Point { row: 94, column: 15 }, Point { row: 94, column: 16 }, Point { row: 94, column: 17 }], ['2', '4', '1']
+[Point { row: 94, column: 26 }, Point { row: 94, column: 27 }], ['7', '0']
+[Point { row: 94, column: 29 }, Point { row: 94, column: 30 }, Point { row: 94, column: 31 }], ['4', '6', '5']
+[Point { row: 94, column: 35 }, Point { row: 94, column: 36 }, Point { row: 94, column: 37 }], ['6', '6', '8']
+[Point { row: 94, column: 42 }, Point { row: 94, column: 43 }, Point { row: 94, column: 44 }], ['1', '1', '0']
+[Point { row: 94, column: 50 }, Point { row: 94, column: 51 }, Point { row: 94, column: 52 }], ['9', '0', '5']
+[Point { row: 94, column: 64 }, Point { row: 94, column: 65 }, Point { row: 94, column: 66 }], ['2', '5', '2']
+[Point { row: 94, column: 95 }, Point { row: 94, column: 96 }], ['7', '4']
+[Point { row: 94, column: 128 }, Point { row: 94, column: 129 }, Point { row: 94, column: 130 }], ['8', '1', '7']
+[Point { row: 94, column: 134 }, Point { row: 94, column: 135 }, Point { row: 94, column: 136 }], ['2', '9', '0']
+[Point { row: 95, column: 1 }, Point { row: 95, column: 2 }, Point { row: 95, column: 3 }], ['5', '4', '0']
+[Point { row: 95, column: 7 }, Point { row: 95, column: 8 }, Point { row: 95, column: 9 }], ['2', '2', '4']
+[Point { row: 95, column: 20 }, Point { row: 95, column: 21 }], ['4', '2']
+[Point { row: 95, column: 55 }, Point { row: 95, column: 56 }, Point { row: 95, column: 57 }], ['7', '0', '5']
+[Point { row: 95, column: 68 }, Point { row: 95, column: 69 }, Point { row: 95, column: 70 }], ['1', '2', '8']
+[Point { row: 95, column: 76 }, Point { row: 95, column: 77 }, Point { row: 95, column: 78 }], ['7', '5', '8']
+[Point { row: 95, column: 81 }, Point { row: 95, column: 82 }, Point { row: 95, column: 83 }], ['5', '1', '2']
+[Point { row: 95, column: 87 }, Point { row: 95, column: 88 }, Point { row: 95, column: 89 }], ['8', '8', '4']
+[Point { row: 95, column: 98 }, Point { row: 95, column: 99 }, Point { row: 95, column: 100 }], ['6', '4', '8']
+[Point { row: 95, column: 109 }, Point { row: 95, column: 110 }, Point { row: 95, column: 111 }], ['2', '5', '9']
+[Point { row: 95, column: 119 }, Point { row: 95, column: 120 }, Point { row: 95, column: 121 }], ['4', '8', '6']
+[Point { row: 95, column: 123 }, Point { row: 95, column: 124 }, Point { row: 95, column: 125 }], ['6', '2', '7']
+[Point { row: 96, column: 15 }, Point { row: 96, column: 16 }, Point { row: 96, column: 17 }], ['4', '6', '7']
+[Point { row: 96, column: 34 }, Point { row: 96, column: 35 }, Point { row: 96, column: 36 }], ['4', '6', '2']
+[Point { row: 96, column: 39 }, Point { row: 96, column: 40 }, Point { row: 96, column: 41 }], ['3', '2', '1']
+[Point { row: 96, column: 46 }, Point { row: 96, column: 47 }, Point { row: 96, column: 48 }], ['2', '9', '6']
+[Point { row: 96, column: 50 }, Point { row: 96, column: 51 }, Point { row: 96, column: 52 }], ['2', '1', '1']
+[Point { row: 96, column: 63 }, Point { row: 96, column: 64 }, Point { row: 96, column: 65 }], ['2', '8', '3']
+[Point { row: 96, column: 72 }, Point { row: 96, column: 73 }, Point { row: 96, column: 74 }], ['4', '8', '8']
+[Point { row: 96, column: 93 }, Point { row: 96, column: 94 }, Point { row: 96, column: 95 }], ['7', '9', '6']
+[Point { row: 96, column: 102 }, Point { row: 96, column: 103 }, Point { row: 96, column: 104 }], ['7', '7', '4']
+[Point { row: 96, column: 128 }, Point { row: 96, column: 129 }, Point { row: 96, column: 130 }], ['2', '0', '0']
+[Point { row: 96, column: 132 }, Point { row: 96, column: 133 }], ['8', '7']
+[Point { row: 97, column: 3 }, Point { row: 97, column: 4 }, Point { row: 97, column: 5 }], ['6', '6', '3']
+[Point { row: 97, column: 21 }, Point { row: 97, column: 22 }, Point { row: 97, column: 23 }], ['9', '6', '1']
+[Point { row: 97, column: 26 }, Point { row: 97, column: 27 }, Point { row: 97, column: 28 }], ['5', '7', '9']
+[Point { row: 97, column: 76 }, Point { row: 97, column: 77 }, Point { row: 97, column: 78 }], ['1', '8', '9']
+[Point { row: 97, column: 89 }, Point { row: 97, column: 90 }], ['7', '1']
+[Point { row: 97, column: 107 }, Point { row: 97, column: 108 }, Point { row: 97, column: 109 }], ['4', '2', '0']
+[Point { row: 97, column: 112 }, Point { row: 97, column: 113 }], ['5', '7']
+[Point { row: 98, column: 11 }, Point { row: 98, column: 12 }, Point { row: 98, column: 13 }], ['6', '1', '7']
+[Point { row: 98, column: 15 }, Point { row: 98, column: 16 }, Point { row: 98, column: 17 }], ['6', '4', '5']
+[Point { row: 98, column: 38 }, Point { row: 98, column: 39 }, Point { row: 98, column: 40 }], ['7', '0', '0']
+[Point { row: 98, column: 43 }, Point { row: 98, column: 44 }, Point { row: 98, column: 45 }], ['8', '8', '6']
+[Point { row: 98, column: 49 }, Point { row: 98, column: 50 }, Point { row: 98, column: 51 }], ['8', '0', '6']
+[Point { row: 98, column: 53 }, Point { row: 98, column: 54 }, Point { row: 98, column: 55 }], ['5', '8', '1']
+[Point { row: 98, column: 57 }, Point { row: 98, column: 58 }, Point { row: 98, column: 59 }], ['6', '1', '0']
+[Point { row: 98, column: 65 }, Point { row: 98, column: 66 }, Point { row: 98, column: 67 }], ['1', '3', '2']
+[Point { row: 98, column: 69 }, Point { row: 98, column: 70 }, Point { row: 98, column: 71 }], ['3', '7', '9']
+[Point { row: 98, column: 94 }, Point { row: 98, column: 95 }, Point { row: 98, column: 96 }], ['9', '4', '1']
+[Point { row: 98, column: 119 }, Point { row: 98, column: 120 }, Point { row: 98, column: 121 }], ['5', '0', '4']
+[Point { row: 98, column: 126 }, Point { row: 98, column: 127 }, Point { row: 98, column: 128 }], ['5', '8', '9']
+[Point { row: 98, column: 137 }, Point { row: 98, column: 138 }, Point { row: 98, column: 139 }], ['5', '2', '8']
+[Point { row: 99, column: 6 }, Point { row: 99, column: 7 }, Point { row: 99, column: 8 }], ['3', '7', '7']
+[Point { row: 99, column: 22 }, Point { row: 99, column: 23 }, Point { row: 99, column: 24 }], ['2', '9', '0']
+[Point { row: 99, column: 28 }, Point { row: 99, column: 29 }, Point { row: 99, column: 30 }], ['2', '2', '1']
+[Point { row: 99, column: 33 }, Point { row: 99, column: 34 }, Point { row: 99, column: 35 }], ['7', '6', '8']
+[Point { row: 99, column: 86 }, Point { row: 99, column: 87 }, Point { row: 99, column: 88 }], ['5', '5', '6']
+[Point { row: 99, column: 103 }, Point { row: 99, column: 104 }, Point { row: 99, column: 105 }], ['1', '3', '2']
+[Point { row: 100, column: 37 }, Point { row: 100, column: 38 }, Point { row: 100, column: 39 }], ['1', '5', '2']
+[Point { row: 100, column: 41 }, Point { row: 100, column: 42 }, Point { row: 100, column: 43 }], ['4', '4', '8']
+[Point { row: 100, column: 56 }, Point { row: 100, column: 57 }, Point { row: 100, column: 58 }], ['9', '0', '3']
+[Point { row: 100, column: 64 }, Point { row: 100, column: 65 }, Point { row: 100, column: 66 }], ['3', '3', '9']
+[Point { row: 100, column: 80 }, Point { row: 100, column: 81 }, Point { row: 100, column: 82 }], ['7', '0', '9']
+[Point { row: 100, column: 95 }, Point { row: 100, column: 96 }, Point { row: 100, column: 97 }], ['9', '9', '1']
+[Point { row: 100, column: 119 }, Point { row: 100, column: 120 }, Point { row: 100, column: 121 }], ['8', '6', '5']
+[Point { row: 101, column: 11 }, Point { row: 101, column: 12 }, Point { row: 101, column: 13 }], ['7', '1', '7']
+[Point { row: 101, column: 27 }, Point { row: 101, column: 28 }, Point { row: 101, column: 29 }], ['5', '5', '2']
+[Point { row: 101, column: 46 }, Point { row: 101, column: 47 }], ['4', '0']
+[Point { row: 101, column: 50 }, Point { row: 101, column: 51 }, Point { row: 101, column: 52 }], ['4', '5', '8']
+[Point { row: 101, column: 70 }, Point { row: 101, column: 71 }, Point { row: 101, column: 72 }], ['3', '6', '5']
+[Point { row: 101, column: 87 }, Point { row: 101, column: 88 }, Point { row: 101, column: 89 }], ['7', '6', '2']
+[Point { row: 101, column: 91 }, Point { row: 101, column: 92 }, Point { row: 101, column: 93 }], ['7', '3', '2']
+[Point { row: 101, column: 103 }, Point { row: 101, column: 104 }, Point { row: 101, column: 105 }], ['6', '9', '0']
+[Point { row: 101, column: 107 }, Point { row: 101, column: 108 }, Point { row: 101, column: 109 }], ['2', '6', '6']
+[Point { row: 101, column: 115 }, Point { row: 101, column: 116 }, Point { row: 101, column: 117 }], ['2', '2', '2']
+[Point { row: 101, column: 130 }, Point { row: 101, column: 131 }, Point { row: 101, column: 132 }], ['1', '2', '2']
+[Point { row: 102, column: 1 }, Point { row: 102, column: 2 }, Point { row: 102, column: 3 }], ['4', '1', '4']
+[Point { row: 102, column: 15 }, Point { row: 102, column: 16 }, Point { row: 102, column: 17 }], ['4', '9', '6']
+[Point { row: 102, column: 23 }, Point { row: 102, column: 24 }, Point { row: 102, column: 25 }], ['7', '1', '2']
+[Point { row: 102, column: 37 }, Point { row: 102, column: 38 }, Point { row: 102, column: 39 }], ['7', '8', '5']
+[Point { row: 102, column: 57 }, Point { row: 102, column: 58 }], ['7', '9']
+[Point { row: 102, column: 62 }, Point { row: 102, column: 63 }, Point { row: 102, column: 64 }], ['8', '8', '4']
+[Point { row: 102, column: 66 }, Point { row: 102, column: 67 }, Point { row: 102, column: 68 }], ['9', '9', '1']
+[Point { row: 102, column: 96 }, Point { row: 102, column: 97 }, Point { row: 102, column: 98 }], ['8', '4', '4']
+[Point { row: 102, column: 119 }, Point { row: 102, column: 120 }, Point { row: 102, column: 121 }], ['7', '8', '2']
+[Point { row: 102, column: 134 }, Point { row: 102, column: 135 }, Point { row: 102, column: 136 }], ['6', '2', '7']
+[Point { row: 103, column: 19 }, Point { row: 103, column: 20 }, Point { row: 103, column: 21 }], ['5', '6', '0']
+[Point { row: 103, column: 28 }, Point { row: 103, column: 29 }, Point { row: 103, column: 30 }], ['8', '7', '3']
+[Point { row: 103, column: 33 }, Point { row: 103, column: 34 }, Point { row: 103, column: 35 }], ['7', '3', '9']
+[Point { row: 103, column: 47 }, Point { row: 103, column: 48 }, Point { row: 103, column: 49 }], ['3', '6', '8']
+[Point { row: 103, column: 51 }, Point { row: 103, column: 52 }, Point { row: 103, column: 53 }], ['9', '9', '1']
+[Point { row: 103, column: 72 }, Point { row: 103, column: 73 }], ['2', '7']
+[Point { row: 103, column: 84 }, Point { row: 103, column: 85 }, Point { row: 103, column: 86 }], ['9', '5', '1']
+[Point { row: 103, column: 101 }, Point { row: 103, column: 102 }, Point { row: 103, column: 103 }], ['8', '6', '4']
+[Point { row: 103, column: 113 }, Point { row: 103, column: 114 }, Point { row: 103, column: 115 }], ['2', '0', '6']
+[Point { row: 103, column: 123 }, Point { row: 103, column: 124 }, Point { row: 103, column: 125 }], ['8', '7', '8']
+[Point { row: 104, column: 5 }, Point { row: 104, column: 6 }, Point { row: 104, column: 7 }], ['2', '3', '1']
+[Point { row: 104, column: 10 }, Point { row: 104, column: 11 }, Point { row: 104, column: 12 }], ['9', '9', '5']
+[Point { row: 104, column: 24 }, Point { row: 104, column: 25 }, Point { row: 104, column: 26 }], ['8', '6', '5']
+[Point { row: 104, column: 43 }, Point { row: 104, column: 44 }, Point { row: 104, column: 45 }], ['6', '0', '2']
+[Point { row: 104, column: 57 }, Point { row: 104, column: 58 }, Point { row: 104, column: 59 }], ['3', '7', '9']
+[Point { row: 104, column: 61 }, Point { row: 104, column: 62 }, Point { row: 104, column: 63 }], ['6', '0', '9']
+[Point { row: 104, column: 65 }, Point { row: 104, column: 66 }, Point { row: 104, column: 67 }], ['9', '3', '5']
+[Point { row: 104, column: 78 }, Point { row: 104, column: 79 }, Point { row: 104, column: 80 }], ['6', '4', '3']
+[Point { row: 104, column: 97 }, Point { row: 104, column: 98 }, Point { row: 104, column: 99 }], ['9', '5', '2']
+[Point { row: 104, column: 117 }, Point { row: 104, column: 118 }, Point { row: 104, column: 119 }], ['8', '8', '4']
+[Point { row: 105, column: 18 }, Point { row: 105, column: 19 }, Point { row: 105, column: 20 }], ['7', '2', '6']
+[Point { row: 105, column: 29 }, Point { row: 105, column: 30 }, Point { row: 105, column: 31 }], ['3', '6', '0']
+[Point { row: 105, column: 93 }, Point { row: 105, column: 94 }, Point { row: 105, column: 95 }], ['9', '9', '0']
+[Point { row: 105, column: 106 }, Point { row: 105, column: 107 }, Point { row: 105, column: 108 }], ['9', '5', '9']
+[Point { row: 105, column: 121 }, Point { row: 105, column: 122 }, Point { row: 105, column: 123 }], ['9', '3', '2']
+[Point { row: 106, column: 23 }, Point { row: 106, column: 24 }, Point { row: 106, column: 25 }], ['5', '0', '8']
+[Point { row: 106, column: 35 }, Point { row: 106, column: 36 }, Point { row: 106, column: 37 }], ['1', '9', '4']
+[Point { row: 106, column: 46 }, Point { row: 106, column: 47 }], ['3', '0']
+[Point { row: 106, column: 69 }, Point { row: 106, column: 70 }, Point { row: 106, column: 71 }], ['4', '8', '7']
+[Point { row: 106, column: 78 }, Point { row: 106, column: 79 }, Point { row: 106, column: 80 }], ['1', '7', '1']
+[Point { row: 106, column: 84 }, Point { row: 106, column: 85 }, Point { row: 106, column: 86 }], ['2', '4', '3']
+[Point { row: 106, column: 89 }, Point { row: 106, column: 90 }, Point { row: 106, column: 91 }], ['7', '0', '9']
+[Point { row: 106, column: 100 }, Point { row: 106, column: 101 }, Point { row: 106, column: 102 }], ['4', '9', '5']
+[Point { row: 106, column: 112 }, Point { row: 106, column: 113 }, Point { row: 106, column: 114 }], ['9', '9', '5']
+[Point { row: 106, column: 116 }, Point { row: 106, column: 117 }, Point { row: 106, column: 118 }], ['4', '6', '4']
+[Point { row: 106, column: 126 }, Point { row: 106, column: 127 }, Point { row: 106, column: 128 }], ['9', '9', '7']
+[Point { row: 107, column: 6 }, Point { row: 107, column: 7 }, Point { row: 107, column: 8 }], ['2', '9', '2']
+[Point { row: 107, column: 42 }, Point { row: 107, column: 43 }, Point { row: 107, column: 44 }], ['2', '5', '3']
+[Point { row: 107, column: 56 }, Point { row: 107, column: 57 }, Point { row: 107, column: 58 }], ['5', '5', '4']
+[Point { row: 107, column: 130 }, Point { row: 107, column: 131 }, Point { row: 107, column: 132 }], ['5', '8', '2']
+[Point { row: 107, column: 134 }, Point { row: 107, column: 135 }, Point { row: 107, column: 136 }], ['4', '4', '6']
+[Point { row: 108, column: 11 }, Point { row: 108, column: 12 }, Point { row: 108, column: 13 }], ['8', '0', '2']
+[Point { row: 108, column: 19 }, Point { row: 108, column: 20 }, Point { row: 108, column: 21 }], ['2', '3', '7']
+[Point { row: 108, column: 28 }, Point { row: 108, column: 29 }], ['3', '2']
+[Point { row: 108, column: 33 }, Point { row: 108, column: 34 }, Point { row: 108, column: 35 }], ['2', '8', '6']
+[Point { row: 108, column: 37 }, Point { row: 108, column: 38 }, Point { row: 108, column: 39 }], ['2', '5', '9']
+[Point { row: 108, column: 52 }, Point { row: 108, column: 53 }, Point { row: 108, column: 54 }], ['1', '3', '2']
+[Point { row: 108, column: 60 }, Point { row: 108, column: 61 }, Point { row: 108, column: 62 }], ['2', '3', '6']
+[Point { row: 108, column: 69 }, Point { row: 108, column: 70 }, Point { row: 108, column: 71 }], ['6', '8', '3']
+[Point { row: 108, column: 101 }, Point { row: 108, column: 102 }, Point { row: 108, column: 103 }], ['7', '0', '5']
+[Point { row: 108, column: 108 }, Point { row: 108, column: 109 }, Point { row: 108, column: 110 }], ['8', '5', '5']
+[Point { row: 108, column: 112 }, Point { row: 108, column: 113 }], ['3', '7']
+[Point { row: 108, column: 123 }, Point { row: 108, column: 124 }, Point { row: 108, column: 125 }], ['4', '7', '6']
+[Point { row: 109, column: 5 }, Point { row: 109, column: 6 }, Point { row: 109, column: 7 }], ['4', '1', '8']
+[Point { row: 109, column: 24 }, Point { row: 109, column: 25 }, Point { row: 109, column: 26 }], ['6', '6', '4']
+[Point { row: 109, column: 47 }, Point { row: 109, column: 48 }], ['1', '1']
+[Point { row: 109, column: 73 }, Point { row: 109, column: 74 }], ['7', '0']
+[Point { row: 109, column: 76 }, Point { row: 109, column: 77 }, Point { row: 109, column: 78 }], ['3', '8', '0']
+[Point { row: 109, column: 83 }, Point { row: 109, column: 84 }, Point { row: 109, column: 85 }], ['1', '3', '8']
+[Point { row: 109, column: 91 }, Point { row: 109, column: 92 }, Point { row: 109, column: 93 }], ['4', '1', '6']
+[Point { row: 109, column: 95 }, Point { row: 109, column: 96 }, Point { row: 109, column: 97 }], ['6', '0', '9']
+[Point { row: 109, column: 116 }, Point { row: 109, column: 117 }, Point { row: 109, column: 118 }], ['4', '5', '2']
+[Point { row: 109, column: 127 }, Point { row: 109, column: 128 }], ['4', '3']
+[Point { row: 109, column: 132 }, Point { row: 109, column: 133 }, Point { row: 109, column: 134 }], ['1', '5', '6']
+[Point { row: 109, column: 137 }, Point { row: 109, column: 138 }, Point { row: 109, column: 139 }], ['2', '6', '0']
+[Point { row: 110, column: 20 }, Point { row: 110, column: 21 }], ['2', '0']
+[Point { row: 110, column: 32 }, Point { row: 110, column: 33 }, Point { row: 110, column: 34 }], ['5', '1', '2']
+[Point { row: 110, column: 43 }, Point { row: 110, column: 44 }, Point { row: 110, column: 45 }], ['3', '0', '3']
+[Point { row: 110, column: 68 }, Point { row: 110, column: 69 }, Point { row: 110, column: 70 }], ['4', '9', '1']
+[Point { row: 110, column: 107 }, Point { row: 110, column: 108 }, Point { row: 110, column: 109 }], ['9', '6', '2']
+[Point { row: 111, column: 0 }, Point { row: 111, column: 1 }, Point { row: 111, column: 2 }], ['4', '2', '6']
+[Point { row: 111, column: 4 }, Point { row: 111, column: 5 }, Point { row: 111, column: 6 }], ['6', '4', '6']
+[Point { row: 111, column: 11 }, Point { row: 111, column: 12 }, Point { row: 111, column: 13 }], ['8', '3', '3']
+[Point { row: 111, column: 25 }, Point { row: 111, column: 26 }, Point { row: 111, column: 27 }], ['8', '2', '1']
+[Point { row: 111, column: 48 }, Point { row: 111, column: 49 }, Point { row: 111, column: 50 }], ['3', '4', '8']
+[Point { row: 111, column: 58 }, Point { row: 111, column: 59 }, Point { row: 111, column: 60 }], ['5', '3', '7']
+[Point { row: 111, column: 64 }, Point { row: 111, column: 65 }, Point { row: 111, column: 66 }], ['6', '6', '8']
+[Point { row: 111, column: 75 }, Point { row: 111, column: 76 }], ['9', '2']
+[Point { row: 111, column: 82 }, Point { row: 111, column: 83 }, Point { row: 111, column: 84 }], ['2', '9', '5']
+[Point { row: 111, column: 90 }, Point { row: 111, column: 91 }, Point { row: 111, column: 92 }], ['6', '2', '0']
+[Point { row: 111, column: 112 }, Point { row: 111, column: 113 }, Point { row: 111, column: 114 }], ['1', '4', '7']
+[Point { row: 111, column: 117 }, Point { row: 111, column: 118 }, Point { row: 111, column: 119 }], ['7', '5', '3']
+[Point { row: 112, column: 31 }, Point { row: 112, column: 32 }, Point { row: 112, column: 33 }], ['2', '1', '0']
+[Point { row: 112, column: 35 }, Point { row: 112, column: 36 }, Point { row: 112, column: 37 }], ['6', '8', '1']
+[Point { row: 112, column: 68 }, Point { row: 112, column: 69 }, Point { row: 112, column: 70 }], ['9', '3', '7']
+[Point { row: 112, column: 78 }, Point { row: 112, column: 79 }, Point { row: 112, column: 80 }], ['3', '5', '0']
+[Point { row: 112, column: 103 }, Point { row: 112, column: 104 }, Point { row: 112, column: 105 }], ['5', '3', '3']
+[Point { row: 113, column: 1 }, Point { row: 113, column: 2 }], ['6', '5']
+[Point { row: 113, column: 6 }, Point { row: 113, column: 7 }], ['2', '2']
+[Point { row: 113, column: 10 }, Point { row: 113, column: 11 }, Point { row: 113, column: 12 }], ['6', '5', '6']
+[Point { row: 113, column: 26 }, Point { row: 113, column: 27 }], ['4', '4']
+[Point { row: 113, column: 39 }, Point { row: 113, column: 40 }, Point { row: 113, column: 41 }], ['1', '7', '8']
+[Point { row: 113, column: 52 }, Point { row: 113, column: 53 }, Point { row: 113, column: 54 }], ['4', '4', '6']
+[Point { row: 113, column: 64 }, Point { row: 113, column: 65 }, Point { row: 113, column: 66 }], ['6', '5', '5']
+[Point { row: 113, column: 82 }, Point { row: 113, column: 83 }, Point { row: 113, column: 84 }], ['5', '9', '2']
+[Point { row: 113, column: 90 }, Point { row: 113, column: 91 }, Point { row: 113, column: 92 }], ['9', '5', '2']
+[Point { row: 113, column: 99 }, Point { row: 113, column: 100 }, Point { row: 113, column: 101 }], ['6', '8', '0']
+[Point { row: 113, column: 119 }, Point { row: 113, column: 120 }, Point { row: 113, column: 121 }], ['3', '0', '5']
+[Point { row: 113, column: 135 }, Point { row: 113, column: 136 }, Point { row: 113, column: 137 }], ['7', '0', '4']
+[Point { row: 114, column: 17 }, Point { row: 114, column: 18 }, Point { row: 114, column: 19 }], ['4', '2', '2']
+[Point { row: 114, column: 22 }, Point { row: 114, column: 23 }, Point { row: 114, column: 24 }], ['8', '3', '5']
+[Point { row: 114, column: 31 }, Point { row: 114, column: 32 }, Point { row: 114, column: 33 }], ['1', '2', '6']
+[Point { row: 114, column: 43 }, Point { row: 114, column: 44 }, Point { row: 114, column: 45 }], ['5', '5', '2']
+[Point { row: 114, column: 58 }, Point { row: 114, column: 59 }, Point { row: 114, column: 60 }], ['5', '4', '3']
+[Point { row: 114, column: 76 }, Point { row: 114, column: 77 }, Point { row: 114, column: 78 }], ['4', '4', '4']
+[Point { row: 114, column: 86 }, Point { row: 114, column: 87 }, Point { row: 114, column: 88 }], ['9', '9', '5']
+[Point { row: 114, column: 104 }, Point { row: 114, column: 105 }, Point { row: 114, column: 106 }], ['7', '7', '1']
+[Point { row: 114, column: 115 }, Point { row: 114, column: 116 }, Point { row: 114, column: 117 }], ['4', '8', '0']
+[Point { row: 114, column: 127 }, Point { row: 114, column: 128 }, Point { row: 114, column: 129 }], ['7', '8', '2']
+[Point { row: 115, column: 12 }, Point { row: 115, column: 13 }], ['2', '8']
+[Point { row: 115, column: 26 }, Point { row: 115, column: 27 }, Point { row: 115, column: 28 }], ['9', '8', '3']
+[Point { row: 115, column: 41 }], ['5']
+[Point { row: 115, column: 54 }, Point { row: 115, column: 55 }, Point { row: 115, column: 56 }], ['9', '5', '3']
+[Point { row: 115, column: 66 }, Point { row: 115, column: 67 }, Point { row: 115, column: 68 }], ['2', '1', '6']
+[Point { row: 115, column: 71 }, Point { row: 115, column: 72 }, Point { row: 115, column: 73 }], ['7', '4', '9']
+[Point { row: 115, column: 110 }, Point { row: 115, column: 111 }, Point { row: 115, column: 112 }], ['2', '3', '2']
+[Point { row: 116, column: 21 }, Point { row: 116, column: 22 }, Point { row: 116, column: 23 }], ['8', '7', '8']
+[Point { row: 116, column: 50 }, Point { row: 116, column: 51 }, Point { row: 116, column: 52 }], ['4', '2', '6']
+[Point { row: 116, column: 103 }, Point { row: 116, column: 104 }, Point { row: 116, column: 105 }], ['7', '9', '2']
+[Point { row: 116, column: 114 }, Point { row: 116, column: 115 }, Point { row: 116, column: 116 }], ['8', '9', '8']
+[Point { row: 116, column: 123 }, Point { row: 116, column: 124 }, Point { row: 116, column: 125 }], ['2', '6', '4']
+[Point { row: 116, column: 129 }, Point { row: 116, column: 130 }], ['3', '9']
+[Point { row: 117, column: 3 }, Point { row: 117, column: 4 }, Point { row: 117, column: 5 }], ['4', '8', '0']
+[Point { row: 117, column: 11 }, Point { row: 117, column: 12 }, Point { row: 117, column: 13 }], ['6', '7', '4']
+[Point { row: 117, column: 16 }, Point { row: 117, column: 17 }, Point { row: 117, column: 18 }], ['1', '4', '9']
+[Point { row: 117, column: 39 }, Point { row: 117, column: 40 }, Point { row: 117, column: 41 }], ['7', '4', '0']
+[Point { row: 117, column: 54 }, Point { row: 117, column: 55 }, Point { row: 117, column: 56 }], ['2', '5', '1']
+[Point { row: 117, column: 59 }, Point { row: 117, column: 60 }, Point { row: 117, column: 61 }], ['9', '2', '0']
+[Point { row: 117, column: 69 }, Point { row: 117, column: 70 }, Point { row: 117, column: 71 }], ['5', '5', '2']
+[Point { row: 117, column: 94 }, Point { row: 117, column: 95 }, Point { row: 117, column: 96 }], ['7', '1', '3']
+[Point { row: 117, column: 108 }, Point { row: 117, column: 109 }, Point { row: 117, column: 110 }], ['6', '3', '9']
+[Point { row: 117, column: 118 }, Point { row: 117, column: 119 }, Point { row: 117, column: 120 }], ['9', '1', '7']
+[Point { row: 118, column: 33 }, Point { row: 118, column: 34 }, Point { row: 118, column: 35 }], ['9', '5', '1']
+[Point { row: 118, column: 49 }, Point { row: 118, column: 50 }, Point { row: 118, column: 51 }], ['9', '6', '8']
+[Point { row: 118, column: 104 }, Point { row: 118, column: 105 }, Point { row: 118, column: 106 }], ['7', '5', '0']
+[Point { row: 118, column: 114 }, Point { row: 118, column: 115 }, Point { row: 118, column: 116 }], ['4', '7', '9']
+[Point { row: 118, column: 129 }, Point { row: 118, column: 130 }, Point { row: 118, column: 131 }], ['7', '7', '0']
+[Point { row: 118, column: 133 }, Point { row: 118, column: 134 }, Point { row: 118, column: 135 }], ['9', '5', '9']
+[Point { row: 119, column: 15 }, Point { row: 119, column: 16 }, Point { row: 119, column: 17 }], ['4', '2', '4']
+[Point { row: 119, column: 20 }, Point { row: 119, column: 21 }], ['5', '4']
+[Point { row: 119, column: 23 }, Point { row: 119, column: 24 }, Point { row: 119, column: 25 }], ['4', '8', '9']
+[Point { row: 119, column: 40 }, Point { row: 119, column: 41 }], ['1', '4']
+[Point { row: 119, column: 44 }, Point { row: 119, column: 45 }, Point { row: 119, column: 46 }], ['3', '5', '5']
+[Point { row: 119, column: 58 }, Point { row: 119, column: 59 }, Point { row: 119, column: 60 }], ['7', '8', '2']
+[Point { row: 119, column: 64 }, Point { row: 119, column: 65 }], ['5', '0']
+[Point { row: 119, column: 82 }, Point { row: 119, column: 83 }, Point { row: 119, column: 84 }], ['9', '0', '0']
+[Point { row: 119, column: 86 }, Point { row: 119, column: 87 }, Point { row: 119, column: 88 }], ['7', '7', '0']
+[Point { row: 119, column: 99 }, Point { row: 119, column: 100 }, Point { row: 119, column: 101 }], ['6', '3', '9']
+[Point { row: 119, column: 109 }, Point { row: 119, column: 110 }, Point { row: 119, column: 111 }], ['9', '4', '2']
+[Point { row: 119, column: 118 }, Point { row: 119, column: 119 }], ['3', '9']
+[Point { row: 119, column: 125 }, Point { row: 119, column: 126 }, Point { row: 119, column: 127 }], ['4', '7', '7']
+[Point { row: 120, column: 4 }, Point { row: 120, column: 5 }, Point { row: 120, column: 6 }], ['8', '8', '8']
+[Point { row: 120, column: 28 }, Point { row: 120, column: 29 }, Point { row: 120, column: 30 }], ['4', '1', '2']
+[Point { row: 120, column: 68 }, Point { row: 120, column: 69 }, Point { row: 120, column: 70 }], ['1', '2', '3']
+[Point { row: 120, column: 74 }, Point { row: 120, column: 75 }, Point { row: 120, column: 76 }], ['5', '7', '9']
+[Point { row: 120, column: 93 }, Point { row: 120, column: 94 }, Point { row: 120, column: 95 }], ['3', '1', '5']
+[Point { row: 120, column: 130 }, Point { row: 120, column: 131 }], ['6', '6']
+[Point { row: 121, column: 33 }, Point { row: 121, column: 34 }, Point { row: 121, column: 35 }], ['7', '9', '3']
+[Point { row: 121, column: 38 }, Point { row: 121, column: 39 }, Point { row: 121, column: 40 }], ['4', '0', '2']
+[Point { row: 121, column: 49 }, Point { row: 121, column: 50 }, Point { row: 121, column: 51 }], ['8', '0', '7']
+[Point { row: 121, column: 55 }, Point { row: 121, column: 56 }, Point { row: 121, column: 57 }], ['8', '5', '4']
+[Point { row: 121, column: 62 }, Point { row: 121, column: 63 }, Point { row: 121, column: 64 }], ['1', '1', '5']
+[Point { row: 121, column: 97 }, Point { row: 121, column: 98 }, Point { row: 121, column: 99 }], ['2', '0', '4']
+[Point { row: 121, column: 107 }, Point { row: 121, column: 108 }, Point { row: 121, column: 109 }], ['2', '0', '8']
+[Point { row: 121, column: 112 }, Point { row: 121, column: 113 }, Point { row: 121, column: 114 }], ['9', '2', '8']
+[Point { row: 121, column: 125 }, Point { row: 121, column: 126 }, Point { row: 121, column: 127 }], ['1', '2', '1']
+[Point { row: 122, column: 11 }, Point { row: 122, column: 12 }, Point { row: 122, column: 13 }], ['8', '8', '0']
+[Point { row: 122, column: 16 }, Point { row: 122, column: 17 }, Point { row: 122, column: 18 }], ['8', '1', '8']
+[Point { row: 122, column: 25 }, Point { row: 122, column: 26 }, Point { row: 122, column: 27 }], ['9', '8', '2']
+[Point { row: 122, column: 45 }, Point { row: 122, column: 46 }, Point { row: 122, column: 47 }], ['9', '2', '3']
+[Point { row: 122, column: 87 }, Point { row: 122, column: 88 }, Point { row: 122, column: 89 }], ['8', '0', '9']
+[Point { row: 122, column: 91 }, Point { row: 122, column: 92 }, Point { row: 122, column: 93 }], ['9', '6', '2']
+[Point { row: 123, column: 3 }, Point { row: 123, column: 4 }, Point { row: 123, column: 5 }], ['9', '5', '7']
+[Point { row: 123, column: 7 }, Point { row: 123, column: 8 }, Point { row: 123, column: 9 }], ['5', '1', '1']
+[Point { row: 123, column: 20 }, Point { row: 123, column: 21 }, Point { row: 123, column: 22 }], ['4', '3', '6']
+[Point { row: 123, column: 32 }, Point { row: 123, column: 33 }, Point { row: 123, column: 34 }], ['7', '0', '4']
+[Point { row: 123, column: 72 }, Point { row: 123, column: 73 }], ['8', '4']
+[Point { row: 123, column: 78 }, Point { row: 123, column: 79 }, Point { row: 123, column: 80 }], ['3', '6', '9']
+[Point { row: 123, column: 82 }, Point { row: 123, column: 83 }, Point { row: 123, column: 84 }], ['4', '9', '6']
+[Point { row: 123, column: 95 }, Point { row: 123, column: 96 }, Point { row: 123, column: 97 }], ['9', '1', '7']
+[Point { row: 123, column: 119 }, Point { row: 123, column: 120 }, Point { row: 123, column: 121 }], ['4', '6', '4']
+[Point { row: 124, column: 28 }, Point { row: 124, column: 29 }, Point { row: 124, column: 30 }], ['8', '1', '2']
+[Point { row: 124, column: 40 }, Point { row: 124, column: 41 }, Point { row: 124, column: 42 }], ['7', '8', '5']
+[Point { row: 124, column: 59 }, Point { row: 124, column: 60 }, Point { row: 124, column: 61 }], ['8', '4', '8']
+[Point { row: 124, column: 64 }, Point { row: 124, column: 65 }, Point { row: 124, column: 66 }], ['5', '0', '6']
+[Point { row: 124, column: 86 }, Point { row: 124, column: 87 }, Point { row: 124, column: 88 }], ['1', '1', '6']
+[Point { row: 125, column: 10 }, Point { row: 125, column: 11 }, Point { row: 125, column: 12 }], ['6', '9', '4']
+[Point { row: 125, column: 15 }, Point { row: 125, column: 16 }, Point { row: 125, column: 17 }], ['2', '5', '7']
+[Point { row: 125, column: 20 }, Point { row: 125, column: 21 }, Point { row: 125, column: 22 }], ['8', '7', '6']
+[Point { row: 125, column: 44 }, Point { row: 125, column: 45 }], ['1', '5']
+[Point { row: 125, column: 55 }, Point { row: 125, column: 56 }, Point { row: 125, column: 57 }], ['1', '7', '6']
+[Point { row: 125, column: 103 }, Point { row: 125, column: 104 }, Point { row: 125, column: 105 }], ['5', '9', '3']
+[Point { row: 125, column: 109 }, Point { row: 125, column: 110 }, Point { row: 125, column: 111 }], ['1', '6', '8']
+[Point { row: 125, column: 115 }, Point { row: 125, column: 116 }, Point { row: 125, column: 117 }], ['9', '1', '4']
+[Point { row: 125, column: 119 }, Point { row: 125, column: 120 }, Point { row: 125, column: 121 }], ['2', '3', '0']
+[Point { row: 125, column: 124 }, Point { row: 125, column: 125 }, Point { row: 125, column: 126 }], ['2', '0', '0']
+[Point { row: 125, column: 136 }, Point { row: 125, column: 137 }, Point { row: 125, column: 138 }], ['5', '0', '0']
+[Point { row: 126, column: 3 }, Point { row: 126, column: 4 }, Point { row: 126, column: 5 }], ['4', '2', '7']
+[Point { row: 126, column: 81 }, Point { row: 126, column: 82 }, Point { row: 126, column: 83 }], ['2', '3', '3']
+[Point { row: 126, column: 86 }, Point { row: 126, column: 87 }, Point { row: 126, column: 88 }], ['6', '1', '6']
+[Point { row: 126, column: 94 }, Point { row: 126, column: 95 }, Point { row: 126, column: 96 }], ['2', '9', '9']
+[Point { row: 127, column: 13 }, Point { row: 127, column: 14 }, Point { row: 127, column: 15 }], ['5', '9', '8']
+[Point { row: 127, column: 28 }, Point { row: 127, column: 29 }, Point { row: 127, column: 30 }], ['5', '7', '1']
+[Point { row: 127, column: 36 }, Point { row: 127, column: 37 }], ['6', '0']
+[Point { row: 127, column: 47 }, Point { row: 127, column: 48 }, Point { row: 127, column: 49 }], ['8', '9', '7']
+[Point { row: 127, column: 57 }, Point { row: 127, column: 58 }, Point { row: 127, column: 59 }], ['9', '1', '1']
+[Point { row: 127, column: 64 }, Point { row: 127, column: 65 }], ['3', '4']
+[Point { row: 127, column: 70 }, Point { row: 127, column: 71 }, Point { row: 127, column: 72 }], ['1', '0', '6']
+[Point { row: 127, column: 76 }, Point { row: 127, column: 77 }, Point { row: 127, column: 78 }], ['7', '1', '3']
+[Point { row: 127, column: 110 }, Point { row: 127, column: 111 }, Point { row: 127, column: 112 }], ['9', '3', '3']
+[Point { row: 127, column: 123 }, Point { row: 127, column: 124 }, Point { row: 127, column: 125 }], ['2', '8', '8']
+[Point { row: 128, column: 2 }, Point { row: 128, column: 3 }, Point { row: 128, column: 4 }], ['3', '1', '4']
+[Point { row: 128, column: 20 }, Point { row: 128, column: 21 }, Point { row: 128, column: 22 }], ['5', '6', '3']
+[Point { row: 128, column: 86 }, Point { row: 128, column: 87 }, Point { row: 128, column: 88 }], ['1', '9', '8']
+[Point { row: 128, column: 127 }, Point { row: 128, column: 128 }, Point { row: 128, column: 129 }], ['5', '9', '1']
+[Point { row: 128, column: 134 }, Point { row: 128, column: 135 }, Point { row: 128, column: 136 }], ['2', '4', '6']
+[Point { row: 129, column: 11 }, Point { row: 129, column: 12 }, Point { row: 129, column: 13 }], ['2', '7', '4']
+[Point { row: 129, column: 15 }, Point { row: 129, column: 16 }, Point { row: 129, column: 17 }], ['8', '7', '5']
+[Point { row: 129, column: 25 }, Point { row: 129, column: 26 }, Point { row: 129, column: 27 }], ['1', '1', '4']
+[Point { row: 129, column: 39 }, Point { row: 129, column: 40 }, Point { row: 129, column: 41 }], ['1', '0', '5']
+[Point { row: 129, column: 43 }, Point { row: 129, column: 44 }, Point { row: 129, column: 45 }], ['7', '6', '3']
+[Point { row: 129, column: 48 }, Point { row: 129, column: 49 }, Point { row: 129, column: 50 }], ['3', '1', '9']
+[Point { row: 129, column: 71 }, Point { row: 129, column: 72 }, Point { row: 129, column: 73 }], ['7', '3', '0']
+[Point { row: 129, column: 79 }, Point { row: 129, column: 80 }, Point { row: 129, column: 81 }], ['1', '5', '8']
+[Point { row: 129, column: 103 }, Point { row: 129, column: 104 }, Point { row: 129, column: 105 }], ['4', '8', '7']
+[Point { row: 129, column: 113 }, Point { row: 129, column: 114 }, Point { row: 129, column: 115 }], ['5', '0', '5']
+[Point { row: 130, column: 1 }, Point { row: 130, column: 2 }, Point { row: 130, column: 3 }], ['4', '3', '9']
+[Point { row: 130, column: 54 }, Point { row: 130, column: 55 }, Point { row: 130, column: 56 }], ['5', '9', '5']
+[Point { row: 130, column: 58 }, Point { row: 130, column: 59 }, Point { row: 130, column: 60 }], ['1', '9', '0']
+[Point { row: 130, column: 62 }, Point { row: 130, column: 63 }, Point { row: 130, column: 64 }], ['1', '7', '3']
+[Point { row: 130, column: 67 }, Point { row: 130, column: 68 }, Point { row: 130, column: 69 }], ['6', '5', '3']
+[Point { row: 130, column: 86 }, Point { row: 130, column: 87 }, Point { row: 130, column: 88 }], ['8', '8', '2']
+[Point { row: 130, column: 90 }, Point { row: 130, column: 91 }, Point { row: 130, column: 92 }], ['8', '1', '2']
+[Point { row: 130, column: 99 }, Point { row: 130, column: 100 }, Point { row: 130, column: 101 }], ['2', '3', '0']
+[Point { row: 130, column: 117 }, Point { row: 130, column: 118 }, Point { row: 130, column: 119 }], ['5', '2', '2']
+[Point { row: 130, column: 132 }, Point { row: 130, column: 133 }, Point { row: 130, column: 134 }], ['1', '9', '2']
+[Point { row: 131, column: 16 }, Point { row: 131, column: 17 }, Point { row: 131, column: 18 }], ['5', '5', '4']
+[Point { row: 131, column: 22 }, Point { row: 131, column: 23 }, Point { row: 131, column: 24 }], ['8', '2', '5']
+[Point { row: 131, column: 28 }, Point { row: 131, column: 29 }, Point { row: 131, column: 30 }], ['8', '4', '5']
+[Point { row: 131, column: 34 }, Point { row: 131, column: 35 }, Point { row: 131, column: 36 }], ['7', '9', '7']
+[Point { row: 131, column: 38 }, Point { row: 131, column: 39 }, Point { row: 131, column: 40 }], ['5', '7', '2']
+[Point { row: 131, column: 43 }, Point { row: 131, column: 44 }, Point { row: 131, column: 45 }], ['8', '1', '4']
+[Point { row: 131, column: 79 }, Point { row: 131, column: 80 }, Point { row: 131, column: 81 }], ['1', '6', '7']
+[Point { row: 131, column: 95 }, Point { row: 131, column: 96 }, Point { row: 131, column: 97 }], ['5', '8', '1']
+[Point { row: 131, column: 125 }, Point { row: 131, column: 126 }, Point { row: 131, column: 127 }], ['3', '3', '0']
+[Point { row: 132, column: 7 }, Point { row: 132, column: 8 }], ['8', '2']
+[Point { row: 132, column: 53 }, Point { row: 132, column: 54 }, Point { row: 132, column: 55 }], ['3', '1', '8']
+[Point { row: 132, column: 71 }, Point { row: 132, column: 72 }, Point { row: 132, column: 73 }], ['3', '2', '6']
+[Point { row: 132, column: 75 }, Point { row: 132, column: 76 }, Point { row: 132, column: 77 }], ['9', '2', '4']
+[Point { row: 132, column: 84 }, Point { row: 132, column: 85 }, Point { row: 132, column: 86 }], ['8', '8', '0']
+[Point { row: 132, column: 91 }, Point { row: 132, column: 92 }, Point { row: 132, column: 93 }], ['2', '8', '8']
+[Point { row: 132, column: 110 }, Point { row: 132, column: 111 }], ['4', '4']
+[Point { row: 133, column: 14 }, Point { row: 133, column: 15 }, Point { row: 133, column: 16 }], ['5', '2', '6']
+[Point { row: 133, column: 43 }, Point { row: 133, column: 44 }, Point { row: 133, column: 45 }], ['9', '8', '1']
+[Point { row: 133, column: 57 }, Point { row: 133, column: 58 }, Point { row: 133, column: 59 }], ['9', '5', '9']
+[Point { row: 133, column: 101 }, Point { row: 133, column: 102 }, Point { row: 133, column: 103 }], ['9', '1', '5']
+[Point { row: 133, column: 105 }, Point { row: 133, column: 106 }, Point { row: 133, column: 107 }], ['1', '1', '6']
+[Point { row: 133, column: 133 }, Point { row: 133, column: 134 }, Point { row: 133, column: 135 }], ['5', '7', '7']
+[Point { row: 134, column: 2 }, Point { row: 134, column: 3 }, Point { row: 134, column: 4 }], ['1', '3', '0']
+[Point { row: 134, column: 36 }, Point { row: 134, column: 37 }, Point { row: 134, column: 38 }], ['3', '3', '0']
+[Point { row: 134, column: 53 }, Point { row: 134, column: 54 }, Point { row: 134, column: 55 }], ['4', '1', '4']
+[Point { row: 134, column: 62 }, Point { row: 134, column: 63 }, Point { row: 134, column: 64 }], ['6', '7', '9']
+[Point { row: 134, column: 73 }, Point { row: 134, column: 74 }, Point { row: 134, column: 75 }], ['9', '9', '9']
+[Point { row: 134, column: 77 }, Point { row: 134, column: 78 }, Point { row: 134, column: 79 }], ['3', '4', '4']
+[Point { row: 134, column: 81 }, Point { row: 134, column: 82 }, Point { row: 134, column: 83 }], ['6', '1', '1']
+[Point { row: 134, column: 91 }, Point { row: 134, column: 92 }, Point { row: 134, column: 93 }], ['4', '3', '2']
+[Point { row: 134, column: 112 }, Point { row: 134, column: 113 }, Point { row: 134, column: 114 }], ['6', '9', '0']
+[Point { row: 134, column: 119 }, Point { row: 134, column: 120 }, Point { row: 134, column: 121 }], ['5', '0', '2']
+[Point { row: 135, column: 13 }, Point { row: 135, column: 14 }, Point { row: 135, column: 15 }], ['4', '7', '6']
+[Point { row: 135, column: 87 }, Point { row: 135, column: 88 }, Point { row: 135, column: 89 }], ['3', '0', '3']
+[Point { row: 135, column: 95 }, Point { row: 135, column: 96 }, Point { row: 135, column: 97 }], ['7', '3', '1']
+[Point { row: 135, column: 107 }, Point { row: 135, column: 108 }, Point { row: 135, column: 109 }], ['6', '8', '1']
+[Point { row: 136, column: 5 }, Point { row: 136, column: 6 }, Point { row: 136, column: 7 }], ['7', '9', '1']
+[Point { row: 136, column: 17 }, Point { row: 136, column: 18 }, Point { row: 136, column: 19 }], ['1', '5', '2']
+[Point { row: 136, column: 24 }, Point { row: 136, column: 25 }, Point { row: 136, column: 26 }], ['3', '9', '7']
+[Point { row: 136, column: 37 }, Point { row: 136, column: 38 }, Point { row: 136, column: 39 }], ['9', '7', '5']
+[Point { row: 136, column: 52 }, Point { row: 136, column: 53 }, Point { row: 136, column: 54 }], ['9', '0', '4']
+[Point { row: 136, column: 71 }, Point { row: 136, column: 72 }, Point { row: 136, column: 73 }], ['2', '2', '5']
+[Point { row: 136, column: 112 }, Point { row: 136, column: 113 }, Point { row: 136, column: 114 }], ['1', '6', '9']
+[Point { row: 136, column: 116 }, Point { row: 136, column: 117 }, Point { row: 136, column: 118 }], ['2', '0', '7']
+[Point { row: 137, column: 10 }, Point { row: 137, column: 11 }, Point { row: 137, column: 12 }], ['9', '9', '5']
+[Point { row: 137, column: 28 }, Point { row: 137, column: 29 }, Point { row: 137, column: 30 }], ['5', '5', '8']
+[Point { row: 137, column: 32 }, Point { row: 137, column: 33 }, Point { row: 137, column: 34 }], ['8', '5', '7']
+[Point { row: 137, column: 42 }, Point { row: 137, column: 43 }, Point { row: 137, column: 44 }], ['1', '4', '1']
+[Point { row: 137, column: 47 }, Point { row: 137, column: 48 }, Point { row: 137, column: 49 }], ['8', '0', '3']
+[Point { row: 137, column: 65 }, Point { row: 137, column: 66 }, Point { row: 137, column: 67 }], ['1', '9', '9']
+[Point { row: 137, column: 80 }, Point { row: 137, column: 81 }, Point { row: 137, column: 82 }], ['5', '7', '3']
+[Point { row: 137, column: 85 }, Point { row: 137, column: 86 }], ['6', '3']
+[Point { row: 137, column: 89 }, Point { row: 137, column: 90 }, Point { row: 137, column: 91 }], ['3', '1', '5']
+[Point { row: 137, column: 120 }, Point { row: 137, column: 121 }, Point { row: 137, column: 122 }], ['5', '1', '9']
+[Point { row: 138, column: 38 }, Point { row: 138, column: 39 }, Point { row: 138, column: 40 }], ['1', '5', '8']
+[Point { row: 138, column: 55 }, Point { row: 138, column: 56 }, Point { row: 138, column: 57 }], ['7', '3', '7']
+[Point { row: 138, column: 72 }, Point { row: 138, column: 73 }, Point { row: 138, column: 74 }], ['3', '9', '9']
+[Point { row: 138, column: 99 }, Point { row: 138, column: 100 }], ['4', '7']
+[Point { row: 138, column: 105 }, Point { row: 138, column: 106 }, Point { row: 138, column: 107 }], ['1', '0', '0']
+[Point { row: 138, column: 124 }, Point { row: 138, column: 125 }, Point { row: 138, column: 126 }], ['5', '7', '4']
+[Point { row: 138, column: 131 }, Point { row: 138, column: 132 }, Point { row: 138, column: 133 }], ['3', '3', '3']
+[Point { row: 139, column: 10 }, Point { row: 139, column: 11 }], ['5', '6']
+[Point { row: 139, column: 24 }, Point { row: 139, column: 25 }, Point { row: 139, column: 26 }], ['8', '2', '2']
+[Point { row: 139, column: 45 }, Point { row: 139, column: 46 }, Point { row: 139, column: 47 }], ['6', '6', '5']
+[Point { row: 139, column: 76 }, Point { row: 139, column: 77 }, Point { row: 139, column: 78 }], ['5', '6', '3']
+[Point { row: 139, column: 81 }, Point { row: 139, column: 82 }, Point { row: 139, column: 83 }], ['3', '8', '3']
+sum: 1435
