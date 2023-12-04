@@ -28,10 +28,7 @@ fn dump_symbol_vector(symbol_vec: &Vec<Symbol>) {
 
 fn dump_number_vector(number_vec: &Vec<Number>) {
     for number in number_vec {
-        println!(
-            "{:?}, {:?}",
-            number.number_point, number.number_char
-        );
+        println!("{:?}, {:?}", number.number_point, number.number_char);
     }
 }
 
@@ -45,10 +42,9 @@ impl Number {
 }
 
 fn arr_char_to_num(number_char: &Vec<char>) -> u64 {
-
     let mut total = 0;
     let mut base = 1;
-    
+
     for c in number_char.iter().rev() {
         total += c.to_digit(10).unwrap() * base;
         base *= 10;
@@ -56,7 +52,6 @@ fn arr_char_to_num(number_char: &Vec<char>) -> u64 {
 
     total as u64
 }
-
 
 fn calc_gear_adjecent_sum(mut gear_symbol_vec: Vec<Symbol>, number_vec: &Vec<Number>) -> u64 {
     gear_symbol_vec.iter_mut().for_each(|sym| {
@@ -80,29 +75,26 @@ fn calc_gear_adjecent_sum(mut gear_symbol_vec: Vec<Symbol>, number_vec: &Vec<Num
         .filter(|sym| sym.adjacent_numbers_count == 2)
         .collect::<Vec<_>>();
 
-
     let mut total: u64 = 0;
     let mut point_mult: u64 = 1;
-    let _  = gear_box_2_adj
-                .into_iter()
-                .for_each(|sym| {
-                    number_vec.iter().for_each(|num| {
-                        if num
-                            .number_point
-                            .iter()
-                            .find(|point| {
-                                sym.symbol_point.row.abs_diff(point.row) <= 1
-                                    && sym.symbol_point.column.abs_diff(point.column) <= 1
-                            })
-                            .is_some()
-                        {
-                            point_mult *= arr_char_to_num(&num.number_char);
-                        }
-                    });
+    let _ = gear_box_2_adj.into_iter().for_each(|sym| {
+        number_vec.iter().for_each(|num| {
+            if num
+                .number_point
+                .iter()
+                .find(|point| {
+                    sym.symbol_point.row.abs_diff(point.row) <= 1
+                        && sym.symbol_point.column.abs_diff(point.column) <= 1
+                })
+                .is_some()
+            {
+                point_mult *= arr_char_to_num(&num.number_char);
+            }
+        });
 
-                    total += point_mult;
-                    point_mult = 1;
-                });
+        total += point_mult;
+        point_mult = 1;
+    });
     total
 }
 
