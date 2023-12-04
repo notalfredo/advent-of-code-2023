@@ -8,18 +8,13 @@ struct Point {
 struct Symbol {
     symbol_point: Point,
     character: char,
-    adjacent_count: u8
+    adjacent_numbers_count: u32,
 }
 
 #[derive(Debug)]
 struct Number {
     number_point: Vec<Point>,
     number_char: Vec<char>,
-}
-
-struct Schematic {
-    numbers: Vec<Number>,
-    symbols: Vec<Symbol>,
 }
 
 fn dump_symbol_vector(symbol_vec: &Vec<Symbol>) {
@@ -33,7 +28,10 @@ fn dump_symbol_vector(symbol_vec: &Vec<Symbol>) {
 
 fn dump_number_vector(number_vec: &Vec<Number>) {
     for number in number_vec {
-        println!("{:?}, {:?}", number.number_point, number.number_char);
+        println!(
+            "{:?}, {:?}",
+            number.number_point, number.number_char
+        );
     }
 }
 
@@ -44,121 +42,68 @@ impl Number {
             number_char: Vec::new(),
         }
     }
-
-    //number_point: Vec<Point>,
-    //number_char: Vec<char>
-
-    //symbol_point: Point,
-    //character: char
-    fn has_adjacent_symbol(&self, vector_of_symbols: &Vec<Symbol>) -> u32 {
-        let adjacent_points: Vec<Option<_>> = self.number_point.iter().map(|point| {
-            vector_of_symbols.iter().find(|curr_symbol| {
-                point.x
-            })
-
-            //if point.row == 0 && point.column == 0 {
-            //    vector_of_symbols.iter().find(|curr_symbol| {
-            //        (curr_symbol.symbol_point.row == point.row // right
-            //            && curr_symbol.symbol_point.column == point.column + 1)
-            //            || (curr_symbol.symbol_point.row == point.row + 1 // bottom
-            //                && curr_symbol.symbol_point.column == point.column)
-            //            || (curr_symbol.symbol_point.row == point.row + 1 // bottom right
-            //                && curr_symbol.symbol_point.column == point.column + 1)
-            //    })
-            //}
-            // else if point.row == 0 {
-            //    vector_of_symbols.iter().find(|curr_symbol| {
-            //        (curr_symbol.symbol_point.row == point.row // right
-            //            && curr_symbol.symbol_point.column == point.column + 1)
-            //            || (curr_symbol.symbol_point.row == point.row  // left
-            //                && curr_symbol.symbol_point.column == point.column - 1)
-            //            || (curr_symbol.symbol_point.row == point.row + 1 // bottom
-            //                && curr_symbol.symbol_point.column == point.column)
-            //            || (curr_symbol.symbol_point.row == point.row + 1 // bottom left 
-            //                && curr_symbol.symbol_point.column == point.column - 1)
-            //            || (curr_symbol.symbol_point.row == point.row + 1 // bottom right
-            //                && curr_symbol.symbol_point.column == point.column + 1)
-            //    })
-            //} else if point.column == 0 {
-            //    vector_of_symbols.iter().find(|curr_symbol| {
-            //        (curr_symbol.symbol_point.row == point.row // right
-            //            && curr_symbol.symbol_point.column == point.column + 1)
-            //            || (curr_symbol.symbol_point.row == point.row + 1 // bottom
-            //                && curr_symbol.symbol_point.column == point.column)
-            //            || (curr_symbol.symbol_point.row == point.row - 1 // top
-            //                && curr_symbol.symbol_point.column == point.column)
-            //            || (curr_symbol.symbol_point.row == point.row + 1 // bottom right
-            //                && curr_symbol.symbol_point.column == point.column + 1)
-            //            || (curr_symbol.symbol_point.row == point.row - 1 // top right
-            //                && curr_symbol.symbol_point.column == point.column + 1)
-            //    })
-            //} else {
-            //    vector_of_symbols.iter().find(|curr_symbol| {
-            //        (curr_symbol.symbol_point.row == point.row // right
-            //            && curr_symbol.symbol_point.column == point.column + 1)
-            //            || (curr_symbol.symbol_point.row == point.row + 1 // bottom
-            //                && curr_symbol.symbol_point.column == point.column)
-            //            || (curr_symbol.symbol_point.row == point.row - 1 // top
-            //                && curr_symbol.symbol_point.column == point.column)
-            //            || (curr_symbol.symbol_point.row == point.row  // left
-            //                && curr_symbol.symbol_point.column == point.column - 1)
-
-
-
-            //            || (curr_symbol.symbol_point.row == point.row + 1 // bottom right
-            //                && curr_symbol.symbol_point.column == point.column + 1)
-            //            || (curr_symbol.symbol_point.row == point.row + 1 // bottom left
-            //                && curr_symbol.symbol_point.column == point.column - 1)
-
-            //            || (curr_symbol.symbol_point.row == point.row - 1 // top right 
-            //                && curr_symbol.symbol_point.column == point.column + 1)
-            //            || (curr_symbol.symbol_point.row == point.row - 1 // top left
-            //                && curr_symbol.symbol_point.column == point.column - 1)
-            //    })
-            //}
-        }).collect();
-
-        let found_adjecent_symbols = adjacent_points.iter().filter(|x| x.is_some() ).collect::<Vec<_>>();
-
-
-        if found_adjecent_symbols.len() > 0 {
-            //println!("FOUND found_adjecent_symbols {:?}", found_adjecent_symbols);
-            //println!("{:?}", self.number_point );
-            //let sting: &str = self.number_char.iter().collect();
-            let mut sum: u32 = 0;
-            let mut ten_power: u32 = 1;
-            self.number_char.iter().rev().for_each(|c| {
-                sum += c.to_digit(10).unwrap() * ten_power;
-                ten_power *= 10;
-            });
-            sum
-        }
-        else {
-            //println!("DID NOT FIND SYMBOL");
-            0
-        }
-
-    }
 }
 
-impl Schematic {
-    fn new(numbers: Vec<Number>, symbols: Vec<Symbol>) -> Schematic {
-        Schematic { numbers, symbols }
-    }
-    fn dump(&self) {
-        dump_symbol_vector(&self.symbols);
-        dump_number_vector(&self.numbers);
+fn arr_char_to_num(number_char: &Vec<char>) -> u64 {
+
+    let mut total = 0;
+    let mut base = 1;
+    
+    for c in number_char.iter().rev() {
+        total += c.to_digit(10).unwrap() * base;
+        base *= 10;
     }
 
-    fn get_sum(&mut self) -> u32 {
-        let result: &u32 = &self
-            .numbers
-            .iter()
-            .map(|number| number.has_adjacent_symbol(&self.symbols))
-            .sum();
-        //println!("{:}", *result);
-        *result
-    }
+    total as u64
+}
+
+
+fn calc_gear_adjecent_sum(mut gear_symbol_vec: Vec<Symbol>, number_vec: &Vec<Number>) -> u64 {
+    gear_symbol_vec.iter_mut().for_each(|sym| {
+        number_vec.iter().for_each(|num| {
+            if num
+                .number_point
+                .iter()
+                .find(|point| {
+                    sym.symbol_point.row.abs_diff(point.row) <= 1
+                        && sym.symbol_point.column.abs_diff(point.column) <= 1
+                })
+                .is_some()
+            {
+                sym.adjacent_numbers_count += 1;
+            }
+        })
+    });
+
+    let gear_box_2_adj = gear_symbol_vec
+        .into_iter()
+        .filter(|sym| sym.adjacent_numbers_count == 2)
+        .collect::<Vec<_>>();
+
+
+    let mut total: u64 = 0;
+    let mut point_mult: u64 = 1;
+    let _  = gear_box_2_adj
+                .into_iter()
+                .for_each(|sym| {
+                    number_vec.iter().for_each(|num| {
+                        if num
+                            .number_point
+                            .iter()
+                            .find(|point| {
+                                sym.symbol_point.row.abs_diff(point.row) <= 1
+                                    && sym.symbol_point.column.abs_diff(point.column) <= 1
+                            })
+                            .is_some()
+                        {
+                            point_mult *= arr_char_to_num(&num.number_char);
+                        }
+                    });
+
+                    total += point_mult;
+                    point_mult = 1;
+                });
+    total
 }
 
 fn parse_symbols(lines: &str) -> Vec<Symbol> {
@@ -175,6 +120,7 @@ fn parse_symbols(lines: &str) -> Vec<Symbol> {
                     column: pos - (row_pos * 140),
                 },
                 character: c,
+                adjacent_numbers_count: 0,
             }
         })
         .collect()
@@ -216,9 +162,14 @@ fn parse_numbers(lines: &str) -> Vec<Number> {
     number_vec
 }
 
-pub fn problem_two(lines: &str) -> u32 {
-    let mut curr_schematic: Schematic = Schematic::new(parse_numbers(lines), parse_symbols(lines));
+pub fn problem_two(lines: &str) -> u64 {
+    let symbol_vec = parse_symbols(lines);
+    let gear_symbol_vec: Vec<Symbol> = symbol_vec
+        .into_iter()
+        .filter(|symbol| symbol.character == '*')
+        .collect();
 
-    curr_schematic.get_sum()
+    let num_vec = parse_numbers(lines);
 
+    calc_gear_adjecent_sum(gear_symbol_vec, &num_vec)
 }

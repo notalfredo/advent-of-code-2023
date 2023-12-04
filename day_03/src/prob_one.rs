@@ -45,16 +45,21 @@ impl Number {
     }
 
     fn has_adjacent_symbol(&self, vector_of_symbols: &Vec<Symbol>) -> u32 {
-        let adjacent_points: Vec<Option<_>> = self.number_point.iter().map(|point| {
-              vector_of_symbols.iter().find(|curr_symbol| {
-                point.row.abs_diff(curr_symbol.symbol_point.row) <= 1 
-                    &&
-                point.column.abs_diff(curr_symbol.symbol_point.column) <= 1 
-              })
-        }).collect();
+        let adjacent_points: Vec<Option<_>> = self
+            .number_point
+            .iter()
+            .map(|point| {
+                vector_of_symbols.iter().find(|curr_symbol| {
+                    point.row.abs_diff(curr_symbol.symbol_point.row) <= 1
+                        && point.column.abs_diff(curr_symbol.symbol_point.column) <= 1
+                })
+            })
+            .collect();
 
-        let found_adjecent_symbols = adjacent_points.iter().filter(|x| x.is_some() ).collect::<Vec<_>>();
-
+        let found_adjecent_symbols = adjacent_points
+            .iter()
+            .filter(|x| x.is_some())
+            .collect::<Vec<_>>();
 
         if found_adjecent_symbols.len() > 0 {
             let mut sum: u32 = 0;
@@ -64,11 +69,9 @@ impl Number {
                 ten_power *= 10;
             });
             sum
-        }
-        else {
+        } else {
             0
         }
-
     }
 }
 
@@ -150,5 +153,4 @@ pub fn problem_one(lines: &str) -> u32 {
     let mut curr_schematic: Schematic = Schematic::new(parse_numbers(lines), parse_symbols(lines));
 
     curr_schematic.get_sum()
-
 }
