@@ -1,7 +1,7 @@
 mod problem_one;
 
 fn main() {
-    let file = include_str!("../input/problem_one_sample.txt");
+    let file = include_str!("../input/problem_one_input.txt");
 
-    problem_one::problem_one_sol(file);
+    println!("{:}", problem_one::problem_one_sol(file));
 }
