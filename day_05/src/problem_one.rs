@@ -28,16 +28,16 @@ impl Almanac {
             let mut next_map_val = *seed;
 
             for map in &self.maps {
-                for (dest_range_start, source_range_start, range_len) in &map.rows 
-                {
-                    if (source_range_start..&(source_range_start + range_len)).contains(&&next_map_val)
+                for (dest_range_start, source_range_start, range_len) in &map.rows {
+                    if (source_range_start..&(source_range_start + range_len))
+                        .contains(&&next_map_val)
                     {
                         next_map_val = (next_map_val - source_range_start) + dest_range_start;
                         break;
                     }
                 }
             }
-            location_vec.push(next_map_val); 
+            location_vec.push(next_map_val);
         });
         location_vec
     }
@@ -87,5 +87,6 @@ fn parse(file: &str) -> Almanac {
 
 pub fn problem_one_sol(file: &str) -> u64 {
     let almanac = parse(file);
+
     *almanac.map_seed_to_location().iter().min().unwrap()
 }
