@@ -1,35 +1,35 @@
 use std::collections::HashMap;
 
+#[derive(Debug)]
 enum Direction {
     Left,
     Right
 }
 
-impl TryFrom<char> for Direction {
-    fn try_from(value: char) -> Result<Self, Self::Error> {
+impl From<char> for Direction {
+    fn from(value: char) -> Self {
         match value {
-            'L' => Ok(Direction::Left),
-            'R' => Ok(Direction::Right),
+            'L' => Direction::Left,
+            'R' => Direction::Right,
+            _ => panic!("Could not convert")
         }
-
-        Err("COULD NOT CONVERT CHAR TO DIRECTION")
     }
 }
 
 
-type Node = [u8; 3];
-const DEST: [u8; 3] = [90, 90, 90];
+type Node = [char; 3];
+const START: Node = ['A', 'A', 'A'];
+const DEST:  Node = ['Z', 'Z', 'Z'];
+
 
 struct Map {
-    directions: Vec<char>,
-    start_loc: Node,
+    directions: Vec<Direction>,
     path: HashMap<Node, (Node, Node)>,
 }
 
 impl Map {
     fn dump(&self) {
         println!("{:?}", self.directions);
-        println!("{:?}", self.start_loc);
         for (key, val) in self.path.iter() {
             println!("key: {:?} val: {:?}", key, val);
         }
@@ -38,9 +38,7 @@ impl Map {
     fn new(mut file: Vec<&str>) -> Self {
         let mut path: HashMap<Node, (Node, Node)> = HashMap::new();
 
-        let directions = file.remove(0).chars().collect::<Vec<_>>();
-        let mut start_loc: Node = [0, 0, 0];
-        let mut inserted_first: bool = false;
+        let directions = file.remove(0).chars().map(|c| Direction::from(c) ).collect::<Vec<_>>();
 
         file.iter().for_each(|line| {
             let (loc, dest) = match line.split_once('=') {
@@ -55,47 +53,67 @@ impl Map {
 
             let cur_loc: Node = loc
                 .chars()
-                .map(|c| c as u8)
-                .collect::<Vec<u8>>()
+                .collect::<Vec<char>>()
                 .try_into()
                 .unwrap();
             let dest_left: Node = dest_left
                 .chars()
-                .map(|c| c as u8)
-                .collect::<Vec<u8>>()
+                .collect::<Vec<char>>()
                 .try_into()
                 .unwrap();
             let dest_right: Node = dest_right
                 .chars()
-                .map(|c| c as u8)
-                .collect::<Vec<u8>>()
+                .collect::<Vec<char>>()
                 .try_into()
                 .unwrap();
 
             path.insert(cur_loc, (dest_left, dest_right));
 
-            if !inserted_first {
-                inserted_first = true;
-                start_loc = cur_loc;
-            }
 
         });
 
-        Map { directions, start_loc, path }
+        Map { directions, path }
     }
 
-    fn follow_instructions(&self) {
+    fn q1(&self) -> u32{
+        let mut current_pos = START;
+        let mut steps = 0;
+
+        loop {
+            for dir in &self.directions {
+                let mut dest = *self.path.get(&current_pos).unwrap();
+                match *dir {
+                    Direction::Left => {
+                        current_pos = dest.0;
+                        dest = *self.path.get(&current_pos).unwrap();
+                    }
+                    Direction::Right => {
+                        current_pos = dest.1;
+                        dest = *self.path.get(&current_pos).unwrap();
+                    }
+                }
+                steps += 1;
+                if current_pos == DEST {
+                    return steps;
+                }
+            }
+        }
     }
+
+
 }
 
 
 fn main() {
-    let mut file = include_str!("../input/input_sample.txt")
+    //let mut file = include_str!("../input/input_sample_two.txt")
+    //let mut file = include_str!("../input/input_sample.txt")
+    let mut file = include_str!("../input/input.txt")
         .lines()
         .filter(|line| line.len() != 0)
         .collect::<Vec<&str>>();
 
     let cur_map = Map::new(file);
-    cur_map.dump();
+    //cur_map.dump();
+    println!("{:}", cur_map.q1());
 
 }
