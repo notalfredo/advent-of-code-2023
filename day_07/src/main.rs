@@ -47,8 +47,8 @@ enum HandType {
     FourOfAKind = 5,
     FullHouse = 4,
     ThreeOfAKind = 3,
-    TwoPair  = 2,
-    OnePair  = 1,
+    TwoPair = 2,
+    OnePair = 1,
     HighCard = 0,
 }
 
@@ -86,7 +86,6 @@ impl HandType {
         }
     }
 
-
     fn hand_arr_to_vec_count(given_hand: &[Card; 5]) -> Vec<(Card, u32)> {
         let mut curr_hand: Vec<(Card, u32)> = Vec::new();
         given_hand.iter().for_each(|card| {
@@ -107,7 +106,6 @@ impl HandType {
         curr_hand
     }
 
-
     fn determine_hand_type(given_hand: &[Card; 5]) -> HandType {
         let curr_hand: Vec<(Card, u32)> = HandType::hand_arr_to_vec_count(given_hand);
 
@@ -116,13 +114,10 @@ impl HandType {
                 "Got a curr_hand of length {:}",
                 curr_hand.iter().map(|(_, count)| count).sum::<u32>()
             );
-        }
-        else{
+        } else {
             HandType::get_hand_type(curr_hand)
         }
-
     }
-
 }
 
 #[derive(PartialEq, Debug, Copy, Clone)]
@@ -154,14 +149,11 @@ impl PartialOrdExtended for Hand {
         for (card_left, card_right) in self.given_hand.iter().zip(other.given_hand.iter()) {
             if *card_left == *card_right {
                 continue;
-            }
-            else if *card_left == Card::Jocker {
+            } else if *card_left == Card::Jocker {
                 return Some(Ordering::Less);
-            }
-            else if *card_right == Card::Jocker {
+            } else if *card_right == Card::Jocker {
                 return Some(Ordering::Greater);
-            }
-            else if *card_left < *card_right {
+            } else if *card_left < *card_right {
                 return Some(Ordering::Less);
             } else if *card_left > *card_right {
                 return Some(Ordering::Greater);
@@ -190,13 +182,16 @@ impl Hand {
 
     //If we are given max hand card type this function wont ever run
     fn upgrade_hand_type_for_jocker(&mut self) {
-        let mut given_hand_count: Vec<(Card, u32)> = HandType::hand_arr_to_vec_count(&self.given_hand);
+        let mut given_hand_count: Vec<(Card, u32)> =
+            HandType::hand_arr_to_vec_count(&self.given_hand);
 
-        let jocker_pos = given_hand_count.iter().position(|(card, count)| *card == Card::Jocker);
+        let jocker_pos = given_hand_count
+            .iter()
+            .position(|(card, count)| *card == Card::Jocker);
 
         if jocker_pos.is_some() {
             let jocker_count = given_hand_count.remove(jocker_pos.unwrap());
-            given_hand_count.first_mut().unwrap().1 += jocker_count.1; 
+            given_hand_count.first_mut().unwrap().1 += jocker_count.1;
             self.hand_type = HandType::get_hand_type(given_hand_count);
         }
     }
@@ -275,20 +270,21 @@ impl CamelCards {
             full_house.sort_by(|cards_a, cards_b| cards_a.partial_cmp(cards_b).unwrap());
             four_of_a_kind.sort_by(|cards_a, cards_b| cards_a.partial_cmp(cards_b).unwrap());
             five_of_a_kind.sort_by(|cards_a, cards_b| cards_a.partial_cmp(cards_b).unwrap());
-        }
-        else {
+        } else {
             high_cards.sort_by(|cards_a, cards_b| cards_a.partial_cmp_extended(cards_b).unwrap());
             one_pairs.sort_by(|cards_a, cards_b| cards_a.partial_cmp_extended(cards_b).unwrap());
             two_pairs.sort_by(|cards_a, cards_b| cards_a.partial_cmp_extended(cards_b).unwrap());
-            three_of_one_kind.sort_by(|cards_a, cards_b| cards_a.partial_cmp_extended(cards_b).unwrap());
+            three_of_one_kind
+                .sort_by(|cards_a, cards_b| cards_a.partial_cmp_extended(cards_b).unwrap());
             full_house.sort_by(|cards_a, cards_b| cards_a.partial_cmp_extended(cards_b).unwrap());
-            four_of_a_kind.sort_by(|cards_a, cards_b| cards_a.partial_cmp_extended(cards_b).unwrap());
-            five_of_a_kind.sort_by(|cards_a, cards_b| cards_a.partial_cmp_extended(cards_b).unwrap());
+            four_of_a_kind
+                .sort_by(|cards_a, cards_b| cards_a.partial_cmp_extended(cards_b).unwrap());
+            five_of_a_kind
+                .sort_by(|cards_a, cards_b| cards_a.partial_cmp_extended(cards_b).unwrap());
         }
 
-
         let mut new_hands: Vec<Hand> = Vec::new();
-        new_hands.append(&mut high_cards) ;
+        new_hands.append(&mut high_cards);
         new_hands.append(&mut one_pairs);
         new_hands.append(&mut two_pairs);
         new_hands.append(&mut three_of_one_kind);
@@ -313,7 +309,7 @@ impl CamelCards {
 
     fn upgrade_camel_cards(&mut self) {
         for hand in &mut self.hands {
-            if hand.hand_type != HandType::FiveOfAKind{
+            if hand.hand_type != HandType::FiveOfAKind {
                 hand.upgrade_hand_type_for_jocker();
             }
         }
@@ -329,6 +325,6 @@ fn main() {
 
     my_camel_cards.upgrade_camel_cards();
     //my_camel_cards.dump();
-    
+
     println!("Question 2: {:}", my_camel_cards.rank_cards(true));
 }
