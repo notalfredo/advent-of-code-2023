@@ -6,6 +6,8 @@ enum Direction {
     Right
 }
 
+
+
 impl From<char> for Direction {
     fn from(value: char) -> Self {
         match value {
@@ -20,6 +22,24 @@ impl From<char> for Direction {
 type Node = [char; 3];
 const START: Node = ['A', 'A', 'A'];
 const DEST:  Node = ['Z', 'Z', 'Z'];
+
+
+fn gcd(a: u64, b:u64) -> u64 {
+    let mut new_a = a;
+    let mut new_b = b;
+    while new_b != 0 {
+        let temp = new_b;
+        new_b = new_a % new_b;
+        new_a = temp;
+    }
+    new_a
+}
+
+fn lcm(a: u64, b:u64) -> u64 {
+    let num = a * b;
+    let den = gcd(a, b);
+    num / den
+}
 
 
 struct Map {
@@ -75,8 +95,8 @@ impl Map {
         Map { directions, path }
     }
 
-    fn q1(&self) -> u32{
-        let mut current_pos = START;
+    fn q1(&self, start_pos: Node, func: fn(Node) -> bool ) -> u32{
+        let mut current_pos = start_pos;
         let mut steps = 0;
 
         loop {
@@ -93,18 +113,46 @@ impl Map {
                     }
                 }
                 steps += 1;
-                if current_pos == DEST {
+                if func(current_pos) {
                     return steps;
                 }
             }
         }
     }
 
+    fn q2(&self) -> u64 {
+        let mut current_pos_arr = self.path.iter().filter_map(|(key, _)|{
+            if key[2] == 'A' {
+                Some(key)
+            }
+            else{
+                None
+            }
+        }).collect::<Vec<_>>();
 
+        let mut all_pos: Vec<u64> = Vec::new();
+
+
+        while current_pos_arr.len() > 0 {
+            let curr = current_pos_arr.pop().unwrap();
+            all_pos.push(self.q1(*curr, |x: Node| x[2] == 'Z') as u64);
+        }
+        
+
+
+        let mut lcd_all_pos = lcm(all_pos.pop().unwrap(), all_pos.pop().unwrap());
+
+        while all_pos.len() > 0 {
+            lcd_all_pos = lcm(lcd_all_pos, all_pos.pop().unwrap()); 
+        }
+
+        lcd_all_pos
+    }
 }
 
 
 fn main() {
+    //let file = include_str!("../input/input_sample_three.txt")
     //let mut file = include_str!("../input/input_sample_two.txt")
     //let mut file = include_str!("../input/input_sample.txt")
     let mut file = include_str!("../input/input.txt")
@@ -113,7 +161,8 @@ fn main() {
         .collect::<Vec<&str>>();
 
     let cur_map = Map::new(file);
-    //cur_map.dump();
-    println!("{:}", cur_map.q1());
+    println!("{:}", cur_map.q1(START, |x: Node| x == DEST ));
+    println!("=========");
+    println!("{:}", cur_map.q2());
 
 }
