@@ -71,15 +71,28 @@ fn main() {
     let file = include_str!("../input/input.txt");
 
     let new_tree = PascalTree::new();
-    new_tree.gen_coefficent_vector(6);
 
-    let testing: i128 = file
-        .lines()
-        .map(|line| {
-            let line_num = parse(line);
-            let length = line_num.len();
-            problem_one(line_num, new_tree.gen_coefficent_vector(length))
-        })
-        .sum();
-    println!("{:?}", testing);
+    println!(
+        "{:}",
+        file.lines()
+            .map(|line| {
+                let line_num = parse(line);
+                let length = line_num.len();
+                problem_one(line_num, new_tree.gen_coefficent_vector(length))
+            })
+            .sum::<i128>()
+    );
+
+    println!("================");
+
+    println!(
+        "{:}",
+        file.lines()
+            .map(|line| {
+                let line_num = parse(line).into_iter().rev().collect::<Vec<_>>();
+                let length = line_num.len();
+                problem_one(line_num, new_tree.gen_coefficent_vector(length))
+            })
+            .sum::<i128>()
+    );
 }
