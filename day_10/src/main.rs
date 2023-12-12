@@ -8,6 +8,24 @@ impl Point {
     fn new(x: usize, y: usize) -> Self {
         Self { x, y }
     }
+    fn determinant(&self, point_2: &Point) -> i32 {
+        (self.x as i32 * point_2.y as i32) - (self.y as i32 * point_2.x as i32)
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq)]
+struct Pipe {
+    pipe_loc: Point,
+    pipe_type: char,
+}
+
+impl Pipe {
+    fn new(pipe_loc: Point, pipe_type: char) -> Self {
+        Self {
+            pipe_loc,
+            pipe_type,
+        }
+    }
 }
 
 #[derive(Copy, Clone, Debug)]
@@ -20,7 +38,6 @@ enum Direction {
 
 impl Direction {
     fn check_if_valid_move(dir: Direction, c: char) -> Option<Direction> {
-
         match dir {
             Direction::North => match c {
                 '|' => Some(Direction::North),
@@ -179,21 +196,104 @@ impl Maze {
         (*pointers.first().unwrap(), *pointers.last().unwrap())
     }
 
-    fn q1(&self) -> u32 {
-        let (mut pointer_one, mut pointer_two) = self.gen_two_starting_pointers();
-        let mut count: u32 = 1;
+    fn gen_edges(&self) -> (Vec<Pipe>, Vec<Pipe>) {
+        let mut pointer_one_visted_points: Vec<Pipe> = Vec::new();
+        let mut pointer_two_visted_points: Vec<Pipe> = Vec::new();
 
-        while pointer_one.loc != pointer_two.loc {
+        let (mut pointer_one, mut pointer_two): (MazePointer, MazePointer) =
+            self.gen_two_starting_pointers();
+
+        pointer_one_visted_points.push(Pipe::new(
+            Point::new(self.start_pos.x, self.start_pos.y),
+            'S',
+        ));
+
+        pointer_one_visted_points.push(Pipe::new(
+            pointer_one.loc,
+            self.tiles[pointer_one.loc.x][pointer_one.loc.y],
+        ));
+        pointer_two_visted_points.push(Pipe::new(
+            pointer_two.loc,
+            self.tiles[pointer_two.loc.x][pointer_two.loc.y],
+        ));
+
+        loop {
             pointer_one.make_move(&self.tiles);
             pointer_two.make_move(&self.tiles);
-            count += 1;
+
+            if pointer_one.loc == pointer_two.loc {
+                pointer_two_visted_points.push(Pipe::new(
+                    pointer_two.loc,
+                    self.tiles[pointer_two.loc.x][pointer_two.loc.y],
+                ));
+                break;
+            }
+
+            pointer_one_visted_points.push(Pipe::new(
+                pointer_one.loc,
+                self.tiles[pointer_one.loc.x][pointer_one.loc.y],
+            ));
+            pointer_two_visted_points.push(Pipe::new(
+                pointer_two.loc,
+                self.tiles[pointer_two.loc.x][pointer_two.loc.y],
+            ));
         }
-        count
+
+        (pointer_one_visted_points, pointer_two_visted_points)
+    }
+
+    fn q1(&self) -> usize {
+        let (_, second_edges) = self.gen_edges();
+        second_edges.len()
+    }
+
+    //https://en.wikipedia.org/wiki/Pick%27s_theorem
+    //https://en.wikipedia.org/wiki/Shoelace_formula
+    fn q2(&self) -> i32 {
+        let (mut first_edges, second_edges) = self.gen_edges();
+
+        let edge_count: i32 = (first_edges.len() + second_edges.len()) as i32;
+
+        let mut second_edges_rev = second_edges.into_iter().rev().collect::<Vec<_>>();
+        first_edges.append(&mut second_edges_rev);
+
+        let vertices: Vec<Point> = first_edges
+            .into_iter()
+            .filter_map(|point| match point.pipe_type {
+                'L' | 'J' | '7' | 'F' | 'S' => Some(point.pipe_loc),
+                _ => None,
+            })
+            .collect();
+
+        let mut index_one = 0;
+        let mut index_two = 1;
+        let mut total: i32 = 0;
+
+        loop {
+            total += vertices[index_one].determinant(&vertices[index_two]);
+
+            if index_two + 1 == vertices.len() {
+                total += vertices[index_one + 1].determinant(&vertices[0]);
+                break;
+            } else {
+                index_one += 1;
+                index_two += 1;
+            }
+        }
+
+        (total / 2) - (edge_count / 2) + 1
     }
 }
 
 fn main() {
+    //let file = include_str!("../input/sample_one.txt");
+    //let file = include_str!("../input/sample_three.txt");
+    //let file = include_str!("../input/sample_four.txt");
+    //let file = include_str!("../input/sample_five.txt");
+    //let file = include_str!("../input/sample_six.txt");
     let file = include_str!("../input/input.txt");
     let maze = Maze::new(&file);
-    println!("{:}", maze.q1());
+    println!("Q1: {:}", maze.q1());
+    println!("============");
+    println!("Q2: {:}", maze.q2());
 }
