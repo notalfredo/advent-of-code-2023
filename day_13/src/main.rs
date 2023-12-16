@@ -15,12 +15,11 @@ impl Reflection {
                     return false;
                 }
                 true
-            },
-            None => true
+            }
+            None => true,
         }
     }
 }
-
 
 impl Reflection {
     fn get_value(&self) -> usize {
@@ -47,18 +46,10 @@ impl Grid {
         self.grid.iter().for_each(|row| println!("{:?}", row));
         println!("");
     }
-    fn equal_row(
-        &self,
-        row_index_one: usize,
-        row_index_two: usize,
-    ) -> bool {
+    fn equal_row(&self, row_index_one: usize, row_index_two: usize) -> bool {
         self.grid[row_index_one] == self.grid[row_index_two]
     }
-    fn equal_column(
-        &self,
-        column_index_one: usize,
-        column_index_two: usize,
-    ) -> bool {
+    fn equal_column(&self, column_index_one: usize, column_index_two: usize) -> bool {
         let left_column: Vec<char> = (0..self.get_rows_count())
             .map(|row_index| self.grid[row_index][column_index_one])
             .collect();
@@ -75,11 +66,11 @@ impl Grid {
         self.grid[0].len()
     }
 
-    fn flip_smudge(&mut self, row_index: usize, column_index: usize){
+    fn flip_smudge(&mut self, row_index: usize, column_index: usize) {
         match self.grid[row_index][column_index] {
             '.' => self.grid[row_index][column_index] = '#',
             '#' => self.grid[row_index][column_index] = '.',
-            _ => panic!("UNKOWN SYMBOL")
+            _ => panic!("UNKOWN SYMBOL"),
         }
     }
 }
@@ -91,11 +82,9 @@ fn q1(grid: &Grid, known_reflection: Option<Reflection>) -> Option<Reflection> {
         let mut found_equal = grid.equal_row(first_pointer, second_pointer);
         let reflection: usize = second_pointer;
 
-        while (first_pointer as isize - 1 >= 0)
-            && (second_pointer + 1 <= grid.get_rows_count() - 1)
+        while (first_pointer as isize - 1 >= 0) && (second_pointer + 1 <= grid.get_rows_count() - 1)
         {
             if !grid.equal_row(first_pointer - 1, second_pointer + 1) {
-
                 found_equal = false;
                 break;
             }
@@ -132,31 +121,26 @@ fn q1(grid: &Grid, known_reflection: Option<Reflection>) -> Option<Reflection> {
     None
 }
 
-
 fn q2(grid: &mut Grid) -> Reflection {
     let pre_smudge = q1(&grid, None);
 
     for row in 0..grid.get_rows_count() {
         for column in 0..grid.get_column_count() {
             grid.flip_smudge(row, column);
-            
+
             match q1(&grid, pre_smudge) {
                 Some(reflection) => {
-                   return reflection;
+                    return reflection;
                 }
                 None => {
                     grid.flip_smudge(row, column);
                     continue;
                 }
             }
-
         }
     }
     pre_smudge.unwrap()
 }
-
-
-
 
 fn parse_grid(file: &str) -> Vec<Grid> {
     file.split("\n\n").map(|grid| Grid::new(grid)).collect()
@@ -171,7 +155,6 @@ fn main() {
 
     let grids = parse_grid(file);
 
-
     println!(
         "{:?}",
         grids
@@ -180,7 +163,6 @@ fn main() {
             .sum::<usize>()
     );
 
-
     println!(
         "{:?}",
         grids
@@ -188,5 +170,4 @@ fn main() {
             .map(|mut grid| q2(&mut grid).get_value())
             .sum::<usize>()
     );
-
 }
