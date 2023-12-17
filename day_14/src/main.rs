@@ -1,14 +1,21 @@
+use std::time::{Duration, Instant};
+mod spin;
+use std::collections::HashMap;
+
 struct Dish {
-    dish: Vec<Vec<char>> 
+    dish: Vec<Vec<char>>,
 }
 
 impl Dish {
     fn new(file: &str) -> Self {
-        let dish: Vec<Vec<char>> = file.lines().map(|line| line.chars().collect::<Vec<char>>() ).collect();
+        let dish: Vec<Vec<char>> = file
+            .lines()
+            .map(|line| line.chars().collect::<Vec<char>>())
+            .collect();
         Self { dish }
     }
     fn dump(&self) {
-        for row in &self.dish{
+        for row in &self.dish {
             for column in row {
                 print!("{:}", column);
             }
@@ -22,15 +29,18 @@ impl Dish {
     fn get_width(&self) -> usize {
         self.dish[0].len()
     }
-    fn check_zero(&self, index: usize, column_index: usize) -> bool {
-        self.dish[index][column_index] == 'O'
+    fn check_zero(&self, row_index: usize, column_index: usize) -> bool {
+        self.dish[row_index][column_index] == 'O'
     }
     fn check_pound(&self, index: usize, column_index: usize) -> bool {
         self.dish[index][column_index] == '#'
     }
+    fn check_dot(&self, index: usize, column_index: usize) -> bool {
+        self.dish[index][column_index] == '.'
+    }
 
     fn within_bounds(&self, window_top: isize, window_bottom: usize, height: usize) -> bool {
-        (window_top >= 0 ) && (window_bottom <= height)
+        (window_top >= 0) && (window_bottom <= height)
     }
 
     fn fill(&mut self, top_index: usize, bottom_index: usize, c: char, column_index: usize) {
@@ -39,30 +49,56 @@ impl Dish {
             self.dish[index][column_index] = c;
         }
     }
-    fn get_score(&self) -> usize{
+    fn get_score(&self) -> usize {
         let row_count = self.get_height();
-        self.dish.iter().enumerate().map(|(num, row)| {
-            row.iter().filter(|c| **c == 'O').collect::<Vec<&char>>().len() * ( row_count - num)
-        }).sum::<usize>()
+        self.dish
+            .iter()
+            .enumerate()
+            .map(|(num, row)| {
+                row.iter()
+                    .filter(|c| **c == 'O')
+                    .collect::<Vec<&char>>()
+                    .len()
+                    * (row_count - num)
+            })
+            .sum::<usize>()
     }
     fn __degub_count_zero(&self) -> usize {
-        self.dish.iter().map(|row| {
-            row.iter().filter(|c| **c == 'O').collect::<Vec<&char>>().len()
-        }).sum::<usize>()
+        self.dish
+            .iter()
+            .map(|row| {
+                row.iter()
+                    .filter(|c| **c == 'O')
+                    .collect::<Vec<&char>>()
+                    .len()
+            })
+            .sum::<usize>()
     }
-
+    fn __degub_count_pound(&self) -> usize {
+        self.dish
+            .iter()
+            .map(|row| {
+                row.iter()
+                    .filter(|c| **c == '#')
+                    .collect::<Vec<&char>>()
+                    .len()
+            })
+            .sum::<usize>()
+    }
 
     fn tilt_column_north(&mut self, column_index: usize) {
         let height = self.get_height();
         let mut window_top: usize = 0;
         let mut window_bottom: usize = 0;
 
-        while self.within_bounds(0, window_bottom, height - 1){
+        while self.within_bounds(0, window_bottom, height - 1) {
             //println!("===============");
             //self.dump();
             //println!("===============");
 
-            if !self.check_zero(window_top, column_index) || !self.check_zero(window_bottom, column_index) {
+            if !self.check_zero(window_top, column_index)
+                || !self.check_zero(window_bottom, column_index)
+            {
                 //println!("===============");
                 //println!("{:}, {:}", window_top, window_bottom);
                 //println!("{:}, {:}", self.check_zero(window_top, column_index), self.check_zero(window_bottom, column_index) );
@@ -70,13 +106,14 @@ impl Dish {
                 //println!("===============");
                 window_top += 1;
                 window_bottom += 1;
-                continue; 
+                continue;
             }
 
             //Find biggest window size of zeros vertically
             while self.within_bounds(window_top as isize, window_bottom + 1, height - 1)
-                    && self.check_zero(window_top, column_index)
-                    && self.check_zero(window_bottom + 1, column_index){
+                && self.check_zero(window_top, column_index)
+                && self.check_zero(window_bottom + 1, column_index)
+            {
                 window_bottom += 1;
             }
 
@@ -85,10 +122,11 @@ impl Dish {
             let mut temp_top = window_top;
             let mut temp_bottom = window_bottom;
 
-            //Try and see how far north you can move it 
+            //Try and see how far north you can move it
             while self.within_bounds(temp_top as isize - 1, temp_bottom, height - 1)
-                    && !self.check_pound(temp_top - 1, column_index)
-                    && !self.check_zero(temp_top - 1, column_index){
+                && !self.check_pound(temp_top - 1, column_index)
+                && !self.check_zero(temp_top - 1, column_index)
+            {
                 temp_top -= 1;
                 temp_bottom -= 1;
             }
@@ -107,32 +145,46 @@ impl Dish {
             window_bottom += 1;
             window_top = window_bottom;
         }
-
-        
     }
 
-    fn q1(&mut self) -> usize{
-        println!("\n\nCount zero, {:}", self.__degub_count_zero());
-
-        for column in 0..self.get_width() {
-            //println!("{:}", column);
-            self.tilt_column_north(column);
-        }
-
-        println!("Count zero, {:}\n", self.__degub_count_zero());
-        //self.dump();
+    fn q1(&mut self) -> usize {
+        self.tilt_column_north_improved();
         self.get_score()
     }
 
+    fn cycle(&mut self, length: usize) -> usize {
+        let mut detect_cycle: HashMap<usize, usize> = HashMap::new();
+
+        for i in 0..length {
+            println!("{:}", i);
+            self.tilt_column_north_improved();
+            self.tilt_row_west_improved();
+            self.tilt_column_south_improved();
+            self.tilt_row_east_improved();
+        }
+        self.get_score()
+        //match detect_cycle.get(&cur) {
+        //    Some(_) =>  panic!("CYCLE FOUND AT {:}", i),
+        //    None => detect_cycle.insert(cur, i),
+        //};
+    }
 }
 
-
 fn main() {
-    //let file = include_str!("../input/sample.txt");
     let file = include_str!("../input/input.txt");
+    //let file = include_str!("../input/sample.txt");
     //let file = include_str!("../input/sample_two.txt");
-    
+
     let mut curr_dish = Dish::new(file);
-    //curr_dish.dump();
-    println!("{:}", curr_dish.q1());
+
+    println!("q1: {:}", curr_dish.q1());
+
+
+    let start = Instant::now();
+
+    println!("{:?}", curr_dish.cycle( 1000000000 ));
+
+    let duration = start.elapsed();
+
+    println!("Time elapsed in expensive_function() is: {:?}", duration);
 }
