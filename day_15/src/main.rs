@@ -11,6 +11,7 @@ fn hash(label: &str) -> u32 {
 }
 
 
+#[derive(Debug)]
 struct LightBox {
     label: String,
     focal_length: u8
@@ -29,13 +30,18 @@ fn q1(file: &str) -> u32 {
 }
 
 
-fn q2(file: &str) {
+fn new_hashmap() -> HashMap<u8, Vec<LightBox>> {
     let mut boxes: HashMap<u8, Vec<LightBox>> = HashMap::new();
+    (0..=255).for_each(|val| {boxes.insert(val, Vec::new());});
+    boxes
+}
+
+fn q2(file: &str) {
+    let mut boxes: HashMap<u8, Vec<LightBox>> = new_hashmap();
     let file = &file[0..file.len() - 1].split(',').collect::<Vec<&str>>();
 
 
-    for (_, slot) in file.iter().enumerate() {
-
+    for slot in file.iter() {
         if slot.contains('-') {
             let label: &str = &slot[0..slot.len() - 1];
             let box_num = hash(label) as u8;
@@ -52,33 +58,39 @@ fn q2(file: &str) {
                     }
 
                 }
-                None => (),
+                None => {
+                    panic!("TRIED TO INSERT A NEW BOX");
+                }
+,
             }
         }
         else if slot.contains('=') {
             println!("slot: {:}", slot);
-            let (label, curr_focal_length) = dbg!(slot[0..slot.len() - 1].split_once('=').unwrap());
+            let (label, curr_focal_length) = dbg!(slot[0..slot.len()].split_once('=').unwrap());
             let curr_focal_length = curr_focal_length.parse::<u8>().unwrap();
             let box_num = hash(label) as u8;
 
+            println!("BOX NUM {:}", box_num);
+
             match boxes.get_mut(&box_num) {
                 Some(vec_box) => {
-                    if vec_box.len() != 0 {
-                        match vec_box.iter_mut().find(|cur_box| cur_box.label == label ) {
-                            Some(found_box) => {
-                                found_box.focal_length = curr_focal_length;
-                            },
-                            None => {
-                                vec_box.push(LightBox::new(label.to_string(), curr_focal_length));
-                            },
-                        }
-
+                    match vec_box.iter_mut().find(|cur_box| cur_box.label == label ) {
+                        Some(found_box) => {
+                            println!("FOUND BOX");
+                            found_box.focal_length = curr_focal_length;
+                        },
+                        None => {
+                            println!("label: {:}, focal_length {:}", label, curr_focal_length);
+                            vec_box.push(LightBox::new(label.to_string(), curr_focal_length));
+                        },
                     }
-
                 }
-                None => {boxes.insert(box_num, Vec::new());},
+                None => {
+                    panic!("TRIED TO INSERT A NEW BOX");
+                },
             }
         }
+        println!("CURR BOXES{:?}", boxes);
     }
 }
 
