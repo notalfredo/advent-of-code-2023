@@ -1,7 +1,7 @@
-use std::time::{Duration, Instant};
 mod spin;
 use std::collections::HashMap;
 
+#[derive(Debug, PartialEq)]
 struct Dish {
     dish: Vec<Vec<char>>,
 }
@@ -44,7 +44,6 @@ impl Dish {
     }
 
     fn fill(&mut self, top_index: usize, bottom_index: usize, c: char, column_index: usize) {
-        //println!("FILL: row {:}, row {:}, column {:}, char {:}", top_index, bottom_index, column_index, c);
         for index in top_index..=bottom_index {
             self.dish[index][column_index] = c;
         }
@@ -86,105 +85,82 @@ impl Dish {
             .sum::<usize>()
     }
 
-    fn tilt_column_north(&mut self, column_index: usize) {
-        let height = self.get_height();
-        let mut window_top: usize = 0;
-        let mut window_bottom: usize = 0;
-
-        while self.within_bounds(0, window_bottom, height - 1) {
-            //println!("===============");
-            //self.dump();
-            //println!("===============");
-
-            if !self.check_zero(window_top, column_index)
-                || !self.check_zero(window_bottom, column_index)
-            {
-                //println!("===============");
-                //println!("{:}, {:}", window_top, window_bottom);
-                //println!("{:}, {:}", self.check_zero(window_top, column_index), self.check_zero(window_bottom, column_index) );
-                //println!("skipping {:?}, {:?}", self.dish[window_top][column_index], self.dish[window_top][column_index]);
-                //println!("===============");
-                window_top += 1;
-                window_bottom += 1;
-                continue;
-            }
-
-            //Find biggest window size of zeros vertically
-            while self.within_bounds(window_top as isize, window_bottom + 1, height - 1)
-                && self.check_zero(window_top, column_index)
-                && self.check_zero(window_bottom + 1, column_index)
-            {
-                window_bottom += 1;
-            }
-
-            //println!("window size {:}, {:}", window_top, window_bottom);
-
-            let mut temp_top = window_top;
-            let mut temp_bottom = window_bottom;
-
-            //Try and see how far north you can move it
-            while self.within_bounds(temp_top as isize - 1, temp_bottom, height - 1)
-                && !self.check_pound(temp_top - 1, column_index)
-                && !self.check_zero(temp_top - 1, column_index)
-            {
-                temp_top -= 1;
-                temp_bottom -= 1;
-            }
-
-            //println!("new pos {:}, {:}", temp_top, temp_bottom);
-
-            if temp_top != window_bottom && temp_bottom != window_bottom {
-                if window_top <= temp_bottom {
-                    window_top = temp_bottom + 1;
-                }
-
-                self.fill(temp_top, temp_bottom, 'O', column_index);
-                self.fill(window_top, window_bottom, '.', column_index);
-            }
-
-            window_bottom += 1;
-            window_top = window_bottom;
-        }
+    fn q1(&mut self) -> usize {
+        self.tilt_column_north();
+        self.get_score()
     }
 
-    fn q1(&mut self) -> usize {
-        self.tilt_column_north_improved();
-        self.get_score()
+    fn detect_cycle(&mut self, cycle_amount: usize) -> (usize, usize) {
+        let mut detect_cycle: HashMap<Vec<Vec<char>>, usize> = HashMap::new();
+
+        for i in 0..cycle_amount {
+            match detect_cycle.get(&self.dish) {
+                Some(start) => return (*start, i - start),
+                None => {
+                    detect_cycle.insert(self.dish.clone(), i);
+                    self.tilt_column_north();
+                    self.tilt_row_west();
+                    self.tilt_column_south();
+                    self.tilt_row_east();
+                }
+            }
+        }
+        panic!("Unable to find a cycle");
     }
 
     fn cycle(&mut self, length: usize) -> usize {
-        let mut detect_cycle: HashMap<usize, usize> = HashMap::new();
+        let (start_index, repeat_index) = self.detect_cycle(length);
+        let loop_time = (length - (start_index + repeat_index)) % repeat_index;
 
-        for i in 0..length {
-            println!("{:}", i);
-            self.tilt_column_north_improved();
-            self.tilt_row_west_improved();
-            self.tilt_column_south_improved();
-            self.tilt_row_east_improved();
+        for _ in 0..loop_time {
+            self.tilt_column_north();
+            self.tilt_row_west();
+            self.tilt_column_south();
+            self.tilt_row_east();
         }
         self.get_score()
-        //match detect_cycle.get(&cur) {
-        //    Some(_) =>  panic!("CYCLE FOUND AT {:}", i),
-        //    None => detect_cycle.insert(cur, i),
-        //};
     }
 }
 
 fn main() {
     let file = include_str!("../input/input.txt");
-    //let file = include_str!("../input/sample.txt");
-    //let file = include_str!("../input/sample_two.txt");
 
     let mut curr_dish = Dish::new(file);
 
     println!("q1: {:}", curr_dish.q1());
 
+    println!("Q2: {:?}", curr_dish.cycle(1000000000));
+}
 
-    let start = Instant::now();
+#[cfg(test)]
+mod tests {
+    use crate::Dish;
+    #[test]
+    fn loop_for_repeat() {
+        let file = include_str!("../input/input.txt");
+        let mut dummy = Dish::new(file);
+        let n = 1000000000;
+        let (start, repeat) = dummy.detect_cycle(n);
 
-    println!("{:?}", curr_dish.cycle( 1000000000 ));
+        let mut test_lhs = Dish::new(file);
+        let mut test_rhs = Dish::new(file);
 
-    let duration = start.elapsed();
+        //0 to 142: runs for 143 times
+        for _ in 0..start {
+            test_lhs.tilt_column_north();
+            test_lhs.tilt_row_west();
+            test_lhs.tilt_column_south();
+            test_lhs.tilt_row_east();
+        }
 
-    println!("Time elapsed in expensive_function() is: {:?}", duration);
+        //0 to 142 + 28 (170): runs for 171 times
+        for _ in 0..start + repeat {
+            test_rhs.tilt_column_north();
+            test_rhs.tilt_row_west();
+            test_rhs.tilt_column_south();
+            test_rhs.tilt_row_east();
+        }
+
+        assert_eq!(test_lhs, test_rhs);
+    }
 }

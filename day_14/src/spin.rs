@@ -1,7 +1,7 @@
 use crate::Dish;
 
 impl Dish {
-    pub fn tilt_column_north_improved(&mut self) {
+    pub fn tilt_column_north(&mut self) {
         for column_index in 0..self.get_width() {
             let mut row = 0;
             let mut found_pound: bool = false;
@@ -34,7 +34,7 @@ impl Dish {
         }
     }
 
-    pub fn tilt_column_south_improved(&mut self) {
+    pub fn tilt_column_south(&mut self) {
         for column_index in 0..self.get_width() {
             let mut row: isize = (self.get_height() - 1) as isize;
             let mut found_pound: bool = false;
@@ -69,15 +69,12 @@ impl Dish {
         }
     }
 
-    pub fn tilt_row_west_improved(&mut self) {
+    pub fn tilt_row_west(&mut self) {
         for row_index in 0..self.get_height() {
-            //println!("width {:}", self.get_width());
             let mut column: usize = 0;
             let mut found_pound: bool = false;
 
             while column < self.get_width() - 1 {
-                //println!("- column{:}", column);
-
                 if self.check_zero(row_index, column) || self.check_pound(row_index, column) {
                     column += 1;
                     continue;
@@ -85,7 +82,6 @@ impl Dish {
 
                 let mut pointer = column + 1;
                 while pointer < self.get_width() {
-                    //println!("- column {:}, pointer {:}", column, pointer);
                     if self.check_pound(row_index, pointer) {
                         column = pointer + 1;
                         found_pound = true;
@@ -93,7 +89,6 @@ impl Dish {
                     }
 
                     if self.check_zero(row_index, pointer) {
-                        //println!("SWAP row {:}, column {:}", row_index, column);
                         self.dish[row_index][column] = 'O';
                         self.dish[row_index][pointer] = '.';
                         column += 1;
@@ -109,15 +104,12 @@ impl Dish {
         }
     }
 
-    pub fn tilt_row_east_improved(&mut self) {
+    pub fn tilt_row_east(&mut self) {
         for row_index in 0..self.get_height() {
-            //println!("width {:}", self.get_width() );
             let mut column: isize = (self.get_width() - 1) as isize;
             let mut found_pound: bool = false;
 
             while column > 0 {
-                //println!("- column{:}", column);
-
                 if self.check_zero(row_index, column as usize)
                     || self.check_pound(row_index, column as usize)
                 {
@@ -127,7 +119,6 @@ impl Dish {
 
                 let mut pointer: isize = (column - 1) as isize;
                 while pointer >= 0 {
-                    //println!("- column {:}, pointer {:}", column, pointer);
                     if self.check_pound(row_index, pointer as usize) {
                         column = pointer - 1;
                         found_pound = true;
@@ -135,7 +126,6 @@ impl Dish {
                     }
 
                     if self.check_zero(row_index, pointer as usize) {
-                        //println!("SWAP row {:}, column {:}", row_index, column);
                         self.dish[row_index][column as usize] = 'O';
                         self.dish[row_index][pointer as usize] = '.';
                         column -= 1;
