@@ -1,4 +1,6 @@
-#[derive(Copy, Clone, Debug)]
+use std::collections::HashMap;
+
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Hash)]
 enum Direction {
     North,
     South,
@@ -6,7 +8,7 @@ enum Direction {
     East,
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Hash)]
 struct Point {
     x: i32,
     y: i32,
@@ -18,7 +20,7 @@ impl Point {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Eq, PartialEq, Hash, Clone, Copy)]
 struct Light {
     direction: Direction,
     loc: Point,
@@ -58,70 +60,72 @@ impl Light {
         }
     }
 
-    fn diag_left(&self, point: Point) -> Point {
+    fn diag_left(&self, point: Point) -> (Direction, Point) {
         match self.direction {
-            Direction::North => Point::new(point.x - 1, point.y),
-            Direction::South => Point::new(point.x + 1, point.y),
-            Direction::West => Point::new(point.x, point.y - 1),
-            Direction::East => Point::new(point.x, point.y + 1),
+            Direction::North => (Direction::West, Point::new(point.x - 1, point.y)),
+            Direction::South => (Direction::East, Point::new(point.x + 1, point.y)),
+            Direction::West => (Direction::North, Point::new(point.x, point.y - 1)),
+            Direction::East => (Direction::South, Point::new(point.x, point.y + 1)),
         }
     }
 
-    fn diag_right(&self, point: Point) -> Point {
+    fn diag_right(&self, point: Point) -> (Direction, Point) {
         match self.direction {
-            Direction::North => Point::new(point.x + 1, point.y),
-            Direction::South => Point::new(point.x - 1, point.y),
-            Direction::West => Point::new(point.x, point.y + 1),
-            Direction::East => Point::new(point.x, point.y - 1),
+            Direction::North => (Direction::East, Point::new(point.x + 1, point.y)),
+            Direction::South => (Direction::West, Point::new(point.x - 1, point.y)),
+            Direction::West => (Direction::South, Point::new(point.x, point.y + 1)),
+            Direction::East => (Direction::North, Point::new(point.x, point.y - 1)),
         }
     }
 
-    fn new_lights(&self, next_tile: Tile, next_loc: Point) -> Option<Vec<Light>> {
-        match next_tile {
+    fn new_lights(self, curr_tile: Tile) -> (Light, Option<Light>) {
+        match curr_tile {
             Tile::Empty => {
-                return Some(vec![Light::new(
-                    self.direction,
-                    self.keep_same_dir(next_loc),
-                )]);
+                return (
+                    Light::new(self.direction, self.keep_same_dir(self.loc)),
+                    None,
+                );
             }
             Tile::Vertical => match self.direction {
                 Direction::North | Direction::South => {
-                    return Some(vec![Light::new(
-                        self.direction,
-                        self.keep_same_dir(next_loc),
-                    )]);
+                    return (
+                        Light::new(self.direction, self.keep_same_dir(self.loc)),
+                        None,
+                    );
                 }
                 Direction::West | Direction::East => {
-                    let (north, south) = self.split_light(next_loc);
-                    return Some(vec![
+                    let (north, south) = self.split_light(self.loc);
+                    return (
                         Light::new(Direction::North, north),
-                        Light::new(Direction::South, south),
-                    ]);
+                        Some(Light::new(Direction::South, south)),
+                    );
                 }
             },
             Tile::Horizontal => match self.direction {
                 Direction::North | Direction::South => {
-                    let (north, south) = self.split_light(next_loc);
-                    return Some(vec![
-                        Light::new(Direction::North, north),
-                        Light::new(Direction::South, south),
-                    ]);
+                    let (west, east) = self.split_light(self.loc);
+                    return (
+                        Light::new(Direction::West, west),
+                        Some(Light::new(Direction::East, east)),
+                    );
                 }
                 Direction::West | Direction::East => {
-                    return Some(vec![Light::new(
-                        self.direction,
-                        self.keep_same_dir(next_loc),
-                    )]);
+                    return (
+                        Light::new(self.direction, self.keep_same_dir(self.loc)),
+                        None,
+                    );
                 }
             },
             Tile::MirrorL => match self.direction {
                 _ => {
-                    return Some(vec![Light::new(self.direction, self.diag_left(next_loc))]);
+                    let (dir, loc) = self.diag_left(self.loc);
+                    return (Light::new(dir, loc), None);
                 }
             },
             Tile::MirrorR => match self.direction {
                 _ => {
-                    return Some(vec![Light::new(self.direction, self.diag_left(next_loc))]);
+                    let (dir, loc) = self.diag_right(self.loc);
+                    return (Light::new(dir, loc), None);
                 }
             },
         }
@@ -152,7 +156,7 @@ impl From<char> for Tile {
 
 struct Map {
     map: Vec<Vec<Tile>>,
-    energized: Vec<Point>,
+    energized: HashMap<Point, Direction>,
     fringe: Vec<Light>,
 }
 
@@ -168,7 +172,7 @@ impl Map {
                     .collect::<Vec<Tile>>()
             })
             .collect();
-        let energized: Vec<Point> = Vec::new();
+        let energized: HashMap<Point, Direction> = HashMap::new();
         let fringe: Vec<Light> = vec![Light::new(Direction::East, Point::new(0, 0))];
         Self {
             map,
@@ -176,29 +180,55 @@ impl Map {
             fringe,
         }
     }
+    fn get_height(&self) -> usize {
+        self.map.len()
+    }
+    fn get_width(&self) -> usize {
+        self.map[0].len()
+    }
 
-    fn q1(&mut self) {
-        for _ in 0..1{
+    fn within_bound(&self, point: Point) -> bool {
+        ((point.x >= 0) && ((point.x as usize) < self.get_width()))
+            && ((point.y >= 0) && ((point.y as usize) < self.get_height()))
+    }
+
+    fn q1(&mut self) -> usize {
+        while self.fringe.len() > 0 {
             let curr_light: Light = self.fringe.pop().unwrap();
-            let next_step = curr_light.get_next_pos();
-            let next_tile = self.map[next_step.y as usize][next_step.x as usize];
+            let next_tile = self.map[curr_light.loc.y as usize][curr_light.loc.x as usize];
 
-            println!("{:?}", curr_light);
-            println!("{:?}", next_step);
-            println!("{:?}", next_tile);
+            match self.energized.get(&curr_light.loc) {
+                Some(dir) => {
+                    if *dir == curr_light.direction {
+                        continue;
+                    }
+                }
+                None => {
+                    self.energized.insert(curr_light.loc, curr_light.direction);
+                }
+            }
 
-            let next_lights: Vec<Light> =
-                Light::new_lights(&curr_light, next_tile, next_step).unwrap();
+            let (next_light, extra_light) = curr_light.new_lights(next_tile);
 
-            println!("{:?}", next_lights);
+            if self.within_bound(next_light.loc) {
+                self.fringe.push(next_light);
+            }
+
+            if let Some(extra_light) = extra_light {
+                if self.within_bound(extra_light.loc) {
+                    self.fringe.push(extra_light);
+                }
+            }
         }
+
+        self.energized.len()
     }
 }
 
 fn main() {
-    let file = include_str!("../input/sample.txt");
+    //let file = include_str!("../input/sample.txt");
+    let file = include_str!("../input/input.txt");
 
-    let mut new_map = Map::new(file); 
-    new_map.q1();
-
+    let mut new_map = Map::new(file);
+    println!("Q1: {:}", new_map.q1());
 }
