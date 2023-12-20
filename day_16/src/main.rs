@@ -1,4 +1,5 @@
-use std::collections::HashMap;
+use std::cmp;
+use std::{collections::HashMap, hash::Hash};
 
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Hash)]
 enum Direction {
@@ -173,7 +174,7 @@ impl Map {
             })
             .collect();
         let energized: HashMap<Point, Direction> = HashMap::new();
-        let fringe: Vec<Light> = vec![Light::new(Direction::East, Point::new(0, 0))];
+        let fringe: Vec<Light> = Vec::new();
         Self {
             map,
             energized,
@@ -192,7 +193,7 @@ impl Map {
             && ((point.y >= 0) && ((point.y as usize) < self.get_height()))
     }
 
-    fn q1(&mut self) -> usize {
+    fn energize(&mut self) -> usize {
         while self.fringe.len() > 0 {
             let curr_light: Light = self.fringe.pop().unwrap();
             let next_tile = self.map[curr_light.loc.y as usize][curr_light.loc.x as usize];
@@ -223,6 +224,57 @@ impl Map {
 
         self.energized.len()
     }
+
+    fn q1(&mut self) -> usize {
+        self.fringe = vec![Light::new(Direction::East, Point::new(0, 0))];
+        self.energize()
+    }
+
+    fn q2(&mut self) -> usize {
+        let left_max = (0..self.get_width())
+            .map(|y| {
+                self.fringe = vec![Light::new(Direction::East, Point::new(0, y as i32))];
+                self.energized = HashMap::new();
+                self.energize()
+            })
+            .max()
+            .unwrap();
+
+        let right_max = (0..self.get_width())
+            .map(|y| {
+                self.fringe = vec![Light::new(
+                    Direction::West,
+                    Point::new((self.get_width() - 1) as i32, y as i32),
+                )];
+                self.energized = HashMap::new();
+                self.energize()
+            })
+            .max()
+            .unwrap();
+
+        let top_max = (0..self.get_width())
+            .map(|x| {
+                self.fringe = vec![Light::new(Direction::South, Point::new(x as i32, 0))];
+                self.energized = HashMap::new();
+                self.energize()
+            })
+            .max()
+            .unwrap();
+
+        let bottom_max = (0..self.get_width())
+            .map(|x| {
+                self.fringe = vec![Light::new(
+                    Direction::North,
+                    Point::new(x as i32, (self.get_height() - 1) as i32),
+                )];
+                self.energized = HashMap::new();
+                self.energize()
+            })
+            .max()
+            .unwrap();
+
+        cmp::max(cmp::max(left_max, right_max), cmp::max(top_max, bottom_max))
+    }
 }
 
 fn main() {
@@ -231,4 +283,5 @@ fn main() {
 
     let mut new_map = Map::new(file);
     println!("Q1: {:}", new_map.q1());
+    println!("Q2: {:}", new_map.q2());
 }
