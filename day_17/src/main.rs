@@ -51,24 +51,52 @@ impl Graph {
         let mut neighbors: Vec<&Node> = Vec::new();
 
         //Top neighbor
+        //print!("-->Top {:}, ", self.within_bounds(node.loc.x as isize, node.loc.y as isize - 1));
         if self.within_bounds(node.loc.x as isize, node.loc.y as isize - 1) {
-            neighbors.push(&self.map[node.loc.x as usize][(node.loc.y - 1) as usize]);
-        }
-        //Bottom neighbor
-        if self.within_bounds(node.loc.x as isize, node.loc.y as isize + 1) {
-            neighbors.push(&self.map[node.loc.x as usize][(node.loc.y + 1) as usize]);
-        }
-        //left neighbor
-        if self.within_bounds(node.loc.x as isize - 1, node.loc.y as isize) {
-            neighbors.push(&self.map[(node.loc.x - 1) as usize][node.loc.y as usize]);
-        }
-        //right neighbor
-        if self.within_bounds(node.loc.x as isize + 1, node.loc.y as isize) {
-            neighbors.push(&self.map[(node.loc.x + 1) as usize][node.loc.y as usize]);
+            neighbors.push(&self.map[(node.loc.y - 1) as usize][node.loc.x as usize]);
         }
 
+        //Bottom neighbor
+        //print!("Bottom {:}, ", self.within_bounds(node.loc.x as isize, node.loc.y as isize + 1));
+        if self.within_bounds(node.loc.x as isize, node.loc.y as isize + 1) {
+            neighbors.push(&self.map[(node.loc.y + 1) as usize][node.loc.x as usize]);
+        }
+
+        //left neighbor
+        //print!("Left {:}, ", self.within_bounds(node.loc.x as isize - 1, node.loc.y as isize));
+        if self.within_bounds(node.loc.x as isize - 1, node.loc.y as isize) {
+            neighbors.push(&self.map[node.loc.y as usize][(node.loc.x - 1) as usize]);
+        }
+
+        //right neighbor
+        //println!("Right {:}/<--", self.within_bounds(node.loc.x as isize + 1, node.loc.y as isize));
+        if self.within_bounds(node.loc.x as isize + 1, node.loc.y as isize) {
+            neighbors.push(&self.map[node.loc.y as usize][(node.loc.x + 1) as usize]);
+        }
+
+        //println!("Checking neighbors for, {:?}", node);
+        for neighbor in &neighbors{ 
+            //println!("  neighbor, {:?}", neighbor);
+        }
         neighbors
     }  
+    
+    fn reconstruct_path(&self, came_from: HashMap<&Node, Option<&Node>>) {
+        let mut current = &self.map[self.get_height()-1][self.get_width()-1]; 
+        let mut path: Vec<&Node> = Vec::new();
+
+        while (current.loc.x != 0) || (current.loc.y != 0) {
+            path.push(current);
+            current = came_from.get(current).unwrap().unwrap();
+        }
+        let path: Vec<&Node> = path.into_iter().rev().collect();
+        
+        for node in path.iter() {
+            println!("{:?}", node);
+        }
+
+    }
+    
 
 
     fn q1(&self) {
@@ -84,6 +112,7 @@ impl Graph {
         
         while !fringe.is_empty() {
             let (current, cost_from_current): (&Node, u32) = fringe.pop();
+            //println!("Current node, {:?}, ", current);
 
 
             if self.is_goal(current){
@@ -92,8 +121,10 @@ impl Graph {
 
             
             for next in self.neighbors(current).iter() {
+                //println!("Looking at the neighbor, {:?}, ", next);
                 let new_cost = cost_so_far[current] + next.weight;
                 if !(cost_so_far.contains_key(next)) || (new_cost < *cost_so_far.get(next).unwrap()) {
+                    //println!("       passed");
                     match cost_so_far.get_mut(next) {
                         Some(next_node) => {
                             *next_node = new_cost;
@@ -115,15 +146,25 @@ impl Graph {
             }
         }
 
-        println!("{:?}", cost_so_far.get(
+
+        println!("Dist {:?}", cost_so_far.get(
                             &self.map[self.get_height()-1][self.get_width()-1]
             ).unwrap()
         );
+        self.reconstruct_path(came_from);
+        //for test in came_from.iter() {
+        //    println!("{:?}", test);
+        //}
+        //println!("============");
+        //for test in cost_so_far.iter() {
+        //    println!("{:?}", test);
+        //}
     }
 }
 
 fn main() {
-    let file = include_str!("../input/sample.txt");
+    //let file = include_str!("../input/sample.txt");
+    let file = include_str!("../input/sample_two.txt");
     let graph = Graph::new(file);
     graph.q1();
 }
