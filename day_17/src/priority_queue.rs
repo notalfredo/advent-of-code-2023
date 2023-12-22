@@ -1,12 +1,11 @@
 use crate::Graph;
 
-
 #[derive(Debug, Clone, Copy, Eq, Hash, PartialEq)]
 pub enum Direction {
     North(u32),
     South(u32),
     East(u32),
-    West(u32)
+    West(u32),
 }
 
 #[derive(Debug, Eq, Hash, PartialEq)]
@@ -37,11 +36,8 @@ pub struct PriorityQueue<'a> {
     pub queue: Vec<(&'a Node, Direction, u32)>,
 }
 
-impl<'a> PriorityQueue<'a> {    
-    pub fn new(
-            right: (&'a Node, Direction, u32),
-            bottom: (&'a Node, Direction, u32)
-        ) -> Self {
+impl<'a> PriorityQueue<'a> {
+    pub fn new(right: (&'a Node, Direction, u32), bottom: (&'a Node, Direction, u32)) -> Self {
         let queue: Vec<(&'a Node, Direction, u32)> = vec![right, bottom];
         let mut temp = Self { queue };
         temp.sort();
@@ -60,10 +56,9 @@ impl<'a> PriorityQueue<'a> {
     pub fn insert(&mut self, node: &'a Node, dir: Direction, cost: u32) {
         self.queue.push((node, dir, cost));
         self.sort();
-        self.dump();
     }
     pub fn is_empty(&self) -> bool {
-        self.queue.len() == 0 
+        self.queue.len() == 0
     }
     pub fn pop(&mut self) -> (&'a Node, Direction, u32) {
         self.queue.remove(0)
@@ -80,15 +75,13 @@ impl Graph {
     }
 
     pub fn is_goal(&self, node: &Node) -> bool {
-        (node.loc.x as usize == self.get_width() - 1) 
-            &&
-        (node.loc.y as usize == self.get_height() - 1) 
+        (node.loc.x as usize == self.get_width() - 1)
+            && (node.loc.y as usize == self.get_height() - 1)
     }
 
     pub fn within_bounds(&self, x: isize, y: isize) -> bool {
         ((x >= 0) && (x <= (self.get_width() - 1) as isize))
-            &&
-        ((y >= 0) && (y <= (self.get_height() - 1) as isize))
+            && ((y >= 0) && (y <= (self.get_height() - 1) as isize))
     }
 
     pub fn gen_neighbor(&self, x: isize, y: isize) -> Option<&Node> {
@@ -98,25 +91,45 @@ impl Graph {
         None
     }
 
-    pub fn gen_west<'a>(&'a self, neighbors: &mut Vec<(&'a Node, Direction)>, node: &Node, direction: Direction) {
+    pub fn gen_west<'a>(
+        &'a self,
+        neighbors: &mut Vec<(&'a Node, Direction)>,
+        node: &Node,
+        direction: Direction,
+    ) {
         if let Some(found) = self.gen_neighbor(node.loc.x as isize - 1, node.loc.y as isize) {
             neighbors.push((found, direction));
         }
     }
 
-    pub fn gen_east<'a>(&'a self, neighbors: &mut Vec<(&'a Node, Direction)>, node: &Node, direction: Direction) {
+    pub fn gen_east<'a>(
+        &'a self,
+        neighbors: &mut Vec<(&'a Node, Direction)>,
+        node: &Node,
+        direction: Direction,
+    ) {
         if let Some(found) = self.gen_neighbor(node.loc.x as isize + 1, node.loc.y as isize) {
             neighbors.push((found, direction));
         }
     }
 
-    pub fn gen_north<'a>(&'a self, neighbors: &mut Vec<(&'a Node, Direction)>, node: &Node, direction: Direction) {
+    pub fn gen_north<'a>(
+        &'a self,
+        neighbors: &mut Vec<(&'a Node, Direction)>,
+        node: &Node,
+        direction: Direction,
+    ) {
         if let Some(found) = self.gen_neighbor(node.loc.x as isize, node.loc.y as isize - 1) {
             neighbors.push((found, direction));
         }
     }
 
-    pub fn gen_south<'a>(&'a self, neighbors: &mut Vec<(&'a Node, Direction)>, node: &Node, direction: Direction) {
+    pub fn gen_south<'a>(
+        &'a self,
+        neighbors: &mut Vec<(&'a Node, Direction)>,
+        node: &Node,
+        direction: Direction,
+    ) {
         if let Some(found) = self.gen_neighbor(node.loc.x as isize, node.loc.y as isize + 1) {
             neighbors.push((found, direction));
         }

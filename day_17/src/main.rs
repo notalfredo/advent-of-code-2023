@@ -1,8 +1,8 @@
 mod priority_queue;
 use std::{collections::HashMap, hash::Hash};
 
-use priority_queue::{PriorityQueue, Node, Direction, Point};
-use priority_queue::Direction::{*};
+use priority_queue::Direction::*;
+use priority_queue::{Direction, Node, Point, PriorityQueue};
 
 struct Graph {
     map: Vec<Vec<Node>>,
@@ -17,10 +17,7 @@ impl Graph {
                 line.chars()
                     .enumerate()
                     .map(|(x, c)| {
-                        Node::new(
-                            Point::new(x as u32, y as u32), 
-                            c.to_digit(10).unwrap()    
-                        )
+                        Node::new(Point::new(x as u32, y as u32), c.to_digit(10).unwrap())
                     })
                     .collect::<Vec<Node>>()
             })
@@ -28,94 +25,119 @@ impl Graph {
         Self { map }
     }
 
-    fn neighbors(&self, node: &Node, direction: Direction) -> Vec<(&Node, Direction)> {
+    fn neighbors(
+        &self,
+        node: &Node,
+        direction: Direction,
+        forward_dist: u32,
+        ultra_crucibles: bool,
+    ) -> Vec<(&Node, Direction)> {
         let mut neighbors: Vec<(&Node, Direction)> = Vec::new();
 
         match direction {
             North(score) | South(score) => {
-
-                self.gen_west(&mut neighbors, node, West(2));
-                self.gen_east(&mut neighbors, node, East(2));
-
-                if score != 0 {
+                //We have to move straight a minimum of four blocks
+                if ultra_crucibles && (score > 6) {
                     match direction {
                         North(_) => self.gen_north(&mut neighbors, node, North(score - 1)),
                         South(_) => self.gen_south(&mut neighbors, node, South(score - 1)),
                         _ => panic!("Matched west/east inside a north/south"),
                     }
+                } else {
+                    self.gen_west(&mut neighbors, node, West(forward_dist));
+                    self.gen_east(&mut neighbors, node, East(forward_dist));
+
+                    if score != 0 {
+                        match direction {
+                            North(_) => self.gen_north(&mut neighbors, node, North(score - 1)),
+                            South(_) => self.gen_south(&mut neighbors, node, South(score - 1)),
+                            _ => panic!("Matched west/east inside a north/south"),
+                        }
+                    }
                 }
-            },
+                return neighbors;
+            }
             East(score) | West(score) => {
-                self.gen_north(&mut neighbors, node, North(2));
-                self.gen_south(&mut neighbors, node, South(2));
-                if score != 0 {
+                //We have to move straight a minimum of four blocks
+                if ultra_crucibles && (score > 6) {
                     match direction {
                         East(_) => self.gen_east(&mut neighbors, node, East(score - 1)),
                         West(_) => self.gen_west(&mut neighbors, node, West(score - 1)),
                         _ => panic!("Matched north/south inside a east/west"),
                     }
+                } else {
+                    self.gen_north(&mut neighbors, node, North(forward_dist));
+                    self.gen_south(&mut neighbors, node, South(forward_dist));
+                    if score != 0 {
+                        match direction {
+                            East(_) => self.gen_east(&mut neighbors, node, East(score - 1)),
+                            West(_) => self.gen_west(&mut neighbors, node, West(score - 1)),
+                            _ => panic!("Matched north/south inside a east/west"),
+                        }
+                    }
                 }
-            },
+                return neighbors;
+            }
         }
-        neighbors
-    }  
-    
-    fn reconstruct_path(&self, came_from: HashMap<&Node, &Node>) {
-        let mut current = &self.map[self.get_height()-1][self.get_width()-1]; 
-        let mut path: Vec<&Node> = Vec::new();
-
-        while (current.loc.x != 0) || (current.loc.y != 0) {
-            path.push(current);
-            current = came_from.get(current).unwrap();
-        }
-        let path: Vec<&Node> = path.into_iter().rev().collect();
-        
-        for node in path.iter() {
-            println!("{:?}", node);
-        }
-
-    }
-    fn get_cost(&self, cost: HashMap<(&Node, Direction), u32>) {
-        
     }
 
-    fn q1(&self) {
+    /*
+     * foward_dist: how for ahead a node
+     *              is allowed to travel
+     */
+    fn find_path(&self, forward_dist: u32, ultra_crucibles: bool) -> u32 {
         let mut fringe = PriorityQueue::new(
-            (&self.map[0][1], East(2),  self.map[0][1].weight),
-            (&self.map[1][0], South(2), self.map[1][0].weight),
+            (&self.map[0][1], East(forward_dist), self.map[0][1].weight),
+            (&self.map[1][0], South(forward_dist), self.map[1][0].weight),
         );
         let mut came_from: HashMap<(&Node, Direction), (&Node, Direction)> = HashMap::from([
-             ((&self.map[0][1], East(2)), (&self.map[0][0],North(2))),
-             ((&self.map[1][0], South(2)), (&self.map[0][0], North(2))),
-        ]); 
+            (
+                (&self.map[0][1], East(forward_dist)),
+                (&self.map[0][0], North(forward_dist)),
+            ),
+            (
+                (&self.map[1][0], South(forward_dist)),
+                (&self.map[0][0], North(forward_dist)),
+            ),
+        ]);
         let mut cost_so_far: HashMap<(&Node, Direction), u32> = HashMap::from([
-             ((&self.map[0][1], East(2)), self.map[0][1].weight),
-             ((&self.map[1][0], South(2)), self.map[1][0].weight),
+            ((&self.map[0][1], East(forward_dist)), self.map[0][1].weight),
+            (
+                (&self.map[1][0], South(forward_dist)),
+                self.map[1][0].weight,
+            ),
         ]);
         let mut total_cost: u32 = 0;
 
-        
         while !fringe.is_empty() {
             let (current, direction, cost_from_current): (&Node, Direction, u32) = fringe.pop();
-            println!("Current node, {:?}, direction {:?}", current, direction);
 
-
-            if self.is_goal(current){
+            if self.is_goal(current) {
+                if ultra_crucibles {
+                    match direction {
+                        North(val) | South(val) | West(val) | East(val) => {
+                            if val > 6 {
+                                continue;
+                            }
+                        }
+                    }
+                }
                 total_cost = cost_from_current;
                 break;
             }
 
-            for (next, next_direction) in self.neighbors(current, direction).iter() {
-                println!("     Looking at the neighbor, {:?}, direction {:?}", next, next_direction);
+            for (next, next_direction) in self
+                .neighbors(current, direction, forward_dist, ultra_crucibles)
+                .iter()
+            {
                 let new_cost = cost_so_far[&(current, direction)] + next.weight;
-                if !(cost_so_far.contains_key(&((next, *next_direction)))) 
-                     || (new_cost < *cost_so_far.get(&((next, *next_direction))).unwrap()) {
-                    println!("          |");
-                    println!("          |-> passed, new_cost, {:}", new_cost);
+                if !(cost_so_far.contains_key(&((next, *next_direction))))
+                    || (new_cost < *cost_so_far.get(&((next, *next_direction))).unwrap())
+                {
                     match cost_so_far.get_mut(&((next, *next_direction))) {
                         Some(next_node) => {
                             *next_node = new_cost;
-                        },
+                        }
                         None => {
                             cost_so_far.insert((next, *next_direction), new_cost);
                         }
@@ -124,7 +146,7 @@ impl Graph {
                     match came_from.get_mut(&((next, *next_direction))) {
                         Some(next_node) => {
                             *next_node = (current, direction);
-                        },
+                        }
                         None => {
                             came_from.insert((next, *next_direction), (current, direction));
                         }
@@ -133,27 +155,24 @@ impl Graph {
             }
         }
 
-        println!("==================");
-        println!("==================");
-        println!("==================");
+        total_cost
+    }
 
-        println!("Q1 Dist {:?}", total_cost)
+    fn q1(&self) -> u32 {
+        self.find_path(2, false)
+    }
 
-        //self.reconstruct_path(came_from);
-        //for test in came_from.iter() {
-        //    println!("{:?}", test);
-        //}
-        //println!("============");
-        //for test in cost_so_far.iter() {
-        //    println!("{:?}", test);
-        //}
+    fn q2(&self) -> u32 {
+        self.find_path(9, true)
     }
 }
 
 fn main() {
     //let file = include_str!("../input/sample.txt");
     //let file = include_str!("../input/sample_two.txt");
+    //let file = include_str!("../input/sample_three.txt");
     let file = include_str!("../input/input.txt");
     let graph = Graph::new(file);
-    graph.q1();
+    println!("Q1: {:}", graph.q1());
+    println!("Q2: {:}", graph.q2());
 }
