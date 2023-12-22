@@ -18,10 +18,22 @@ impl From<char> for Direction {
     }
 }
 
+impl From<u32> for Direction {
+    fn from(d: u32) -> Self {
+        match d {
+            0 => Direction::Right,
+            1 => Direction::Down,
+            2 => Direction::Left,
+            3 => Direction::Up,
+            _ => panic!("Tried from on a unsupported u64"),
+        }
+    }
+}
+
 #[derive(Debug)]
 struct Step<'a> {
     dir: Direction,
-    step_count: u32,
+    step_count: u64,
     color: &'a str,
 }
 
@@ -31,8 +43,8 @@ impl<'a> Step<'a> {
         let (step_count, color) = steps_color.split_once(' ').unwrap();
 
         let dir: Direction = Direction::from(dir.chars().next().expect("string is empty"));
-        let step_count: u32 = step_count.parse::<u32>().expect("Unable to parse to int");
-        let color: &str = &color[1..color.len() - 1];
+        let step_count: u64 = step_count.parse::<u64>().expect("Unable to parse to int");
+        let color: &str = &color[2..color.len() - 1];
 
         Self {
             dir,
@@ -44,12 +56,12 @@ impl<'a> Step<'a> {
 
 #[derive(Copy, Clone, Debug)]
 struct Point {
-    x: i32,
-    y: i32,
+    x: i64,
+    y: i64,
 }
 
 impl Point {
-    fn new(x: i32, y: i32) -> Self {
+    fn new(x: i64, y: i64) -> Self {
         Self { x, y }
     }
 }
@@ -78,11 +90,11 @@ impl Map {
             println!("{:?}", row);
         }
     }
-    fn calc_area(&self) -> i32 {
-        let mut sum: i32 = 0;
+    fn calc_area(&self) -> i64 {
+        let mut sum: i64 = 0;
 
         for (left, right) in &self.vertices {
-            sum += ((left.x * right.y) as i32) - ((left.y * right.x) as i32);
+            sum += ((left.x * right.y) as i64) - ((left.y * right.x) as i64);
         }
 
         sum / 2
@@ -108,26 +120,44 @@ impl<'a> DigPlan<'a> {
         }
     }
 
-    fn calc_edge_pair(&self, prev: Point, step_index: usize, step_count: &mut u32) -> Point {
+    fn calc_edge_pair(&self, prev: Point, step_index: usize, step_count: &mut u64) -> Point {
         *step_count += self.plan[step_index].step_count;
         match self.plan[step_index].dir {
             Direction::Up => {
-                return Point::new(prev.x, prev.y - (self.plan[step_index].step_count as i32));
+                return Point::new(prev.x, prev.y - (self.plan[step_index].step_count as i64));
             }
             Direction::Down => {
-                return Point::new(prev.x, prev.y + (self.plan[step_index].step_count as i32));
+                return Point::new(prev.x, prev.y + (self.plan[step_index].step_count as i64));
             }
             Direction::Left => {
-                return Point::new(prev.x - (self.plan[step_index].step_count as i32), prev.y);
+                return Point::new(prev.x - (self.plan[step_index].step_count as i64), prev.y);
             }
             Direction::Right => {
-                return Point::new(prev.x + (self.plan[step_index].step_count as i32), prev.y);
+                return Point::new(prev.x + (self.plan[step_index].step_count as i64), prev.y);
             }
         }
     }
 
-    fn build_map(&self) -> u32 {
-        let mut step_count: u32 = 0;
+    fn upgrade_plan(&mut self) {
+        for plan in &mut self.plan {
+            let new_step_count: u64 =
+                u64::from_str_radix(&plan.color[0..plan.color.len() - 1], 16).unwrap();
+            let new_dir: Direction = Direction::from(
+                plan.color[plan.color.len() - 1..plan.color.len()]
+                    .chars()
+                    .next()
+                    .unwrap()
+                    .to_digit(10)
+                    .unwrap(),
+            );
+
+            plan.step_count = new_step_count;
+            plan.dir = new_dir;
+        }
+    }
+
+    fn build_map(&self) -> u64 {
+        let mut step_count: u64 = 0;
 
         let mut map = Map::new(
             Point::new(0, 0),
@@ -145,7 +175,16 @@ impl<'a> DigPlan<'a> {
             step_index += 1;
         }
 
-        step_count + ((map.calc_area() as u32) - (step_count / 2) + 1)
+        step_count + ((map.calc_area() as u64) - (step_count / 2) + 1)
+    }
+
+    fn q1(&self) -> u64 {
+        self.build_map()
+    }
+
+    fn q2(&mut self) -> u64 {
+        self.upgrade_plan();
+        self.build_map()
     }
 }
 
@@ -154,6 +193,7 @@ fn main() {
     //let file = include_str!("../input/sample_two.txt");
     let file = include_str!("../input/input.txt");
 
-    let plan = DigPlan::new(file);
-    println!("{:}", plan.build_map());
+    let mut plan = DigPlan::new(file);
+    println!("Q1 {:}", plan.q1());
+    println!("Q2 {:}", plan.q2());
 }
