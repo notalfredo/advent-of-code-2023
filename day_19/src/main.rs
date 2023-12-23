@@ -137,7 +137,7 @@ impl<'a> Rule<'a> {
     }
 }
 
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 struct Range {
     start: u64,
     end: u64,
@@ -167,12 +167,21 @@ impl DfsNode {
             sum: 0,
         }
     }
+    fn dump(&self) {
+        println!("x {:?}", self.x);
+        println!("m {:?}", self.m);
+        println!("a {:?}", self.a);
+        println!("s {:?}", self.s);
+        println!("sum {:?}", self.sum);
+    }
+
+
     fn add_combinations(&mut self) {
         let mut combinations = 1;
-        combinations *= self.x.end - (self.x.end - 1);
-        combinations *= self.m.end - (self.m.end - 1);
-        combinations *= self.a.end - (self.a.end - 1);
-        combinations *= self.s.end - (self.s.end - 1);
+        combinations *= self.x.end - (self.x.start - 1);
+        combinations *= self.m.end - (self.m.start - 1);
+        combinations *= self.a.end - (self.a.start - 1);
+        combinations *= self.s.end - (self.s.start - 1);
         self.sum += combinations;
     }
     fn get_x(&self) -> Range {
@@ -188,47 +197,50 @@ impl DfsNode {
         self.s
     }
 
-    //lhs: Option<Rating>,
-    //op: Option<Operator>,
-    //rhs: Option<u32>,
-    //location: Location<'a>,
-
     fn make_rule_true(&mut self, lhs: Rating, op: Operator, rhs: u64) {
         match lhs {
             Rating::X => match op {
                 Operator::Gt => {
-                    self.x.end = rhs + 1;
+                    self.x.start = rhs + 1;
                 }
                 Operator::Lt => {
-                    self.x.start = rhs - 1;
+                    self.x.end = rhs - 1;
                 }
             },
             Rating::M => match op {
                 Operator::Gt => {
-                    self.m.end = rhs + 1;
+                    self.m.start = rhs + 1;
                 }
                 Operator::Lt => {
-                    self.m.start = rhs - 1;
+                    self.m.end = rhs - 1;
                 }
             },
             Rating::A => match op {
                 Operator::Gt => {
-                    self.a.end = rhs + 1;
+                    self.a.start = rhs + 1;
                 }
                 Operator::Lt => {
-                    self.a.start = rhs - 1;
+                    self.a.end = rhs - 1;
                 }
             },
             Rating::S => match op {
                 Operator::Gt => {
-                    self.s.end = rhs + 1;
+                    self.s.start = rhs + 1;
                 }
                 Operator::Lt => {
-                    self.a.start = rhs - 1;
+                    self.s.end = rhs - 1;
                 }
             },
         }
     }
+
+    fn restore(&mut self, x: Range, m: Range, a: Range, s: Range) {
+        self.x = x;
+        self.m = m;
+        self.a = a;
+        self.s = s;
+    }
+
 }
 
 struct Workflow<'a> {
@@ -359,25 +371,65 @@ impl<'a> Workflow<'a> {
         }
     }
 
-    fn dfs(&mut self, node: &mut DfsNode, workflow: &Vec<Rule>) {
+    fn dfs(&self, node: &mut DfsNode, workflow: &Vec<Rule>) {
+        println!("looking at workflow: {:?}", workflow);
+        node.dump();
+
         for rule in workflow {
+            println!("      | looking at rule {:?}", rule);
             match &rule.lhs {
                 //We found a predicate, make it true and recurse
                 //make it false and continue to the right
                 Some(_) => {
-                    let (x_range, m_range, a_range, s_range) =
-                        (node.get_x(), node.get_m(), node.get_a(), node.get_s());
+                    println!("      | PREDICATE FOUND");
+                    match rule.location {
+                        Location::Label(_) => {
+
+                            let (x, m, a, s) =
+                                (node.get_x(), node.get_m(), node.get_a(), node.get_s());
+
+                            //TODO: Make predicate true and Recurse here             
+                            node.make_rule_true(rule.lhs.unwrap(), rule.op.unwrap(), rule.rhs.unwrap() as u64);
+                            self.dfs(node, &self.workflows[&rule.location].clone());
+
+                            node.restore(x, m, a, s);
+                            //TODO: Make predicate false and continue
+                            node.make_rule_true(rule.lhs.unwrap(), rule.op.unwrap().flip(), rule.rhs.unwrap() as u64);
+                        },
+                        Location::Accept => {
+                            let (x, m, a, s) =
+                                (node.get_x(), node.get_m(), node.get_a(), node.get_s());
+                            println!("-------> ACCEPTED <-----------");
+                            node.make_rule_true(rule.lhs.unwrap(), rule.op.unwrap(), rule.rhs.unwrap() as u64);
+                            println!("looking at workflow: {:?}", workflow);
+                            node.dump();
+                            println!("-------> ACCEPTED <-----------");
+                            node.add_combinations();
+                            node.restore(x, m, a, s);
+                            //TODO: Make predicate false and continue
+                            node.make_rule_true(rule.lhs.unwrap(), rule.op.unwrap().flip(), rule.rhs.unwrap() as u64);
+                        },
+                        Location::Reject => {
+                            return;
+                        }
+                    }
                 }
                 //We are at the final rule, we either found a
                 //new label, accepted or rejected. If we found a label
                 //recurse down again
                 None => {
-                    if rule.location.is_label() {
-                        self.dfs(node, &self.workflows[&rule.location].clone());
-                    } else if rule.location.is_accept() {
-                        node.add_combinations();
-                    } else if rule.location.is_reject() {
-                        return;
+                    println!("      | PREDICATE NOT FOUND");
+                    match rule.location {
+                        Location::Label(_) => {
+                            self.dfs(node, &self.workflows[&rule.location].clone());
+                        },
+                        Location::Accept => {
+                            println!("-------> ACCEPTED");
+                            node.add_combinations();
+                        },
+                        Location::Reject => {
+                            return;
+                        }
                     }
                 }
             }
@@ -393,20 +445,22 @@ impl<'a> Workflow<'a> {
         );
     }
 
-    fn q2(&mut self) {
+    fn q2(&self) {
         let mut node = DfsNode::new();
-        let mut current_rule = self.workflows[&Location::from("in")].clone();
+        let current_rule = self.workflows[&Location::from("in")].clone();
         self.dfs(&mut node, &current_rule);
+        println!("Q2 {:}", node.sum);
     }
 }
 
 fn main() {
-    //let file = include_str!("../input/sample.txt");
-    let file = include_str!("../input/input.txt");
+    let file = include_str!("../input/sample.txt");
+    //let file = include_str!("../input/input.txt");
     //let file = include_str!("../input/sample_two.txt");
 
     let workflow = Workflow::new(file);
-    workflow.q1();
+    //workflow.q1();
+    workflow.q2();
 }
 
 #[cfg(test)]
