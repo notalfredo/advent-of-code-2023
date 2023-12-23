@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Copy, Clone)]
 enum Rating {
     X,
     M,
@@ -20,7 +20,7 @@ impl From<char> for Rating {
     }
 }
 
-#[derive(Debug, Hash, Eq, PartialEq)]
+#[derive(Debug, Hash, Eq, PartialEq, Copy, Clone)]
 enum Location<'a> {
     Label(&'a str),
     Accept,
@@ -46,7 +46,6 @@ impl<'a> Location<'a> {
             _ => false,
         }
     }
-
 }
 
 impl<'a> From<&'a str> for Location<'a> {
@@ -59,17 +58,27 @@ impl<'a> From<&'a str> for Location<'a> {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 enum Operator {
-    Le,
+    Lt,
     Gt,
 }
 
 impl Operator {
     fn compare(&self, lhs: u32, rhs: u32) -> bool {
         match self {
-            Operator::Le => lhs < rhs,
+            Operator::Lt => lhs < rhs,
             Operator::Gt => lhs > rhs,
+        }
+    }
+    fn flip(&self) -> Operator {
+        match *self {
+            Operator::Lt => {
+                return Operator::Gt;
+            }
+            Operator::Gt => {
+                return Operator::Lt;
+            }
         }
     }
 }
@@ -86,7 +95,7 @@ impl Variable {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 struct Rule<'a> {
     lhs: Option<Rating>,
     op: Option<Operator>,
@@ -101,7 +110,7 @@ impl<'a> Rule<'a> {
                 Some((lhs, rhs)) => {
                     return Rule {
                         lhs: Some(Rating::from(lhs.chars().next().unwrap())),
-                        op: Some(Operator::Le),
+                        op: Some(Operator::Lt),
                         rhs: Some(rhs.parse::<u32>().unwrap()),
                         location: Location::from(location),
                     }
@@ -124,6 +133,100 @@ impl<'a> Rule<'a> {
                     location: Location::from(rule),
                 }
             }
+        }
+    }
+}
+
+#[derive(Copy, Clone)]
+struct Range {
+    start: u64,
+    end: u64,
+}
+
+impl Range {
+    fn new(start: u64, end: u64) -> Self {
+        Self { start, end }
+    }
+}
+
+struct DfsNode {
+    x: Range,
+    m: Range,
+    a: Range,
+    s: Range,
+    sum: u64,
+}
+
+impl DfsNode {
+    fn new() -> Self {
+        Self {
+            x: Range::new(1, 4000),
+            m: Range::new(1, 4000),
+            a: Range::new(1, 4000),
+            s: Range::new(1, 4000),
+            sum: 0,
+        }
+    }
+    fn add_combinations(&mut self) {
+        let mut combinations = 1;
+        combinations *= self.x.end - (self.x.end - 1);
+        combinations *= self.m.end - (self.m.end - 1);
+        combinations *= self.a.end - (self.a.end - 1);
+        combinations *= self.s.end - (self.s.end - 1);
+        self.sum += combinations;
+    }
+    fn get_x(&self) -> Range {
+        self.x
+    }
+    fn get_m(&self) -> Range {
+        self.m
+    }
+    fn get_a(&self) -> Range {
+        self.a
+    }
+    fn get_s(&self) -> Range {
+        self.s
+    }
+
+    //lhs: Option<Rating>,
+    //op: Option<Operator>,
+    //rhs: Option<u32>,
+    //location: Location<'a>,
+
+    fn make_rule_true(&mut self, lhs: Rating, op: Operator, rhs: u64) {
+        match lhs {
+            Rating::X => match op {
+                Operator::Gt => {
+                    self.x.end = rhs + 1;
+                }
+                Operator::Lt => {
+                    self.x.start = rhs - 1;
+                }
+            },
+            Rating::M => match op {
+                Operator::Gt => {
+                    self.m.end = rhs + 1;
+                }
+                Operator::Lt => {
+                    self.m.start = rhs - 1;
+                }
+            },
+            Rating::A => match op {
+                Operator::Gt => {
+                    self.a.end = rhs + 1;
+                }
+                Operator::Lt => {
+                    self.a.start = rhs - 1;
+                }
+            },
+            Rating::S => match op {
+                Operator::Gt => {
+                    self.s.end = rhs + 1;
+                }
+                Operator::Lt => {
+                    self.a.start = rhs - 1;
+                }
+            },
         }
     }
 }
@@ -180,12 +283,6 @@ impl<'a> Workflow<'a> {
         }
     }
 
-    /*
-    lhs: Option<Rating>,
-    op: Option<Operator>,
-    rhs: Option<u32>,
-    location: Location<'a>,
-    */
     fn check_row(&self, row_num: usize) -> u32 {
         let mut current_rule = &self.workflows[&Location::from("in")];
 
@@ -195,46 +292,45 @@ impl<'a> Workflow<'a> {
         loop {
             //println!("current_rule {:?}", current_rule);
             for rule in current_rule {
-                //println!("{:?}", visted_rules);                
+                //println!("{:?}", visted_rules);
                 //println!("      | Looking at{:?}", rule);
                 match &rule.lhs {
                     Some(left_hand_side) => {
-                        //println!("          | Rule has something, {:?} {:?} {:?}", 
+                        //println!("          | Rule has something, {:?} {:?} {:?}",
                         //                                            left_hand_side,
                         //                                            &rule.op,
                         //                                            &rule.rhs
-                        //                                            ); 
+                        //                                            );
                         match self.ratings[row_num]
                             .iter()
                             .find(|var| var.name == *left_hand_side)
                         {
                             Some(var) => {
-                                //println!("          | var found {:?}", var); 
+                                //println!("          | var found {:?}", var);
                                 if rule
                                     .op
                                     .as_ref()
                                     .unwrap()
                                     .compare(var.value, rule.rhs.unwrap())
                                 {
-                                    //println!("          | comparison passed {:?}", var); 
+                                    //println!("          | comparison passed {:?}", var);
                                     if rule.location.is_label() {
-                                        //println!("          | found label {:?}", rule.location); 
+                                        //println!("          | found label {:?}", rule.location);
 
                                         visted_rules.push(&rule.location);
                                         current_rule = &self.workflows[&rule.location];
                                         break;
                                     } else if rule.location.is_accept() {
-                                        //println!("          | accepted {:?}", var); 
+                                        //println!("          | accepted {:?}", var);
                                         return self.ratings[row_num]
                                             .iter()
                                             .map(|rating| rating.value)
                                             .sum::<u32>();
-                                    }
-                                    else if rule.location.is_reject() {
-                                        return 0; 
+                                    } else if rule.location.is_reject() {
+                                        return 0;
                                     }
                                 }
-                                //println!("          | comparison did not passed"); 
+                                //println!("          | comparison did not passed");
                             }
                             None => {
                                 continue;
@@ -244,7 +340,7 @@ impl<'a> Workflow<'a> {
                     None => {
                         //println!("           | DID NOT FIND ANY PREDICATE");
                         if rule.location.is_label() {
-                            //println!("          | found label {:?}", rule.location); 
+                            //println!("          | found label {:?}", rule.location);
                             visted_rules.push(&rule.location);
                             current_rule = &self.workflows[&rule.location];
                             break;
@@ -263,10 +359,44 @@ impl<'a> Workflow<'a> {
         }
     }
 
+    fn dfs(&mut self, node: &mut DfsNode, workflow: &Vec<Rule>) {
+        for rule in workflow {
+            match &rule.lhs {
+                //We found a predicate, make it true and recurse
+                //make it false and continue to the right
+                Some(_) => {
+                    let (x_range, m_range, a_range, s_range) =
+                        (node.get_x(), node.get_m(), node.get_a(), node.get_s());
+                }
+                //We are at the final rule, we either found a
+                //new label, accepted or rejected. If we found a label
+                //recurse down again
+                None => {
+                    if rule.location.is_label() {
+                        self.dfs(node, &self.workflows[&rule.location].clone());
+                    } else if rule.location.is_accept() {
+                        node.add_combinations();
+                    } else if rule.location.is_reject() {
+                        return;
+                    }
+                }
+            }
+        }
+    }
+
     fn q1(&self) {
-        println!("Q1: {:}", (0..self.ratings.len()).map(|num| {
-            self.check_row(num)
-        }).sum::<u32>());
+        println!(
+            "Q1: {:}",
+            (0..self.ratings.len())
+                .map(|num| { self.check_row(num) })
+                .sum::<u32>()
+        );
+    }
+
+    fn q2(&mut self) {
+        let mut node = DfsNode::new();
+        let mut current_rule = self.workflows[&Location::from("in")].clone();
+        self.dfs(&mut node, &current_rule);
     }
 }
 
@@ -278,7 +408,6 @@ fn main() {
     let workflow = Workflow::new(file);
     workflow.q1();
 }
-
 
 #[cfg(test)]
 mod test {
@@ -299,4 +428,3 @@ mod test {
         assert_eq!(workflow.ratings.len(), 200);
     }
 }
-
