@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 enum Rating {
     X,
     M,
@@ -27,6 +27,28 @@ enum Location<'a> {
     Reject,
 }
 
+impl<'a> Location<'a> {
+    fn is_label(&self) -> bool {
+        match self {
+            Location::Label(_) => true,
+            _ => false,
+        }
+    }
+    fn is_accept(&self) -> bool {
+        match self {
+            Location::Accept => true,
+            _ => false,
+        }
+    }
+    fn is_reject(&self) -> bool {
+        match self {
+            Location::Reject => true,
+            _ => false,
+        }
+    }
+
+}
+
 impl<'a> From<&'a str> for Location<'a> {
     fn from(location: &'a str) -> Self {
         match location {
@@ -41,6 +63,15 @@ impl<'a> From<&'a str> for Location<'a> {
 enum Operator {
     Le,
     Gt,
+}
+
+impl Operator {
+    fn compare(&self, lhs: u32, rhs: u32) -> bool {
+        match self {
+            Operator::Le => lhs < rhs,
+            Operator::Gt => lhs > rhs,
+        }
+    }
 }
 
 #[derive(Debug)]
@@ -105,18 +136,18 @@ struct Workflow<'a> {
 impl<'a> Workflow<'a> {
     fn new(file: &'a str) -> Self {
         let (workflows, ratings) = file.split_once("\n\n").unwrap();
-        let workflows: Vec<(Location<'a>, Vec<Rule>)> = workflows
+        let workflows: Vec<(Location, Vec<Rule>)> = workflows
             .lines()
             .map(|workflows: &str| {
                 let (workflow_name, rules) = workflows.split_once("{").unwrap();
-                let rules: Vec<&'a str> = (&rules[0..rules.len() - 1]).split(',').collect();
+                let rules: Vec<&str> = (&rules[0..rules.len() - 1]).split(',').collect();
                 let rules: Vec<Rule> = rules.iter().map(|rule| Rule::new(rule)).collect();
                 let workflow_name = Location::from(workflow_name);
 
                 (workflow_name, rules)
             })
             .collect();
-        let workflows: HashMap<Location, Vec<Rule<'a>>> = workflows.into_iter().collect();
+        let workflows: HashMap<Location, Vec<Rule>> = workflows.into_iter().collect();
 
         let ratings: Vec<[Variable; 4]> = ratings
             .lines()
@@ -139,7 +170,7 @@ impl<'a> Workflow<'a> {
 
         Self { workflows, ratings }
     }
-    
+
     fn dump(&self) {
         for (label_name, rules) in &self.workflows {
             println!("{:?}, {:?}", label_name, rules);
@@ -149,11 +180,123 @@ impl<'a> Workflow<'a> {
         }
     }
 
+    /*
+    lhs: Option<Rating>,
+    op: Option<Operator>,
+    rhs: Option<u32>,
+    location: Location<'a>,
+    */
+    fn check_row(&self, row_num: usize) -> u32 {
+        let mut current_rule = &self.workflows[&Location::from("in")];
+
+        let binding = &Location::from("in");
+        let mut visted_rules: Vec<&Location> = vec![binding];
+
+        loop {
+            //println!("current_rule {:?}", current_rule);
+            for rule in current_rule {
+                //println!("{:?}", visted_rules);                
+                //println!("      | Looking at{:?}", rule);
+                match &rule.lhs {
+                    Some(left_hand_side) => {
+                        //println!("          | Rule has something, {:?} {:?} {:?}", 
+                        //                                            left_hand_side,
+                        //                                            &rule.op,
+                        //                                            &rule.rhs
+                        //                                            ); 
+                        match self.ratings[row_num]
+                            .iter()
+                            .find(|var| var.name == *left_hand_side)
+                        {
+                            Some(var) => {
+                                //println!("          | var found {:?}", var); 
+                                if rule
+                                    .op
+                                    .as_ref()
+                                    .unwrap()
+                                    .compare(var.value, rule.rhs.unwrap())
+                                {
+                                    //println!("          | comparison passed {:?}", var); 
+                                    if rule.location.is_label() {
+                                        //println!("          | found label {:?}", rule.location); 
+
+                                        visted_rules.push(&rule.location);
+                                        current_rule = &self.workflows[&rule.location];
+                                        break;
+                                    } else if rule.location.is_accept() {
+                                        //println!("          | accepted {:?}", var); 
+                                        return self.ratings[row_num]
+                                            .iter()
+                                            .map(|rating| rating.value)
+                                            .sum::<u32>();
+                                    }
+                                    else if rule.location.is_reject() {
+                                        return 0; 
+                                    }
+                                }
+                                //println!("          | comparison did not passed"); 
+                            }
+                            None => {
+                                continue;
+                            }
+                        }
+                    }
+                    None => {
+                        //println!("           | DID NOT FIND ANY PREDICATE");
+                        if rule.location.is_label() {
+                            //println!("          | found label {:?}", rule.location); 
+                            visted_rules.push(&rule.location);
+                            current_rule = &self.workflows[&rule.location];
+                            break;
+                        } else if rule.location.is_accept() {
+                            //println!("           | Accepted");
+                            return self.ratings[row_num]
+                                .iter()
+                                .map(|rating| rating.value)
+                                .sum::<u32>();
+                        }
+                        //println!("           | Rejected");
+                        return 0;
+                    }
+                }
+            }
+        }
+    }
+
+    fn q1(&self) {
+        println!("Q1: {:}", (0..self.ratings.len()).map(|num| {
+            self.check_row(num)
+        }).sum::<u32>());
+    }
 }
 
 fn main() {
-    let file = include_str!("../input/sample.txt");
+    //let file = include_str!("../input/sample.txt");
+    let file = include_str!("../input/input.txt");
+    //let file = include_str!("../input/sample_two.txt");
 
     let workflow = Workflow::new(file);
-    workflow.dump();
+    workflow.q1();
 }
+
+
+#[cfg(test)]
+mod test {
+    use crate::*;
+
+    #[test]
+    fn assert_length() {
+        let file = include_str!("../input/sample.txt");
+        let workflow = Workflow::new(file);
+
+        assert_eq!(workflow.workflows.len(), 11);
+        assert_eq!(workflow.ratings.len(), 5);
+
+        let file = include_str!("../input/input.txt");
+        let workflow = Workflow::new(file);
+
+        assert_eq!(workflow.workflows.len(), 569);
+        assert_eq!(workflow.ratings.len(), 200);
+    }
+}
+
