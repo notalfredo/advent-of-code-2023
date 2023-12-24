@@ -155,6 +155,7 @@ struct DfsNode {
     a: Range,
     s: Range,
     sum: u64,
+    debug: u32,
 }
 
 impl DfsNode {
@@ -164,6 +165,7 @@ impl DfsNode {
             m: Range::new(1, 4000),
             a: Range::new(1, 4000),
             s: Range::new(1, 4000),
+            debug: 0,
             sum: 0,
         }
     }
@@ -182,7 +184,10 @@ impl DfsNode {
         combinations *= self.m.end - (self.m.start - 1);
         combinations *= self.a.end - (self.a.start - 1);
         combinations *= self.s.end - (self.s.start - 1);
+        println!("Going to add {:}", combinations);
+
         self.sum += combinations;
+        self.debug += 1;
     }
     fn get_x(&self) -> Range {
         self.x
@@ -374,7 +379,6 @@ impl<'a> Workflow<'a> {
     fn dfs(&self, node: &mut DfsNode, workflow: &Vec<Rule>) {
         println!("looking at workflow: {:?}", workflow);
         node.dump();
-
         for rule in workflow {
             println!("      | looking at rule {:?}", rule);
             match &rule.lhs {
@@ -384,7 +388,7 @@ impl<'a> Workflow<'a> {
                     println!("      | PREDICATE FOUND");
                     match rule.location {
                         Location::Label(_) => {
-
+                            println!("Label found"); 
                             let (x, m, a, s) =
                                 (node.get_x(), node.get_m(), node.get_a(), node.get_s());
 
@@ -410,7 +414,9 @@ impl<'a> Workflow<'a> {
                             node.make_rule_true(rule.lhs.unwrap(), rule.op.unwrap().flip(), rule.rhs.unwrap() as u64);
                         },
                         Location::Reject => {
-                            return;
+                            node.make_rule_true(rule.lhs.unwrap(), rule.op.unwrap().flip(), rule.rhs.unwrap() as u64);
+                            println!("-------> REJECT <-----------");
+                            continue;
                         }
                     }
                 }
@@ -425,9 +431,12 @@ impl<'a> Workflow<'a> {
                         },
                         Location::Accept => {
                             println!("-------> ACCEPTED");
+                            node.dump();
+                            println!("-------> ACCEPTED");
                             node.add_combinations();
                         },
                         Location::Reject => {
+                            println!("-------> Rejected");
                             return;
                         }
                     }
@@ -450,6 +459,7 @@ impl<'a> Workflow<'a> {
         let current_rule = self.workflows[&Location::from("in")].clone();
         self.dfs(&mut node, &current_rule);
         println!("Q2 {:}", node.sum);
+        println!("Q2 {:}", node.debug);
     }
 }
 
