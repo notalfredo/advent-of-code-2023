@@ -27,27 +27,6 @@ enum Location<'a> {
     Reject,
 }
 
-impl<'a> Location<'a> {
-    fn is_label(&self) -> bool {
-        match self {
-            Location::Label(_) => true,
-            _ => false,
-        }
-    }
-    fn is_accept(&self) -> bool {
-        match self {
-            Location::Accept => true,
-            _ => false,
-        }
-    }
-    fn is_reject(&self) -> bool {
-        match self {
-            Location::Reject => true,
-            _ => false,
-        }
-    }
-}
-
 impl<'a> From<&'a str> for Location<'a> {
     fn from(location: &'a str) -> Self {
         match location {
@@ -69,16 +48,6 @@ impl Operator {
         match self {
             Operator::Lt => lhs < rhs,
             Operator::Gt => lhs > rhs,
-        }
-    }
-    fn flip(&self) -> Operator {
-        match *self {
-            Operator::Lt => {
-                return Operator::Gt;
-            }
-            Operator::Gt => {
-                return Operator::Lt;
-            }
         }
     }
 }
@@ -155,7 +124,6 @@ struct DfsNode {
     a: Range,
     s: Range,
     sum: u64,
-    debug: u32,
 }
 
 impl DfsNode {
@@ -165,7 +133,6 @@ impl DfsNode {
             m: Range::new(1, 4000),
             a: Range::new(1, 4000),
             s: Range::new(1, 4000),
-            debug: 0,
             sum: 0,
         }
     }
@@ -177,18 +144,15 @@ impl DfsNode {
         println!("sum {:?}", self.sum);
     }
 
-
     fn add_combinations(&mut self) {
-        let mut combinations = 1;
-        combinations *= self.x.end - (self.x.start - 1);
-        combinations *= self.m.end - (self.m.start - 1);
-        combinations *= self.a.end - (self.a.start - 1);
-        combinations *= self.s.end - (self.s.start - 1);
-        println!("Going to add {:}", combinations);
-
-        self.sum += combinations;
-        self.debug += 1;
+        let size_x = (self.x.start..=self.x.end).count() as u64;
+        let size_m = (self.m.start..=self.m.end).count() as u64;
+        let size_a = (self.a.start..=self.a.end).count() as u64;
+        let size_s = (self.s.start..=self.s.end).count() as u64;
+        let total = size_x * size_m * size_a * size_s;
+        self.sum += total;
     }
+
     fn get_x(&self) -> Range {
         self.x
     }
@@ -202,39 +166,79 @@ impl DfsNode {
         self.s
     }
 
-    fn make_rule_true(&mut self, lhs: Rating, op: Operator, rhs: u64) {
+    fn make_rule_true(&mut self, lhs: Rating, op: Operator, rhs: u64, flip: bool) {
         match lhs {
             Rating::X => match op {
-                Operator::Gt => {
-                    self.x.start = rhs + 1;
-                }
-                Operator::Lt => {
-                    self.x.end = rhs - 1;
-                }
+                Operator::Gt => match flip {
+                    true => {
+                        self.x.end = rhs;
+                    }
+                    false => {
+                        self.x.start = rhs + 1;
+                    }
+                },
+                Operator::Lt => match flip {
+                    true => {
+                        self.x.start = rhs;
+                    }
+                    false => {
+                        self.x.end = rhs - 1;
+                    }
+                },
             },
             Rating::M => match op {
-                Operator::Gt => {
-                    self.m.start = rhs + 1;
-                }
-                Operator::Lt => {
-                    self.m.end = rhs - 1;
-                }
+                Operator::Gt => match flip {
+                    true => {
+                        self.m.end = rhs;
+                    }
+                    false => {
+                        self.m.start = rhs + 1;
+                    }
+                },
+                Operator::Lt => match flip {
+                    true => {
+                        self.m.start = rhs;
+                    }
+                    false => {
+                        self.m.end = rhs - 1;
+                    }
+                },
             },
             Rating::A => match op {
-                Operator::Gt => {
-                    self.a.start = rhs + 1;
-                }
-                Operator::Lt => {
-                    self.a.end = rhs - 1;
-                }
+                Operator::Gt => match flip {
+                    true => {
+                        self.a.end = rhs;
+                    }
+                    false => {
+                        self.a.start = rhs + 1;
+                    }
+                },
+                Operator::Lt => match flip {
+                    true => {
+                        self.a.start = rhs;
+                    }
+                    false => {
+                        self.a.end = rhs - 1;
+                    }
+                },
             },
             Rating::S => match op {
-                Operator::Gt => {
-                    self.s.start = rhs + 1;
-                }
-                Operator::Lt => {
-                    self.s.end = rhs - 1;
-                }
+                Operator::Gt => match flip {
+                    true => {
+                        self.s.end = rhs;
+                    }
+                    false => {
+                        self.s.start = rhs + 1;
+                    }
+                },
+                Operator::Lt => match flip {
+                    true => {
+                        self.s.start = rhs;
+                    }
+                    false => {
+                        self.s.end = rhs - 1;
+                    }
+                },
             },
         }
     }
@@ -245,7 +249,6 @@ impl DfsNode {
         self.a = a;
         self.s = s;
     }
-
 }
 
 struct Workflow<'a> {
@@ -307,115 +310,119 @@ impl<'a> Workflow<'a> {
         let mut visted_rules: Vec<&Location> = vec![binding];
 
         loop {
-            //println!("current_rule {:?}", current_rule);
             for rule in current_rule {
-                //println!("{:?}", visted_rules);
-                //println!("      | Looking at{:?}", rule);
                 match &rule.lhs {
                     Some(left_hand_side) => {
-                        //println!("          | Rule has something, {:?} {:?} {:?}",
-                        //                                            left_hand_side,
-                        //                                            &rule.op,
-                        //                                            &rule.rhs
-                        //                                            );
                         match self.ratings[row_num]
                             .iter()
                             .find(|var| var.name == *left_hand_side)
                         {
                             Some(var) => {
-                                //println!("          | var found {:?}", var);
                                 if rule
                                     .op
                                     .as_ref()
                                     .unwrap()
                                     .compare(var.value, rule.rhs.unwrap())
                                 {
-                                    //println!("          | comparison passed {:?}", var);
-                                    if rule.location.is_label() {
-                                        //println!("          | found label {:?}", rule.location);
-
-                                        visted_rules.push(&rule.location);
-                                        current_rule = &self.workflows[&rule.location];
-                                        break;
-                                    } else if rule.location.is_accept() {
-                                        //println!("          | accepted {:?}", var);
-                                        return self.ratings[row_num]
-                                            .iter()
-                                            .map(|rating| rating.value)
-                                            .sum::<u32>();
-                                    } else if rule.location.is_reject() {
-                                        return 0;
+                                    match rule.location {
+                                        Location::Label(_) => {
+                                            visted_rules.push(&rule.location);
+                                            current_rule = &self.workflows[&rule.location];
+                                            break;
+                                        }
+                                        Location::Accept => {
+                                            return self.ratings[row_num]
+                                                .iter()
+                                                .map(|rating| rating.value)
+                                                .sum::<u32>();
+                                        }
+                                        Location::Reject => {
+                                            return 0;
+                                        }
                                     }
                                 }
-                                //println!("          | comparison did not passed");
                             }
                             None => {
                                 continue;
                             }
                         }
                     }
-                    None => {
-                        //println!("           | DID NOT FIND ANY PREDICATE");
-                        if rule.location.is_label() {
-                            //println!("          | found label {:?}", rule.location);
+                    None => match rule.location {
+                        Location::Label(_) => {
                             visted_rules.push(&rule.location);
                             current_rule = &self.workflows[&rule.location];
                             break;
-                        } else if rule.location.is_accept() {
-                            //println!("           | Accepted");
+                        }
+                        Location::Accept => {
                             return self.ratings[row_num]
                                 .iter()
                                 .map(|rating| rating.value)
                                 .sum::<u32>();
                         }
-                        //println!("           | Rejected");
-                        return 0;
-                    }
+                        Location::Reject => {
+                            return 0;
+                        }
+                    },
                 }
             }
         }
     }
 
     fn dfs(&self, node: &mut DfsNode, workflow: &Vec<Rule>) {
-        println!("looking at workflow: {:?}", workflow);
-        node.dump();
         for rule in workflow {
-            println!("      | looking at rule {:?}", rule);
             match &rule.lhs {
                 //We found a predicate, make it true and recurse
                 //make it false and continue to the right
                 Some(_) => {
-                    println!("      | PREDICATE FOUND");
                     match rule.location {
                         Location::Label(_) => {
-                            println!("Label found"); 
                             let (x, m, a, s) =
                                 (node.get_x(), node.get_m(), node.get_a(), node.get_s());
 
-                            //TODO: Make predicate true and Recurse here             
-                            node.make_rule_true(rule.lhs.unwrap(), rule.op.unwrap(), rule.rhs.unwrap() as u64);
+                            //TODO: Make predicate true and Recurse here
+                            node.make_rule_true(
+                                rule.lhs.unwrap(),
+                                rule.op.unwrap(),
+                                rule.rhs.unwrap() as u64,
+                                false,
+                            );
                             self.dfs(node, &self.workflows[&rule.location].clone());
 
                             node.restore(x, m, a, s);
                             //TODO: Make predicate false and continue
-                            node.make_rule_true(rule.lhs.unwrap(), rule.op.unwrap().flip(), rule.rhs.unwrap() as u64);
-                        },
+                            node.make_rule_true(
+                                rule.lhs.unwrap(),
+                                rule.op.unwrap(),
+                                rule.rhs.unwrap() as u64,
+                                true,
+                            );
+                        }
                         Location::Accept => {
                             let (x, m, a, s) =
                                 (node.get_x(), node.get_m(), node.get_a(), node.get_s());
-                            println!("-------> ACCEPTED <-----------");
-                            node.make_rule_true(rule.lhs.unwrap(), rule.op.unwrap(), rule.rhs.unwrap() as u64);
-                            println!("looking at workflow: {:?}", workflow);
-                            node.dump();
-                            println!("-------> ACCEPTED <-----------");
+                            node.make_rule_true(
+                                rule.lhs.unwrap(),
+                                rule.op.unwrap(),
+                                rule.rhs.unwrap() as u64,
+                                false,
+                            );
                             node.add_combinations();
                             node.restore(x, m, a, s);
                             //TODO: Make predicate false and continue
-                            node.make_rule_true(rule.lhs.unwrap(), rule.op.unwrap().flip(), rule.rhs.unwrap() as u64);
-                        },
+                            node.make_rule_true(
+                                rule.lhs.unwrap(),
+                                rule.op.unwrap(),
+                                rule.rhs.unwrap() as u64,
+                                true,
+                            );
+                        }
                         Location::Reject => {
-                            node.make_rule_true(rule.lhs.unwrap(), rule.op.unwrap().flip(), rule.rhs.unwrap() as u64);
-                            println!("-------> REJECT <-----------");
+                            node.make_rule_true(
+                                rule.lhs.unwrap(),
+                                rule.op.unwrap(),
+                                rule.rhs.unwrap() as u64,
+                                true,
+                            );
                             continue;
                         }
                     }
@@ -423,72 +430,42 @@ impl<'a> Workflow<'a> {
                 //We are at the final rule, we either found a
                 //new label, accepted or rejected. If we found a label
                 //recurse down again
-                None => {
-                    println!("      | PREDICATE NOT FOUND");
-                    match rule.location {
-                        Location::Label(_) => {
-                            self.dfs(node, &self.workflows[&rule.location].clone());
-                        },
-                        Location::Accept => {
-                            println!("-------> ACCEPTED");
-                            node.dump();
-                            println!("-------> ACCEPTED");
-                            node.add_combinations();
-                        },
-                        Location::Reject => {
-                            println!("-------> Rejected");
-                            return;
-                        }
+                None => match rule.location {
+                    Location::Label(_) => {
+                        self.dfs(node, &self.workflows[&rule.location].clone());
                     }
-                }
+                    Location::Accept => {
+                        node.add_combinations();
+                    }
+                    Location::Reject => {
+                        return;
+                    }
+                },
             }
         }
     }
 
-    fn q1(&self) {
-        println!(
-            "Q1: {:}",
-            (0..self.ratings.len())
-                .map(|num| { self.check_row(num) })
-                .sum::<u32>()
-        );
+    fn q1(&self) -> u32 {
+        (0..self.ratings.len())
+            .map(|num| self.check_row(num))
+            .sum::<u32>()
     }
 
-    fn q2(&self) {
+    fn q2(&self) -> u64 {
         let mut node = DfsNode::new();
         let current_rule = self.workflows[&Location::from("in")].clone();
         self.dfs(&mut node, &current_rule);
-        println!("Q2 {:}", node.sum);
-        println!("Q2 {:}", node.debug);
+        node.sum
     }
 }
 
 fn main() {
-    let file = include_str!("../input/sample.txt");
-    //let file = include_str!("../input/input.txt");
+    let file = include_str!("../input/input.txt");
+    //let file = include_str!("../input/sample.txt");
     //let file = include_str!("../input/sample_two.txt");
+    //let file = include_str!("../input/sample_three.txt");
 
     let workflow = Workflow::new(file);
-    //workflow.q1();
-    workflow.q2();
-}
-
-#[cfg(test)]
-mod test {
-    use crate::*;
-
-    #[test]
-    fn assert_length() {
-        let file = include_str!("../input/sample.txt");
-        let workflow = Workflow::new(file);
-
-        assert_eq!(workflow.workflows.len(), 11);
-        assert_eq!(workflow.ratings.len(), 5);
-
-        let file = include_str!("../input/input.txt");
-        let workflow = Workflow::new(file);
-
-        assert_eq!(workflow.workflows.len(), 569);
-        assert_eq!(workflow.ratings.len(), 200);
-    }
+    println!("Q1: {:}", workflow.q1());
+    println!("Q2: {:}", workflow.q2());
 }
