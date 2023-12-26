@@ -219,7 +219,6 @@ impl<'a> Module<'a> {
             },
             ModuleType::Conjuction => {
                 let temp = &self.conj_info.as_ref().unwrap().received_history;
-                //println!("{:?}", temp);
                 match temp
                     .iter()
                     .find(|(_, hist_pulse)| *hist_pulse == Pulse::Low)
@@ -320,68 +319,11 @@ impl<'a> ModuleConfiguration<'a> {
         println!("{:}", self.high_pulse_count);
     }
 
-    /*
-     * Updates current pulse history based on action the it gens
-     * future actions
-     */
-    //fn update_and_send_signal(&mut self, action: Action) -> Option<Vec<Action>> {
-    //    let found_module: &mut Module = self
-    //        .modules
-    //        .iter_mut()
-    //        .find(|module| {
-    //            if let Some(found) = module.flip_info {
-    //                found.name == action.dest
-    //            } else if let Some(found) = &module.conj_info {
-    //                found.name == action.dest
-    //            } else {
-    //                panic!("Unable to find module with name");
-    //            }
-    //        })
-    //        .unwrap();
-
-    //    match found_module.mod_type {
-    //        ModuleType::FlipFlop => match action.pulse {
-    //            Pulse::High => {
-    //                return None;
-    //            }
-    //            Pulse::Low => {
-    //                found_module.flip_info.unwrap().flip();
-    //                return Some(found_module.gen_actions());
-    //            }
-    //        },
-    //        ModuleType::Conjuction => {
-    //            match found_module
-    //                .conj_info
-    //                .as_mut()
-    //                .unwrap()
-    //                .received_history
-    //                .iter_mut()
-    //                .find(|(name, last_pulse)| *name == action.origin)
-    //            {
-    //                Some((_, last_pulse)) => {
-    //                    *last_pulse = action.pulse;
-    //                    return Some(found_module.gen_actions());
-    //                }
-    //                None => {
-    //                    panic!("Unable to find action origin in conjuction history");
-    //                }
-    //            }
-    //        }
-    //        _ => panic!("How did you not find a name?"),
-    //    }
-    //}
-
     fn broadcast(&mut self) {
         let mut actions: Vec<Action> = Vec::new();
         let temp = Module::new_broadcast(self.broadcast_connections.clone());
         actions.append(&mut temp.gen_actions());
         self.low_pulse_count += 1;
-
-        println!("Actions vec start");
-        for action in &actions {
-            println!("  | {:?}", action);
-        }
-
 
         while actions.len() != 0 {
             let front = actions.remove(0);
@@ -394,24 +336,16 @@ impl<'a> ModuleConfiguration<'a> {
                     self.low_pulse_count += 1;
                 }
             }
-            println!("{:}", front.dest);
-            let found_module = self
-                .modules
-                .iter_mut()
-                .find(|module| {
-                    if let Some(found) = module.flip_info {
-                        found.name == front.dest
-                    } else if let Some(found) = &module.conj_info {
-                        found.name == front.dest
-                    } else {
-                        panic!("Unable to find module with name");
-                    }
-                });
-            
-            //println!("---> Current module {:?}", found_module);
-            //println!("---> Current pulse {:?}", front);
+            let found_module = self.modules.iter_mut().find(|module| {
+                if let Some(found) = module.flip_info {
+                    found.name == front.dest
+                } else if let Some(found) = &module.conj_info {
+                    found.name == front.dest
+                } else {
+                    panic!("Unable to find module with name");
+                }
+            });
 
-            
             if let Some(found_module) = found_module {
                 match found_module.update_and_send_signal(front) {
                     Some(mut arr) => {
@@ -420,29 +354,19 @@ impl<'a> ModuleConfiguration<'a> {
                     None => (),
                 }
             }
-
-
-            //println!("loop");
-            //for action in &actions {
-            //    println!("  | {:?}", action);
-            //}
-            //println!("======================");
         }
-        //self.dump();
     }
 
     fn q1(&mut self) -> u64 {
-        (0..1000).for_each(|_| self.broadcast() );
+        (0..1000).for_each(|_| self.broadcast());
         self.low_pulse_count * self.high_pulse_count
     }
 }
-
 
 fn main() {
     //let file = include_str!("../input/sample.txt");
     let file = include_str!("../input/input.txt");
 
     let mut module_configuration = ModuleConfiguration::new(file);
-    //module_configuration.broadcast();
     println!("{:}", module_configuration.q1());
 }
