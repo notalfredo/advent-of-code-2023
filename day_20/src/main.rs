@@ -1,5 +1,16 @@
 use std::collections::HashMap;
 
+fn gcd(a: usize, b: usize) -> usize {
+    if b <= 0 {
+        return a;
+    }
+    gcd(b, a % b)
+}
+
+fn lcd(a: usize, b: usize) -> usize {
+    (a * b) / gcd(a, b)
+}
+
 #[derive(Debug, Copy, Clone, Eq, PartialEq)]
 enum Pulse {
     High,
@@ -61,10 +72,10 @@ struct FlipFlop<'a> {
 }
 
 impl<'a> FlipFlop<'a> {
-    fn new(name: &'a str, current_status: Status) -> Self {
+    fn new(name: &'a str) -> Self {
         Self {
             name,
-            current_status,
+            current_status: Status::Off,
         }
     }
     fn flip(&mut self) {
@@ -119,7 +130,7 @@ impl<'a> Module<'a> {
             ModuleType::FlipFlop => {
                 return Self {
                     mod_type,
-                    flip_info: Some(FlipFlop::new(&lhs[1..], Status::Off)),
+                    flip_info: Some(FlipFlop::new(&lhs[1..])),
                     conj_info: None,
                     connections,
                 }
@@ -259,6 +270,7 @@ impl<'a> Module<'a> {
     }
 }
 
+#[derive(Debug)]
 struct ExtraInfo {
     dest: String,
     high_pulse_index: Vec<(usize, Pulse)>,
@@ -276,17 +288,16 @@ impl ExtraInfo {
     fn dump(&self) {
         println!("dest: {:}", self.dest);
         for i in 1..self.high_pulse_index.len() {
-            println!("index: {:?}, pulse {:?}, diff {:}", 
-                     self.high_pulse_index[i].0,
-                     self.high_pulse_index[i].1,
-                     self.high_pulse_index[i].0 - self.high_pulse_index[i - 1].0,
-                     )
+            println!(
+                "index: {:?}, pulse {:?}, diff {:}",
+                self.high_pulse_index[i].0,
+                self.high_pulse_index[i].1,
+                self.high_pulse_index[i].0 - self.high_pulse_index[i - 1].0,
+            )
         }
         println!("count: {:}", self.count);
     }
-
 }
-
 
 #[derive(Debug)]
 struct ModuleConfiguration<'a> {
@@ -350,11 +361,12 @@ impl<'a> ModuleConfiguration<'a> {
         }
     }
     fn dump(&self) {
+        println!("Broadcast connections {:?}", self.broadcast_connections);
         for module in &self.modules {
             println!("{:?}", module);
         }
-        println!("{:}", self.low_pulse_count);
-        println!("{:}", self.high_pulse_count);
+        println!("low_pulse_count : {:}", self.low_pulse_count);
+        println!("high_pulse_count: {:}", self.high_pulse_count);
     }
 
     fn broadcast(&mut self, info: &mut Option<ExtraInfo>) {
@@ -362,6 +374,10 @@ impl<'a> ModuleConfiguration<'a> {
         let temp = Module::new_broadcast(self.broadcast_connections.clone());
         actions.append(&mut temp.gen_actions());
         self.low_pulse_count += 1;
+
+        if info.is_some() {
+            info.as_mut().unwrap().count += 1;
+        }
 
         while actions.len() != 0 {
             let front = actions.remove(0);
@@ -375,18 +391,15 @@ impl<'a> ModuleConfiguration<'a> {
                 }
             }
 
-            
             if info.is_some() {
-
-
-                info.as_mut().unwrap().count += 1;
-                let temp = info.as_ref().unwrap().count;
-
                 if info.as_mut().unwrap().dest == front.dest && front.pulse == Pulse::Low {
-                    info.as_mut().unwrap().high_pulse_index.push((temp, Pulse::High));
+                    let temp_button_press_count = info.as_ref().unwrap().count;
+                    info.as_mut()
+                        .unwrap()
+                        .high_pulse_index
+                        .push((temp_button_press_count, Pulse::High));
                 }
             }
-            
 
             let found_module = self.modules.iter_mut().find(|module| {
                 if let Some(found) = module.flip_info {
@@ -409,25 +422,50 @@ impl<'a> ModuleConfiguration<'a> {
         }
     }
 
-    fn get_sub_graphs(&self) -> Vec<ModuleConfiguration> {
+    fn get_sub_graphs(&self) -> (Vec<ModuleConfiguration>, Vec<&str>) {
         let mut module_clone = self.modules.clone();
+        let mut name_connections_that_point_to_rx: Vec<&str> = Vec::new();
 
         //Find node that points to rx
-        let pos = module_clone.iter().position(|module| {
-            module.connections.iter().find(|name| {
-                **name == "rx"
-            }).is_some()
-        }).unwrap();
+        let pos = module_clone
+            .iter()
+            .position(|module| {
+                module
+                    .connections
+                    .iter()
+                    .find(|name| **name == "rx")
+                    .is_some()
+            })
+            .unwrap();
 
-        
         let pointer_to_rx = module_clone.remove(pos);
+
+        module_clone.iter().for_each(|module| {
+            //This module points to pointer_to_rx
+            //We need to keep track of this so we can know
+            //when a a high pulse is sent to the naem of pointer_to_rx
+            if let Some(_) = module.connections.iter().find(|connection_name| {
+                *connection_name == &pointer_to_rx.conj_info.as_ref().unwrap().name
+            }) {
+                match module.mod_type {
+                    ModuleType::FlipFlop => {
+                        name_connections_that_point_to_rx
+                            .push(module.flip_info.as_ref().unwrap().name);
+                    }
+                    ModuleType::Conjuction => {
+                        name_connections_that_point_to_rx
+                            .push(module.conj_info.as_ref().unwrap().name);
+                    }
+                    _ => panic!("How is this even possible"),
+                }
+            }
+        });
 
         let mut sub_graphs: Vec<ModuleConfiguration> = Vec::new();
 
         for start in &self.broadcast_connections {
             let mut sub_graph: Vec<Module> = Vec::new();
             let mut connections_to_find: Vec<&str> = Vec::new();
-
 
             connections_to_find.push(start);
 
@@ -437,19 +475,20 @@ impl<'a> ModuleConfiguration<'a> {
                 match module_clone.iter().position(|module| {
                     if let Some(flip) = &module.flip_info {
                         flip.name == connection_name
-                    }
-                    else if let Some(conj) = &module.conj_info {
+                    } else if let Some(conj) = &module.conj_info {
                         conj.name == connection_name
-                    }
-                    else{
+                    } else {
                         false
                     }
                 }) {
                     Some(found_connection_pos) => {
                         let node_connected_to = module_clone.remove(found_connection_pos);
-                        node_connected_to.connections.iter().for_each(|connection_name| {
-                            connections_to_find.push(connection_name);
-                        });
+                        node_connected_to
+                            .connections
+                            .iter()
+                            .for_each(|connection_name| {
+                                connections_to_find.push(connection_name);
+                            });
                         sub_graph.push(node_connected_to);
                     }
                     //Probably found in a prev iteration
@@ -461,17 +500,83 @@ impl<'a> ModuleConfiguration<'a> {
             sub_graphs.push(ModuleConfiguration::new_from_modules(sub_graph, start));
         }
 
-        sub_graphs
+        (sub_graphs, name_connections_that_point_to_rx)
     }
 
-    fn monitor_high_pulse_cycle(&mut self, dest: String){
-
+    fn reset(&mut self) {
+        self.modules
+            .iter_mut()
+            .for_each(|module| match module.mod_type {
+                ModuleType::FlipFlop => {
+                    module.flip_info.as_mut().unwrap().current_status = Status::Off;
+                }
+                ModuleType::Conjuction => {
+                    module
+                        .conj_info
+                        .as_mut()
+                        .unwrap()
+                        .received_history
+                        .iter_mut()
+                        .for_each(|(_, status)| *status = Pulse::Low);
+                }
+                _ => (),
+            });
     }
-
 
     fn q1(&mut self) -> u64 {
         (0..1000).for_each(|_| self.broadcast(&mut None));
         self.low_pulse_count * self.high_pulse_count
+    }
+
+    fn q2(&mut self) -> usize {
+        let (sub_graphs, layer_one_nodes): (Vec<ModuleConfiguration>, Vec<&str>) =
+            self.get_sub_graphs();
+
+        let mut cycles: Vec<usize> = Vec::new();
+
+        for mut sub_graph in sub_graphs {
+            let mut extra: Option<ExtraInfo> = None;
+
+            for module in &sub_graph.modules {
+                match module.mod_type {
+                    ModuleType::FlipFlop => {
+                        if let Some(name) = layer_one_nodes
+                            .iter()
+                            .find(|name| *name == &module.flip_info.as_ref().unwrap().name)
+                        {
+                            extra = Some(ExtraInfo::new(name.to_string()));
+                        } else {
+                            continue;
+                        }
+                    }
+                    ModuleType::Conjuction => {
+                        if let Some(name) = layer_one_nodes
+                            .iter()
+                            .find(|name| *name == &module.conj_info.as_ref().unwrap().name)
+                        {
+                            extra = Some(ExtraInfo::new(name.to_string()));
+                        } else {
+                            continue;
+                        }
+                    }
+                    _ => (),
+                }
+            }
+
+            loop {
+                sub_graph.broadcast(&mut extra);
+                if extra.as_ref().unwrap().high_pulse_index.len() > 0 {
+                    cycles.push(extra.as_ref().unwrap().high_pulse_index[0].0);
+                    break;
+                }
+            }
+        }
+
+        let mut lcd_calc = lcd(cycles[0], cycles[1]);
+        for index in 2..cycles.len() {
+            lcd_calc = lcd(lcd_calc, cycles[index]);
+        }
+        lcd_calc
     }
 }
 
@@ -480,38 +585,58 @@ fn main() {
     let file = include_str!("../input/input.txt");
 
     let mut module_configuration = ModuleConfiguration::new(file);
-    module_configuration.get_sub_graphs();
-    //println!("{:}", module_configuration.q1());
+    println!("Q1: {:}", module_configuration.q1());
+    module_configuration.reset();
+    println!("Q2: {:}", module_configuration.q2());
 }
-
 
 #[cfg(test)]
 mod test {
     use crate::*;
-    
+
     #[test]
     fn monitor_high_pulse_cycle() {
         let file = include_str!("../input/input.txt");
-        let mut module_configuration = ModuleConfiguration::new(file);
-        let mut sub_graphs: Vec<ModuleConfiguration> = module_configuration.get_sub_graphs();
+        let module_configuration = ModuleConfiguration::new(file);
+        let (sub_graphs, layer_one_nodes): (Vec<ModuleConfiguration>, Vec<&str>) =
+            module_configuration.get_sub_graphs();
 
-        println!("Size {:}", sub_graphs.len());
         for mut sub_graph in sub_graphs {
-            let mut extra = Some(ExtraInfo::new(sub_graph.broadcast_connections[0].to_string()));
+            let mut extra: Option<ExtraInfo> = None;
 
-            (0..30).for_each(|_| {
-                sub_graph.broadcast(&mut extra)
-            });
+            //Try to find what layer one node this sub graph contains
+            for module in &sub_graph.modules {
+                match module.mod_type {
+                    ModuleType::FlipFlop => {
+                        if let Some(name) = layer_one_nodes
+                            .iter()
+                            .find(|name| *name == &module.flip_info.as_ref().unwrap().name)
+                        {
+                            extra = Some(ExtraInfo::new(name.to_string()));
+                        } else {
+                            continue;
+                        }
+                    }
+                    ModuleType::Conjuction => {
+                        if let Some(name) = layer_one_nodes
+                            .iter()
+                            .find(|name| *name == &module.conj_info.as_ref().unwrap().name)
+                        {
+                            extra = Some(ExtraInfo::new(name.to_string()));
+                        } else {
+                            continue;
+                        }
+                    }
+                    _ => (),
+                }
+            }
 
+            (0..100000).for_each(|_| sub_graph.broadcast(&mut extra));
+
+            println!("=============");
+            sub_graph.dump();
             extra.unwrap().dump();
+            println!("=============");
         }
     }
 }
-
-
-
-
-
-
-
-
